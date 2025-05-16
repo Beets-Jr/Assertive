@@ -1,5 +1,43 @@
 /* Parte Thales */
+* {
+    margin: 0;
+    padding: 0;
+}
 
+:root {
+    --fonte-assertive: 'Inria Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    height: 10vh;
+    background: #0994B4;
+    background: linear-gradient(90deg, rgba(9, 148, 180, 1) 0%, rgba(2, 81, 146, 1) 30%, rgba(28, 32, 85, 1) 100%);
+    justify-content: space-between;
+}
+
+.logo-header {
+    margin-left: 2%;
+    margin-top: 15px;
+}
+
+.logo-header img {
+    max-width: 4vw; /* ou o valor que quiser */
+    height: auto;
+  }
+
+header nav {
+    display: flex;
+    margin-right: 2%;
+    gap: 15px;
+    align-items: center;
+}
+header nav a {
+    text-decoration: none;
+    font-size: 1vw;
+    color: white;
+    font-family: var(--fonte-assertive);
+}
 /* end parte Thales */
 
 /* Parte Murillo */
