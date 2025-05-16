@@ -7,5 +7,87 @@
 /* end parte Murillo */
 
 /* Parte Renan */
+:root {
+    --primary-blue: #15194B;
+}
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.white-section {
+    background-color: white;
+    height: 96vh;
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.section-title {
+    font-size: 42px;
+}
+
+.grid-container-socio1 {
+    max-width: 100%;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 660px;
+    justify-content: space-between;
+    margin: 30px 0 0 0px;
+}
+
+.grid-container-socio1 div {
+    display: block;   
+    margin-right: 120px;      
+}
+
+.grid-container-socio1 img {
+    display: block; 
+    margin-left: 120px;        
+}
+
+.grid-container-socio2 {
+    margin: 89px 0px 0 0px;
+    max-width: 100%;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 608px 1fr;
+    justify-content: space-between;
+}
+
+.blue-card1 {
+    background-color: var(--primary-blue);
+    width: 100%px;
+}
+
+.blue-card2 {
+    background-color: var(--primary-blue);
+    width: 100%px;
+}
+
+.grid-container-socio2 img {
+    display: block;  
+    justify-self: end; 
+    margin-right: 120px;      
+}
+
+.grid-container-socio2 div {
+    display: block;   
+    margin-left: 120px;      
+}
 /* end parte Renan */
