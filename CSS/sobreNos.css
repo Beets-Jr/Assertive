@@ -17,14 +17,18 @@
     box-sizing: border-box;
 }
 
+.founders h1 {
+    font-size: 42px;
+}
+
 .founders h1, h2, h3, p {
     font-family: "Inria Sans", sans-serif;
-    font-weight: 700;
     font-style: normal;
     text-align: center;
 }
 
 .founders h2, h3 {
+    font-weight: 700;
     font-size: 38px;
 }
 
@@ -33,13 +37,22 @@
 }
 
 .founders .blue-card p {
-    font-weight: 300;
-    font-size: 24px;
-    margin-top: 60px;
+    font-weight: 100;
+    font-size: 26px;
 }
 
-.founders .grid-container-socio2 .blue-card p{
-    margin: auto 0 0 auto;
+.information-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.information-container p {
+    display: block;
 }
 
 .inria-sans-bold {
@@ -69,19 +82,17 @@
     max-width: 100%;
     width: 1200px;
     display: grid;
-    grid-template-columns: 1fr 708px;
-    justify-content: space-between;
-    margin: 30px 0 0 0px;
+    grid-template-columns: 1fr 758px;
+    margin-top: 30px;
 }
 
-.grid-container-socio1 div {
-    margin-right: 120px;      
+.grid-container-socio1 .blue-card {
+    margin-right: 0px;      
 }
 
 .grid-container-socio1 img {
     display: block; 
-    margin-left: 0px;   
-    width: 405px;     
+    width: 356px;     
 }
 
 .grid-container-socio2 img {
@@ -101,21 +112,15 @@
 .blue-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: var(--primary-blue);
     width: 100%;
     color: white;
-    padding: 40px 60px;
+    padding: 40px 60px 0px 60px;
 }
 
 .grid-container-socio2 img {
     display: block;  
     justify-self: end; 
     margin-right: 0px;      
-}
-
-.grid-container-socio2 div {
-    display: block;   
-    margin-left: 0px;      
 }
 /* end parte Renan */
