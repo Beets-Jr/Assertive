@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,80 +11,127 @@
   <!-- Fonte Inria Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
-<!-- Thales Header -->
-  
-<!-- end thales header -->
+  <!-- Thales Header -->
 
-<!-- Renan Pessoas -->
-<section class="white-section"></section>
+  <!-- end thales header -->
 
-<section class="white-section founders">
-  <div class="section-title-container">
-    <h1 class="section-title">Fundadores</h1>
-  </div>
+  <!-- Renan Pessoas -->
 
-  <div class="grid-container-socio1">
-    <img src="../imgs/socio.png" alt="Sócio Renato Caitano, co-fundador">
-
-    <div class="blue-card">
-      <div class="title-container">
-        <h2 class="inria-sans-bold">Renato Caitano</h3>
-        <h3>Sócio Co-fundador</h3>
-      </div>
-
-      <div class="information-container">
-        <p>
-          Formado em Marketing , Pós graduado em gestão de pessoas com ênfase em liderança.
-          Profissional especializado em vendas, com mais de 17 anos de experiência, atuando em 
-          grandes empresas multinacionais. Experiência no desenvolvimento e liderança de grandes 
-          equipes comerciais.
-        </p>
-      </div>
+  <section class="white-section founders">
+    <div class="section-title-container">
+      <h1 class="section-title">Fundadores</h1>
     </div>
-    
-  </div>
 
-  <div class="grid-container-socio2">
-    <div class="blue-card">
-      <div class="title-container">
-        <h2 class="inria-sans-bold">Larissa Tavares</h2>
-        <h3>Sócia fundadora</h3>
+    <div class="grid-container-socio1">
+      <img src="../imgs/socio.png" alt="Sócio Renato Caitano, co-fundador">
+
+      <div class="blue-card">
+        <div class="title-container">
+          <h2 class="inria-sans-bold">Renato Caitano</h3>
+            <h3>Sócio Co-fundador</h3>
+        </div>
+
+        <div class="information-container">
+          <p>
+            Formado em Marketing , Pós graduado em gestão de pessoas com ênfase em liderança.
+            Profissional especializado em vendas, com mais de 17 anos de experiência, atuando em
+            grandes empresas multinacionais. Experiência no desenvolvimento e liderança de grandes
+            equipes comerciais.
+          </p>
+        </div>
       </div>
 
-      <div class="information-container">
-        <p>
-          Formada em Gestão Comercial e Administração de
-          empresas, soma mais de 10 anos de experiência
-          em prospecção ativa b2b, é a responsável pela
-          gestão estratégica operacional e personalização
-          dos projetos para empresas de diversos portes e
-          segmentos.
-        </p>
-      </div>
     </div>
-    <img src="../imgs/socia.png" alt="Sócia Larissa Tavares, fundadora">
-  </div>
 
-</section>
+    <div class="grid-container-socio2">
+      <div class="blue-card">
+        <div class="title-container">
+          <h2 class="inria-sans-bold">Larissa Tavares</h2>
+          <h3>Sócia fundadora</h3>
+        </div>
 
-<script src="../JS/sobreNos.js"></script>
-<!-- end Renan Pessoas -->
+        <div class="information-container">
+          <p>
+            Formada em Gestão Comercial e Administração de
+            empresas, soma mais de 10 anos de experiência
+            em prospecção ativa b2b, é a responsável pela
+            gestão estratégica operacional e personalização
+            dos projetos para empresas de diversos portes e
+            segmentos.
+          </p>
+        </div>
+      </div>
+      <img src="../imgs/socia.png" alt="Sócia Larissa Tavares, fundadora">
+    </div>
 
-<!--end parte Murillo -->
-<!-- end parte Murillo -->
+  </section>
+
+  <script src="../JS/sobreNos.js"></script>
+  <!-- end Renan Pessoas -->
+
+  <!--end parte Murillo -->
+  <!-- end parte Murillo -->
 
 
 
-<!-- Renan contato -->
-  
-<!-- end Renan contato -->
-  
-<!-- Thales footer -->
-  
-<!-- end Thales footer -->
+  <!-- Renan contato -->
+  <div class="contact-spacing"></div>
+
+  <section class="blue-bg">
+    <img class="contact-img" src="../imgs/foto-contato.png" alt="">
+
+    <div class="contact-section">
+      
+      <div class="forms-container">
+        <h1>Chegou a hora de <br> escalar seus resultados</h1>
+        <h2>Fale com nossos <span>especialistas!</span></h2>
+        
+        <form class="contact-form" action="" method="POST">
+          <div>
+            <label for="nome">Nome</label>
+            <br>
+            <input type="text" id="nome" placeholder="Informe seu nome" name="nome" required>
+          </div>
+
+          <div>
+            <label for="email">E-mail</label>
+            <br>
+            <input type="email" id="email" placeholder="Informe um email para contato" name="email" required>
+          </div>
+
+          <div>
+            <label for="celphone">Celular</label>
+            <br>
+            <input type="tel" id="celphone" placeholder="Informe um celular para contato" name="celphone" required>
+          </div>
+
+          <div>
+            <label for="mensagem">Mensagem</label>
+            <br>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte-nos mais sobre sua empresa e o serviço buscado" rows="5" required></textarea>
+          </div>
+
+          <div class="button-container">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end Renan contato -->
+
+  <!-- Thales footer -->
+
+  <!-- end Thales footer -->
 </body>
+
 </html>
