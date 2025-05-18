@@ -71,7 +71,7 @@ h3 {
 
 .white-section {
     background-color: white;
-    width: 100vw;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -173,7 +173,7 @@ h2 {
     position: relative;
     height: 96vh;
     max-height: 1000px;
-    width: 100vw;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
 }
