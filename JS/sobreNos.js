@@ -10,49 +10,60 @@
 
 // sobreNos.js
 
+// sobreNos.js
+// sobreNos.js
+// sobreNos.js
 window.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll([
+    '.grid-container-socio1 img',
+    '.grid-container-socio1 .blue-card',
+    '.grid-container-socio2 img',
+    '.grid-container-socio2 .blue-card',
+    '.contact-img',
+    '.forms-container h1',
+    '.forms-container h2',
+    '.contact-form > div',
+    '.contact-form .button-container'
+  ].join(','));
+
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const el = entry.target;
-        // adiciona transição e leva ao estado final
-        el.style.transition = 'opacity 0.9s ease-out, transform 0.9s ease-out';
-        el.style.opacity    = '1';
-        el.style.transform  = 'translateX(0)';
-        obs.unobserve(el);
+        entry.target.style.opacity   = '1';
+        entry.target.style.transform = 'translateX(0)';
+        obs.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.1  // quando 10% do elemento aparecer na viewport
+    threshold: 0.1,
+    rootMargin: '0px 0px 0px 0px'
   });
 
-  // Seleciona cada item e define o deslocamento inicial
-  const deslocamento = 600
-  const itensAnima = [
-    {
-      el: document.querySelector('.grid-container-socio1 img'),
-      from: `-${deslocamento}px`    // entra da esquerda
-    },
-    {
-      el: document.querySelector('.grid-container-socio1 .blue-card'),
-      from: `${deslocamento}px`     // entra da direita
-    },
-    {
-      el: document.querySelector('.grid-container-socio2 .blue-card'),
-      from: `-${deslocamento}px`    // entra da esquerda
-    },
-    {
-      el: document.querySelector('.grid-container-socio2 img'),
-      from: `${deslocamento}px`     // entra da direita
-    }
-  ];
+  items.forEach(el => {
+    el.style.opacity    = '0';
+    el.style.transition = 'transform 0.6s ease-out, opacity 0.6s ease-out';
 
-  // Aplicar o estado inicial (fora da tela)
-  itensAnima.forEach(item => {
-    if (!item.el) return; 
-    item.el.style.opacity   = '0';
-    item.el.style.transform = `translateX(${item.from})`;
-    observer.observe(item.el);
+    const baseOffset = window.innerWidth * 0.2;
+    let offset;
+
+    if (el.tagName === 'IMG') {
+      if (el.closest('.grid-container-socio1')) {
+        offset = -baseOffset;
+      } else if (el.closest('.grid-container-socio2')) {
+        offset = baseOffset;
+      } else {
+        offset = -baseOffset;
+      }
+    } else {
+      if (el.closest('.grid-container-socio2') && el.classList.contains('blue-card')) {
+        offset = -baseOffset;
+      } else {
+        offset = baseOffset;
+      }
+    }
+
+    el.style.transform = `translateX(${offset}px)`;
+    observer.observe(el);
   });
 });
 
