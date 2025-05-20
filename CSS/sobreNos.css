@@ -6,6 +6,7 @@
 
 :root {
     --primary-font: "Inria Sans", sans-serif;
+    --secondary-font: "League Spartan", "Inria Sans", sans-serif;
     --third-blue: #000760;
 }
 
@@ -27,8 +28,9 @@
     align-items: center;
     display: flex;
     gap: 2.5rem;
-    justify-content: space-between;
-    margin: 8rem 0px 4rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 8rem 2rem 4rem;
 }
 
 .how-the-work-card,
@@ -43,11 +45,10 @@
 
 .how-the-work-card {
     height: 24rem;
-    max-width: 23rem;
+    max-width: 22rem;
 }
 
-.how-the-work-card h3,
-.mvv-card {
+.how-the-work-card h3 {
     font-size: 1.6rem;
     margin-bottom: 40px;
 }
@@ -63,6 +64,7 @@
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    margin: 1rem;
     padding: 1rem 3rem;
 }
 
@@ -124,6 +126,10 @@
     margin: auto;
 }
 
+.mvv-img-container {
+    padding-top: 5rem;
+}
+
 .mvv-cards-container {
     display: flex;
     flex: 1;
@@ -133,7 +139,16 @@
 }
 
 .mvv-card {
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    font-weight: bold;;
     width: 36rem;
+}
+
+.mvv-card h3 {
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    margin-bottom: 1rem;
 }
 
 .mvv-second-card {
@@ -148,18 +163,56 @@
 }
 
 .mvv-first-line {
-    transform: rotateZ(-45deg) translateY(-50px) translateX(250px);
+    transform: rotateZ(-45deg) translateY(-30px) translateX(250px);
     width: 220px;
 }
 
 .mvv-second-line {
     transform: translateY(-90px) translateX(190px);
-    width: 400px;
+    width: 420px;
 }
 
 .mvv-third-line {
-    transform: rotateZ(45deg) translateY(-80px) translateX(130px);
+    transform: rotateZ(45deg) translateY(-90px) translateX(130px);
     width: 220px;
+}
+
+.mvv-end-message {
+    color: var(--primary-blue);
+    margin: 10rem auto 0;
+    text-transform: uppercase;
+}
+
+.mvv-end-message p {
+    font-family: var(--secondary-font);
+}
+
+.mvv-end-message p:first-child {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.mvv-end-message p:last-child {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .how-the-work h2 {
+        font-size: 3rem;
+    }
+
+    .how-the-work-cards-container {
+        margin-top: 2rem;
+    }
+
+    .who-we-are-introduction {
+        margin: 10rem 1rem 6rem;
+    }
+    
+    /* .who-we-are-introduction p {
+    } */
 }
 
 /* end parte Murillo */
