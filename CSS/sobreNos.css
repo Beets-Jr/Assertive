@@ -89,6 +89,7 @@
 .who-we-are-introduction {
     font-weight: 600;
     margin: 10rem 2rem 6rem;
+    position: relative;
 }
 
 .who-we-are-introduction::before,
@@ -102,19 +103,20 @@
 .who-we-are-introduction::before {
     border-left: 1px solid var(--secondary-blue);
     border-top: 1px solid var(--secondary-blue);
-    float: left;
-    transform: translateY(-3rem);
+    position: absolute;
+    top: -2rem;
 }
 
 .who-we-are-introduction::after {
     border-right: 1px solid var(--secondary-blue);
     border-bottom: 1px solid var(--secondary-blue);
-    float: right;
-    transform: translateY(-1rem);
+    position: absolute;
+    right: 0;
+    bottom: -2rem;
 }
 
 .who-we-are-introduction p {
-    margin: 1.5rem 4rem;
+    margin: 3rem;
     text-align: left;
 }
 
@@ -128,6 +130,10 @@
 
 .mvv-img-container {
     padding-top: 5rem;
+}
+
+.mvv-image {
+    width: 190px;
 }
 
 .mvv-cards-container {
@@ -198,21 +204,79 @@
     font-weight: bold;
 }
 
+@media (max-width: 1200px) {
+    .mvv-img-container {
+        width: 16vw;
+    }
+
+    .mvv-card {
+        width: 60vw;
+        z-index: 1;
+    }
+
+    .mvv-second-card {
+        margin-left: 2rem;
+    }
+}
+
 @media (max-width: 800px) {
+    .how-the-work {
+        padding-bottom: 4rem;
+    }
+
     .how-the-work h2 {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
     .how-the-work-cards-container {
         margin-top: 2rem;
     }
 
-    .who-we-are-introduction {
-        margin: 10rem 1rem 6rem;
+    .how-the-work-card {
+        height: fit-content;
     }
-    
-    /* .who-we-are-introduction p {
-    } */
+
+    .who-we-are h2 {
+        font-size: 2.2rem
+    }
+
+    .who-we-are-introduction {
+        margin: 4rem 1rem 6rem;
+        font-size: 1rem;
+    }
+
+    .who-we-are-introduction::before {
+        top: -1rem;
+    }
+
+    .who-we-are-introduction::after {
+        bottom: -1rem;
+    }
+
+    .who-we-are-introduction p {
+        margin: 1rem;
+    }
+
+    .mvv-img-container {
+        display: none;
+    }
+
+    .mvv-cards-container {
+        text-align: center;
+    }
+
+    .mvv-card {
+        width: 90%;
+        margin: auto;
+    }
+
+    .mvv-second-card {
+        margin: 1rem auto;
+    }
+
+    .mvv-end-message p:first-child {
+        margin-bottom: 4rem;
+    }
 }
 
 /* end parte Murillo */
