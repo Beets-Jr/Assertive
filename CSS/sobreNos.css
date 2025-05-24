@@ -46,10 +46,21 @@ header::before {
     margin-top: 15px;
 }
 
+.logo-header a {
+    display: inline-block;
+}
+
 .logo-header img {
     max-width: 4vw;
     height: auto;
-  }
+     transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-header img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
 
 header nav {
     display: flex;
@@ -62,10 +73,45 @@ header nav a {
     font-size: 1vw;
     color: white;
     font-family: var(--fonte-assertive);
+    position: relative;
+    transition: color 0.3s ease;
 }
+
+header nav a:hover {
+    color: #00aaff;
+}
+
+header nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00aaff;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* destacar qual é a página atual na header - melhor implementar num arquivo js e css geral 
+
+header nav a.active {
+    color: #00aaff;
+}
+
+header nav a.active::after {
+    width: 100%;
+} 
+
+*/
 
 section#hero {
     background: url('../imgs/cidade-da-noite-brilhante 1-og.png') no-repeat center center/cover;
+    background-position: center left;
     display: flex;
     height: 100vh;
     justify-content: left;
@@ -92,6 +138,12 @@ section#hero .hero-content {
     border-radius: 20px;
     color: white;
     font-family: var(--fonte-assertive);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
