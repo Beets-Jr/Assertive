@@ -223,7 +223,7 @@ h2 {
     border-radius: 5px;
 }
 
-.contact-form textarea::placeholder {
+.contact-form textarea::placeholder, .contact-form input {
     font-family: "Inria Sans", sans-serif;
     font-style: normal;
     color: black;
@@ -262,7 +262,163 @@ h2 {
     margin-top: 5px;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px){
+    .contact-img{
+        display: none;
+    }
+
+    .blue-bg{
+        background-image: url("../imgs/foto-contato-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .forms-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .forms-container h1 {
+        margin: 0 auto;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .forms-container h1 span {
+        display: block;           
+        width: max-content;      
+        margin: 0 auto;          
+    }
+
+        .forms-container h1 br {
+            display: none;
+            /* remove a segunda quebra de linha */
+        }
+
+    .forms-container h2 { 
+        margin-top: 10px;       
+    }
+}
+
+@media (max-width: 800px ) {
+
+    .forms-container h1 {
+        font-size: 2rem;
+    }
+
+    .forms-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .forms-container label {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input::placeholder {
+        font-size: 1rem;
+    }
+
+    .contact-form textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .founders .grid-container-socio1,
+    .founders .grid-container-socio2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .founders .grid-container-socio2 {
+        flex-direction: column-reverse;
+    }
+
+    .founders img {
+        width: 62%;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .founders .blue-card {
+        width: 80%;
+        height: 350px;
+        margin-bottom: 0;
+        padding: 2rem;
+    }
+
+    .founders .blue-card h2 {
+        font-size: 1.75rem;
+    }
+
+    .founders .blue-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .founders .blue-card p {
+        margin-top: 10px;
+        font-size: 1.12rem;
+    }
+
+    .founders .section-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width:801px) and (max-width:1200px) {
+
+    .founders .grid-container-socio1,
+    .founders .grid-container-socio2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .founders .grid-container-socio2 {
+        flex-direction: column-reverse;
+    }
+
+    .founders img {
+        width: 42%;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .founders .blue-card {
+        width: 80%;
+        height: 480px;
+        margin-bottom: 0;
+        padding: 2rem;
+    }
+
+    .founders .blue-card h2 {
+        font-size: 3rem;
+    }
+
+    .founders .blue-card h3 {
+        font-size: 2.5rem;
+    }
+
+    .founders .blue-card p {
+        font-size: 2rem;
+    }
+
+    .founders .section-title {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) { 
     .contact-section {
         max-width: 1100px;
         padding-top: 20px;
@@ -297,7 +453,7 @@ h2 {
     }
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 1601px) and (min-width: 2200px) {
     .contact-img {
         position: absolute;
         top: 0;
