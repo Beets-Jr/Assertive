@@ -180,61 +180,127 @@ section#hero .hero-content {
 }
 
 footer {
-    height: 70vh;
     display: flex;
     flex-direction: column;
-    background: #0994B4;
     background: linear-gradient(180deg, rgba(9, 148, 180, 1) 0%, rgba(0, 4, 57, 1) 100%);
+    padding: 2rem;
 }
 
 .footer-content {
     color: white;
     font-family: var(--fonte-assertive);
     font-size: 1.2rem;
+
 }
 
-.footer-content .redes-sociais a {
-    display: block;
-    margin: 5px 0;
-    color: inherit;
-    font-family: inherit;
-    text-decoration: none;
+.footer-content .img-icon {
+    display: inline-block;
+    background-color: #002D5C;
+    border-radius: 40%;
+    padding: 7px;
+    width: 1.4vw;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.footer-content .img-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo-footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8vh;
-    max-width: 4vw;
-    height: auto;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    margin: 4vh auto;
+    gap: 24vw;
+    border-bottom: 2px solid white;
+    padding-bottom: 2rem;
+}
+
+ .info-contato p, .endereco p {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-contato, .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+
+.logo-footer img {
+    max-width: 6vw;
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
 }
 
-.logo-footer:hover {
+.logo-footer img:hover {
     transform: scale(1.05);
     filter: brightness(1.2);
 }
 
 .localizacao-assertive {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 }
 
-.footer-bottom {
-    color: white;
-    font-family: var(--fonte-assertive);
-    font-size: 1.3rem;
+.mapa img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.mapa img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.copiado-msg {
+  display: none;
+  margin-left: 10px;
+  color: lightblue;
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .info-contato, .redes-sociais {
+        align-items: center; 
+        text-align: center;
+    }
+}
+
 
 
 /* end parte Thales */
