@@ -53,7 +53,7 @@ header::before {
 .logo-header img {
     max-width: 4vw;
     height: auto;
-     transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
 }
 
@@ -138,11 +138,16 @@ section#hero .hero-content {
     border-radius: 20px;
     color: white;
     font-family: var(--fonte-assertive);
+    /* animação de entrada */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 .hero-content:hover {
-    transform: scale(1.02);
+    transform: translateX(0) scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -153,12 +158,84 @@ section#hero .hero-content {
     font-weight: bold;
     margin-bottom: 1.5rem;
     max-width: 30vw;
+    animation-delay: 0.2s;
 }
 
 .hero-content p {
     font-size: 1.5rem;
     line-height: 1.2;
 }
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+footer {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background: #0994B4;
+    background: linear-gradient(180deg, rgba(9, 148, 180, 1) 0%, rgba(0, 4, 57, 1) 100%);
+}
+
+.footer-content {
+    color: white;
+    font-family: var(--fonte-assertive);
+    font-size: 1.2rem;
+}
+
+.footer-content .redes-sociais a {
+    display: block;
+    margin: 5px 0;
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    max-width: 4vw;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-footer:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.localizacao-assertive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-bottom {
+    color: white;
+    font-family: var(--fonte-assertive);
+    font-size: 1.3rem;
+}
+
 
 /* end parte Thales */
 
