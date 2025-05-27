@@ -1,8 +1,20 @@
 /* Parte Thales */
+function copiarTexto (texto, elemento) {
+  navigator.clipboard.writeText(texto).then(() => {
+    const msg = elemento.querySelector('.copiado-msg');
+    msg.style.display = 'inline';
+    setTimeout(() => {
+      msg.style.display = 'none';
+    }, 1500);
+  }).catch (err => {
+    console.error('Erro ao copiar: ', err);
+  });
+}
+
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY <= 50) {  // Ajusta o valor conforme seu layout
+    if (window.scrollY <= 50) {
         header.classList.add('header-transparent');
     } else {
         header.classList.remove('header-transparent');
