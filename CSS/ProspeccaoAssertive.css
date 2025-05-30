@@ -1,0 +1,281 @@
+:root {
+    --primary-blue: #15194B;
+    --secondary-blue: #0994B4;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.inria-sans-font{
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+}
+
+.inria-sans-regular {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-sans-bold {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.league-spartan-bold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Hero section */
+
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+    background: url('../imgs/Prospeccao-Assertive/foto-ProspeccaoHero.png') center/cover no-repeat;
+    color: #fff;
+    font-family: "Inria Sans", sans-serif;
+}
+
+.hero-content {
+    text-align: center;
+    width: 90%;
+}
+
+.hero-line {
+    width: 80%;
+    height: 0.4rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 2.5rem auto;
+    border: none;
+}
+
+.hero-content h1 {
+    font-size: 7.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 2.8rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 2.2rem 9rem;
+    font-size: 2.4rem;
+    background-color: var(--primary-blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1.2rem;
+    transition: background-color 0.3s;
+    margin-bottom: 2.5rem;
+    width: auto;
+}
+
+.btn-primary:hover {
+    background-color: #06215f;
+}
+
+/* end Hero */
+
+/* Imagens e textos (grid) */
+
+.grid-section{
+    height: 70vh;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.bigger-grid-section{
+    height: 96vh;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.white-bg{
+    background-color: white;
+    color: var(--primary-blue);
+}
+
+.blue-bgd{
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12rem;
+    align-items: center;
+}
+
+.grid img{
+    width: 100%;
+    height: auto;
+}
+
+.grid div h1{
+    text-align: right;
+    font-size: 6rem;
+    margin-bottom: 4rem;
+}
+
+.blue-bgd .grid div h1{
+    text-align: left;
+}
+
+.grid div p{
+    text-align: justify;
+    font-size: 2.6rem;
+    font-weight: 200;
+}
+
+.bigger-grid-section .grid{
+    display: grid;
+    grid-template-columns: 0.93fr 1fr;
+    column-gap: 12rem;
+    align-items: center;
+}
+
+.grid div li{
+    text-align: justify;
+    font-size: 2.6rem;
+    font-weight: 200;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    height: 20vh;
+    background-color: var(--secondary-blue);
+}
+
+/* end Imagens e textos */
+
+/* Seção como funciona */
+
+.how-it-works-grid {
+    display: grid;
+    height: 96vh;
+    grid-template-columns: auto 0.2rem 1fr;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 4rem;
+    max-width: 140rem;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.dots-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10rem;
+}
+
+.how-it-works-grid>hr {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    background-color: var(--secondary-blue);
+    justify-self: center;
+}
+
+.information-container {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+}
+
+.information-container div{
+    height: 9.5rem;
+}
+
+.information-container div h1{
+    font-size: 3.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.information-container div p{
+    font-size: 2.6rem;
+}
+
+.dot {
+    width: 9.5rem;
+    height: 9.5rem;
+    background-color: var(--secondary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.information-container > div:last-child {
+    height: 13rem;
+}
+
+
+/* end seção como funciona */
+
+@media ((min-width : 2400px) and (max-width: 3000px)) {
+
+    :root{
+        font-size: 80%;
+    }
+
+    .grid-section {
+        max-width: 180rem;
+    }
+
+    .bigger-grid-section {
+        max-width: 180rem;
+    }
+}
+
+@media ((min-width : 3001px)) {
+
+    :root{
+        font-size: 110%;
+    }
+
+    .grid-section {
+        max-width: 180rem;
+    }
+
+    .bigger-grid-section {
+        max-width: 180rem;
+    }
+}
+
+/* end imagens e textos */
