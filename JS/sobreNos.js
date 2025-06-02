@@ -4,6 +4,20 @@
 
 /* Parte Murillo */
 
+window.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible-block-animation');
+      }
+    });
+  });
+
+  observer.observe(document.querySelector([
+    '.who-we-are-introduction'
+  ]));
+})
+
 /* end parte Murillo */
 
 /* Parte Renan */
@@ -23,7 +37,8 @@ window.addEventListener('DOMContentLoaded', () => {
     '.forms-container h1',
     '.forms-container h2',
     '.contact-form > div',
-    '.contact-form .button-container'
+    '.contact-form .button-container',
+    '.mvv-card',
   ].join(','));
 
   const observer = new IntersectionObserver((entries, obs) => {
