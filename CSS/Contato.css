@@ -238,23 +238,23 @@ h2 {
 @media (max-width: 800px ) {
 
     .forms-container h1 {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     .forms-container h2 {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     .forms-container label {
-        font-size: 1.2rem;
+        font-size: 19px;
     }
 
     .contact-form input::placeholder {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .contact-form textarea::placeholder {
-        font-size: 1rem;
+        font-size: 16px;
     }
 }
 
@@ -309,20 +309,20 @@ h2 {
     }
 
     .contact-section .forms-container h1 {
-        font-size: 5rem;
+        font-size: 80px;
     }
 
     .contact-section .forms-container h2 {
-        font-size: 3rem;
+        font-size: 48px;
     }
 
     .contact-section .forms-container input::placeholder,
     .contact-section .forms-container textarea::placeholder  {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     .contact-section .forms-container label {
-        font-size: 2.5rem;
+        font-size: 40px;
     }
 
     .contact-section .forms-container input {
@@ -336,52 +336,52 @@ h2 {
     .contact-form button {
         width: 30%;
         height: 60px;
-        font-size: 2rem;
+        font-size: 32px;
         border: 2px solid white;
     }
 }
 
 @media (min-width: 3200px) {
     .contact-section .forms-container h1 {
-        font-size: 7rem;
+        font-size: 112px;
     }
 
     .contact-section .forms-container h2 {
-        font-size: 5rem;
+        font-size: 80px;
     }
 
     .contact-section .forms-container input::placeholder,
     .contact-section .forms-container textarea::placeholder  {
-        font-size: 3rem;
+        font-size: 48px;
     }
 
     .contact-section .forms-container label {
         display: block;
-        font-size: 4rem;
+        font-size: 64px;
         margin-bottom: 0rem;
     }
 
     .contact-section .forms-container input {
         height: 120px;
-        padding: 0 0 0 1rem;
+        padding: 0 0 0 16px;
         margin: 0;
     }
 
     .contact-section .forms-container textarea {
         height: 450px;
-        padding: 0 0 0 1rem;
+        padding: 0 0 0 16px;
         margin: 0;
     }
 
     .contact-form button {
         width: 30%;
         height: 90px;
-        font-size: 3rem;
+        font-size: 48px;
         border: 4px solid white;
     }
 
     .contact-form div {
-        margin-top: 3rem;
+        margin-top: 48px;
     }
 }
 
