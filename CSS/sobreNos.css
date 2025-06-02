@@ -4,6 +4,298 @@
 
 /* Parte Murillo */
 
+:root {
+    --primary-font: "Inria Sans", sans-serif;
+    --secondary-font: "League Spartan", "Inria Sans", sans-serif;
+    --third-blue: #000760;
+}
+
+.how-the-work {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+    text-align: center;
+}
+
+.how-the-work h2 {
+    color: var(--primary-blue);
+    font: normal bold 4rem var(--primary-font);
+    text-align: center;
+}
+
+.how-the-work-cards-container {
+    align-items: center;
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 8rem 2rem 4rem;
+}
+
+.how-the-work-card,
+.mvv-card {
+    background-color: var(--primary-blue);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    color: white;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.how-the-work-card {
+    height: 24rem;
+    max-width: 22rem;
+}
+
+.how-the-work-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+
+.how-the-work-card p {
+    text-align: left;
+}
+
+.how-the-work button {
+    background-color: var(--third-blue);
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    transition: background-color .2s, scale .2s;
+}
+
+.how-the-work button:hover {
+    background-color: var(--secondary-blue);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.who-we-are {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.who-we-are h2 {
+    color: var(--primary-blue);
+    font: normal bold 4rem var(--primary-font);
+    text-align: center;
+}
+
+.who-we-are-introduction {
+    font-weight: 600;
+    margin: 10rem 2rem 6rem;
+    position: relative;
+}
+
+.who-we-are-introduction::before,
+.who-we-are-introduction::after {
+    content: '';
+    display: block;
+    height: 4rem;
+    width: 4rem;
+}
+
+.who-we-are-introduction::before {
+    border-left: 1px solid var(--secondary-blue);
+    border-top: 1px solid var(--secondary-blue);
+    position: absolute;
+    top: -2rem;
+}
+
+.who-we-are-introduction::after {
+    border-right: 1px solid var(--secondary-blue);
+    border-bottom: 1px solid var(--secondary-blue);
+    position: absolute;
+    right: 0;
+    bottom: -2rem;
+}
+
+.who-we-are-introduction p {
+    margin: 3rem;
+    text-align: left;
+}
+
+.mvv {
+    align-items: center;
+    display: flex;
+    gap: 10rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mvv-img-container {
+    padding-top: 5rem;
+}
+
+.mvv-image {
+    width: 190px;
+}
+
+.mvv-cards-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.mvv-card {
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    font-weight: bold;;
+    width: 36rem;
+}
+
+.mvv-card h3 {
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    margin-bottom: 1rem;
+}
+
+.mvv-second-card {
+    margin-left: 270px;
+}
+
+.mvv-line {
+    background-color: var(--primary-blue);
+    border-radius: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.mvv-first-line {
+    transform: rotateZ(-45deg) translateY(-30px) translateX(250px);
+    width: 220px;
+}
+
+.mvv-second-line {
+    transform: translateY(-90px) translateX(190px);
+    width: 420px;
+}
+
+.mvv-third-line {
+    transform: rotateZ(45deg) translateY(-90px) translateX(130px);
+    width: 220px;
+}
+
+.mvv-end-message {
+    color: var(--primary-blue);
+    margin: 10rem auto 0;
+    text-transform: uppercase;
+}
+
+.mvv-end-message p {
+    font-family: var(--secondary-font);
+}
+
+.mvv-end-message p:first-child {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.mvv-end-message p:last-child {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .mvv-img-container {
+        width: 16vw;
+    }
+
+    .mvv-card {
+        width: 60vw;
+        z-index: 1;
+    }
+
+    .mvv-second-card {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .how-the-work {
+        padding-bottom: 4rem;
+    }
+
+    .how-the-work h2 {
+        font-size: 2.2rem;
+    }
+
+    .how-the-work-cards-container {
+        margin-top: 2rem;
+    }
+
+    .how-the-work-card {
+        height: fit-content;
+    }
+
+    .who-we-are h2 {
+        font-size: 2.2rem
+    }
+
+    .who-we-are-introduction {
+        margin: 4rem 1rem 6rem;
+        font-size: 1rem;
+    }
+
+    .who-we-are-introduction::before {
+        top: -1rem;
+    }
+
+    .who-we-are-introduction::after {
+        bottom: -1rem;
+    }
+
+    .who-we-are-introduction p {
+        margin: 1rem;
+    }
+
+    .mvv-img-container {
+        display: none;
+    }
+
+    .mvv-cards-container {
+        text-align: center;
+    }
+
+    .mvv-card {
+        width: 90%;
+        margin: auto;
+    }
+
+    .mvv-second-card {
+        margin: 1rem auto;
+    }
+
+    .mvv-end-message p:first-child {
+        margin-bottom: 4rem;
+    }
+}
+
+@keyframes visible-block {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .visible-block-animation {
+    animation: visible-block 1s ease-in-out;
+  }
+}
+
 /* end parte Murillo */
 
 /* Parte Renan */
