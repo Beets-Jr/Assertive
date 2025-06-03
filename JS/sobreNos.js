@@ -22,11 +22,19 @@ window.addEventListener('scroll', () => {
 });
 
 const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('header nav');
+const nav = document.querySelector('header nav');
+const overlay = document.querySelector('.overlay');
 
-  menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', () => {
     nav.classList.toggle('show');
-  });
+    overlay.classList.toggle('active');
+});
+
+// Fechar ao clicar fora do menu
+overlay.addEventListener('click', () => {
+    nav.classList.remove('show');
+    overlay.classList.remove('active');
+});
 
 /* end parte Thales */
 
