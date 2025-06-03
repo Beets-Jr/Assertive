@@ -175,7 +175,6 @@ header nav a.active::after {
 
 */
 
-/* (2) Configuração do container do dropdown: */
 .dropdown {
   position: relative;
 }
@@ -184,69 +183,83 @@ header nav a.active::after {
   cursor: pointer;
 }
 
-/* (3) Painel original, mas usando flex-wrap: */
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) scale(0);
-  /* Largura “auto” ou um mínimo mais razoável */
-  width: auto;
-  min-width: 300px;      /* mínimo para caber pelo menos um card confortavelmente */
-  max-width: 90vw;       /* nunca vai ficar mais largo que 90% da viewport */
+  min-width: 25vw;
+  max-width: 35vw;
+
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border-radius: 8px;
   padding: 1rem;
   display: flex;
-  flex-wrap: wrap;       /* MUITO IMPORTANTE: permite que os cards “quebrem” linha */
-  justify-content: center; /* alinha ao centro quando“quebram”linha */
+  flex-wrap: wrap;       /* deixa q os cards “quebrem” linha */
   gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  
   opacity: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  
   transform-origin: top center;
+  transform: translateX(-50%) scale(0);
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
   z-index: 50;
 }
 
-/* (4) Exibe o painel no hover: */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
 
-/* (5) Estilo dos cards: */
 .dropdown-menu .card {
-  background: linear-gradient(135deg, rgba(0,123,200,0.8) 0%, rgba(0,50,100,0.8) 100%);
+  background: linear-gradient(88deg, rgba(9,148,180,1) 0%, rgba(2,41,69,1) 100%);
   border-radius: 8px;
   padding: 1.2rem;
   color: white;
-  width: calc(33.333% - 1rem); /* tenta colocar 3 cards lado a lado */
-  min-width: 200px;            /* mas encolhe até 200px para caber */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-family: var(--fonte-assertive);
+
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  font-family: var(--fonte-assertive);
+
+  flex: 0 1 300px;
+  min-width: 20vw; 
+  max-width: 30vw;
+  min-height: 9rem;
 }
 
-/* (6) Títulos e parágrafos: */
 .dropdown-menu .card h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.2;
 }
 
 .dropdown-menu .card p {
   margin: 0;
-  font-size: 0.9rem;
+  margin-top: 5%;
+  font-size: 1.1rem;
   line-height: 1.4;
   flex-grow: 1;
 }
 
-/* (7) Ajustes opcionais de responsividade: */
-/* Se a tela for muito estreita (abaixo de 800px, digamos), podemos colocar os cards empilhados */
+.dropdown-menu .card .atributos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.dropdown-menu .card .atributos p {
+    max-width: fit-content;
+    font-size: 0.75rem;
+    font-family: var(--fonte-assertive);
+    white-space: nowrap;  
+    margin: 0;                  /* remover margem padrão do <p> */
+    padding: 0.25rem 0.5rem;
+    border: 0.5px solid white;
+    border-radius: 15px;
+}
+
+
 
 
 section#hero {
