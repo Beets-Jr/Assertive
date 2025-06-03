@@ -355,6 +355,8 @@ h3 {
 
 .information-container p {
     display: block;
+    font-size: clamp(10px, 1.5vw, 30px) !important;
+
 }
 
 .inria-sans-bold {
