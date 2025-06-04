@@ -2,6 +2,9 @@
 
 /* end parte Thales */
 
+
+
+
 /* Parte Murillo */
 
 window.addEventListener('DOMContentLoaded', () => {
