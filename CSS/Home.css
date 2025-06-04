@@ -1,0 +1,56 @@
+:root {
+    --primary-blue: #15194B;
+    --secondary-blue: #0994B4;
+    --third-blue: #000760;
+    --primary-font: "Inria Sans", sans-serif;
+    --secondary-font: "League Spartan", "Inria Sans", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.numbers-container-background {
+    background: #0994B407;
+}
+
+.numbers-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+    padding: 3rem;
+}
+
+.numbers-container > article {
+    color: var(--primary-blue);
+    font-family: var(--secondary-font);
+    text-align: center;
+}
+
+.numbers-container svg {
+    fill: var(--primary-blue);
+    height: 4rem;
+    width: 4rem;
+}
+
+.numbers-container p {
+    font-size: 2.2rem;
+    margin-top: .75rem;
+}
+
+.number {
+    font-weight: 300;
+}
+
+.number::before {
+    content: '+';
+}
+
+.numbers-container p:last-child {
+    font-weight: bold;
+    width: min-content;
+}
