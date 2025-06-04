@@ -352,7 +352,7 @@ header nav a:hover::after {
 
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1284px) {
   .dropdown .dropdown-menu {
     flex-wrap: wrap;
     justify-content: center;
@@ -362,6 +362,17 @@ header nav a:hover::after {
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
+
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    pointer-events: none;
+  }
+
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
   }
 
   .dropdown .dropdown-menu .card {

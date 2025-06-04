@@ -30,15 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btn.addEventListener('click', function(e) {
     const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (viewportWidth <= 768) {
-      e.preventDefault();        // impede a âncora de rolar a página
+
+    if (viewportWidth <= 1440) {
+      e.preventDefault();          // impede a âncora de rolar a página 
       dropdown.classList.toggle('open');
     }
   });
 
   document.addEventListener('click', function(e) {
     const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (viewportWidth <= 768) {
+
+    if (viewportWidth <= 1440) {
       if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('open');
       }
@@ -47,13 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('resize', function() {
     const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (viewportWidth > 768) {
+
+    if (viewportWidth > 1440) {
       dropdown.classList.remove('open');
     }
   });
 });
-
-/* funcionalidade para copiar facilmente dados de contato no footer */
 
 function copiarTexto (texto, elemento) {
   navigator.clipboard.writeText(texto).then(() => {
