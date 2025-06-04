@@ -2,6 +2,7 @@
     --primary-blue: #15194B;
     --secondary-blue: #0994B4;
     font-size: 62.5%;
+    scroll-behavior: smooth;
     /* 1rem = 10px */
 }
 
@@ -344,6 +345,7 @@
 
     .grid img{
         margin-bottom: 5rem;
+        max-width: 50vh;
     }
 
     .blue-bgd .grid{
@@ -455,5 +457,21 @@
         max-width: 140rem;
     }
 }
+
+.reveal{
+  opacity: 0;
+  transform: translateY(4rem);
+  transition: opacity .7s ease-out,
+              transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.reveal.from-left  { transform: translateX(-40rem); }
+.reveal.from-right { transform: translateX( 40rem); }
+
+.reveal.show{
+  opacity: 1;
+  transform: none;
+}
+
 
 /* end imagens e textos */
