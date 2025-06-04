@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assertive</title>
+
+  <link rel="stylesheet" href="../CSS/sobreNos.css">
+  <link rel="stylesheet" href="../CSS/sobreNosTransicoes.css">
+  <link rel="stylesheet" href="../CSS/Contato.css">
+
+  <!-- Fonte Inria Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+<!-- Seção contato -->
+
+  <section class="blue-bg">
+    <img class="contact-img" src="../imgs/foto-contato.png" alt="">
+
+    <div class="contact-section">
+      
+      <div class="forms-container">
+        <h1><span>Chegou a hora de </span><br> escalar seus resultados</h1>
+        <h2>Fale com nossos <span>especialistas!</span></h2>
+        
+        <form class="contact-form" action="" method="POST">
+          <div>
+            <label for="nome">Nome</label>
+            <br>
+            <input type="text" id="nome" placeholder="Informe seu nome" name="nome" required>
+          </div>
+
+          <div>
+            <label for="email">E-mail</label>
+            <br>
+            <input type="email" id="email" placeholder="Informe um email para contato" name="email" required>
+          </div>
+
+          <div>
+            <label for="celphone">Celular</label>
+            <br>
+            <input type="tel" id="celphone" placeholder="Informe um celular para contato" name="celphone" required>
+          </div>
+
+          <div>
+            <label for="mensagem">Mensagem</label>
+            <br>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte-nos mais sobre sua empresa e o serviço buscado" rows="5" required></textarea>
+          </div>
+
+          <div class="button-container">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="../JS/Contato.js"></script>
+<!-- end seção contato -->
+  
+</body>
+</html>
