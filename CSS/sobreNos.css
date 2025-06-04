@@ -1,14 +1,136 @@
 /* Parte Thales */
 
+
+section#hero {
+    background: url('../imgs/cidade-alt-4.png') no-repeat center center/cover;
+    background-position: center left;
+    display: flex;
+    height: 100vh;
+    justify-content: left;
+    padding: 2rem;
+}
+
+section#hero .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 12vh;
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+
+section#hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+    max-width: 30vw; 
+    background-color: rgba(0, 4, 57, 0.22);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    color: white;
+    font-family: var(--fonte-assertive);
+    /* animação de entrada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-content:hover {
+    transform: translateX(0) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: white;
+    font-family: var(--fonte-assertive);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    max-width: 30vw;
+    animation-delay: 0.2s;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    section#hero .hero-inner {
+        padding-top: 8vh;
+        margin-top: 3vh;
+        margin-left: 2vw;
+        gap: 1rem;
+    }
+
+    section#hero .hero-content {
+        max-width: 50vw;
+        padding: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        max-width: 50vw;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#hero {
+        background-image: url('../imgs/cidade-mobile.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    section#hero .hero-inner {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section#hero .hero-content {
+        max-width: 90%;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
 /* end parte Thales */
 
 /* Parte Murillo */
 
-:root {
-    --primary-font: "Inria Sans", sans-serif;
-    --secondary-font: "League Spartan", "Inria Sans", sans-serif;
-    --third-blue: #000760;
-}
+
 
 .how-the-work {
     margin: 0 auto;
@@ -300,8 +422,15 @@
 
 /* Parte Renan */
 :root {
+    /* Fontes */
+    --fonte-assertive: 'Inria Sans', sans-serif;
+    --primary-font: 'Inria Sans', sans-serif;
+    --secondary-font: 'League Spartan', 'Inria Sans', sans-serif;
+
+    /* Cores */
     --primary-blue: #15194B;
     --secondary-blue: #0994B4;
+    --third-blue: #000760;
 }
 
 * {
