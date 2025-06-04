@@ -9,25 +9,26 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
     font-family: var(--primary-font);
 }
 
 .market-intelligence-hero {
     background: url("../imgs/market-intelligence-what-is-it.jpg") no-repeat 120% top/75%, linear-gradient(to right, #02052F, #06090E 20%);
     height: 100vh;
+    width: 100vw;
 }
 
 .market-intelligence-hero-content {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 100vh;
     justify-content: space-around;
-    padding: 10% 5%;
+    padding: 5%;
     width: 40%;
 }
 
@@ -226,7 +227,19 @@ body {
 
 @media (max-width: 1100px) {
     .market-intelligence-hero {
-        background-size: 100%;
+        background-position: center ;
+        background-size: cover;
+    }
+
+    .market-intelligence-hero-content {
+        backdrop-filter: blur(5px) brightness(50%);
+        height: 100vh;
+        padding: 10%;
+        width: 100%;
+    }
+
+    .market-intelligence-hero-content > h1 {
+        text-align: center;
     }
 
     .market-intelligence-what-is-it-vertical-bar.second-bar {
