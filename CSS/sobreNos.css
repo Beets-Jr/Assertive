@@ -1,12 +1,5 @@
 /* Parte Thales */
-* {
-    margin: 0;
-    padding: 0;
-}
 
-:root {
-    --fonte-assertive: 'Inria Sans', sans-serif;
-}
 
 section#hero {
     background: url('../imgs/cidade-alt-4.png') no-repeat center center/cover;
@@ -137,8 +130,894 @@ section#hero .hero-content {
 
 /* Parte Murillo */
 
+
+
+.how-the-work {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+    text-align: center;
+}
+
+.how-the-work h2 {
+    color: var(--primary-blue);
+    font: normal bold 4rem var(--primary-font);
+    text-align: center;
+}
+
+.how-the-work-cards-container {
+    align-items: center;
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 8rem 2rem 4rem;
+}
+
+.how-the-work-card,
+.mvv-card {
+    background-color: var(--primary-blue);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    color: white;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.how-the-work-card {
+    height: 24rem;
+    max-width: 22rem;
+}
+
+.how-the-work-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+
+.how-the-work-card p {
+    text-align: left;
+}
+
+.how-the-work button {
+    background-color: var(--third-blue);
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    transition: background-color .2s, scale .2s;
+}
+
+.how-the-work button:hover {
+    background-color: var(--secondary-blue);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.who-we-are {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.who-we-are h2 {
+    color: var(--primary-blue);
+    font: normal bold 4rem var(--primary-font);
+    text-align: center;
+}
+
+.who-we-are-introduction {
+    font-weight: 600;
+    margin: 10rem 2rem 6rem;
+    position: relative;
+}
+
+.who-we-are-introduction::before,
+.who-we-are-introduction::after {
+    content: '';
+    display: block;
+    height: 4rem;
+    width: 4rem;
+}
+
+.who-we-are-introduction::before {
+    border-left: 1px solid var(--secondary-blue);
+    border-top: 1px solid var(--secondary-blue);
+    position: absolute;
+    top: -2rem;
+}
+
+.who-we-are-introduction::after {
+    border-right: 1px solid var(--secondary-blue);
+    border-bottom: 1px solid var(--secondary-blue);
+    position: absolute;
+    right: 0;
+    bottom: -2rem;
+}
+
+.who-we-are-introduction p {
+    margin: 3rem;
+    text-align: left;
+}
+
+.mvv {
+    align-items: center;
+    display: flex;
+    gap: 10rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mvv-img-container {
+    padding-top: 5rem;
+}
+
+.mvv-image {
+    width: 190px;
+}
+
+.mvv-cards-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.mvv-card {
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    font-weight: bold;;
+    width: 36rem;
+}
+
+.mvv-card h3 {
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    margin-bottom: 1rem;
+}
+
+.mvv-second-card {
+    margin-left: 270px;
+}
+
+.mvv-line {
+    background-color: var(--primary-blue);
+    border-radius: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.mvv-first-line {
+    transform: rotateZ(-45deg) translateY(-30px) translateX(250px);
+    width: 220px;
+}
+
+.mvv-second-line {
+    transform: translateY(-90px) translateX(190px);
+    width: 420px;
+}
+
+.mvv-third-line {
+    transform: rotateZ(45deg) translateY(-90px) translateX(130px);
+    width: 220px;
+}
+
+.mvv-end-message {
+    color: var(--primary-blue);
+    margin: 10rem auto 0;
+    text-transform: uppercase;
+}
+
+.mvv-end-message p {
+    font-family: var(--secondary-font);
+}
+
+.mvv-end-message p:first-child {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.mvv-end-message p:last-child {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .mvv-img-container {
+        width: 16vw;
+    }
+
+    .mvv-card {
+        width: 60vw;
+        z-index: 1;
+    }
+
+    .mvv-second-card {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .how-the-work {
+        padding-bottom: 4rem;
+    }
+
+    .how-the-work h2 {
+        font-size: 2.2rem;
+    }
+
+    .how-the-work-cards-container {
+        margin-top: 2rem;
+    }
+
+    .how-the-work-card {
+        height: fit-content;
+    }
+
+    .who-we-are h2 {
+        font-size: 2.2rem
+    }
+
+    .who-we-are-introduction {
+        margin: 4rem 1rem 6rem;
+        font-size: 1rem;
+    }
+
+    .who-we-are-introduction::before {
+        top: -1rem;
+    }
+
+    .who-we-are-introduction::after {
+        bottom: -1rem;
+    }
+
+    .who-we-are-introduction p {
+        margin: 1rem;
+    }
+
+    .mvv-img-container {
+        display: none;
+    }
+
+    .mvv-cards-container {
+        text-align: center;
+    }
+
+    .mvv-card {
+        width: 90%;
+        margin: auto;
+    }
+
+    .mvv-second-card {
+        margin: 1rem auto;
+    }
+
+    .mvv-end-message p:first-child {
+        margin-bottom: 4rem;
+    }
+}
+
+@keyframes visible-block {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .visible-block-animation {
+    animation: visible-block 1s ease-in-out;
+  }
+}
+
 /* end parte Murillo */
 
 /* Parte Renan */
+:root {
+    /* Fontes */
+    --fonte-assertive: 'Inria Sans', sans-serif;
+    --primary-font: 'Inria Sans', sans-serif;
+    --secondary-font: 'League Spartan', 'Inria Sans', sans-serif;
+
+    /* Cores */
+    --primary-blue: #15194B;
+    --secondary-blue: #0994B4;
+    --third-blue: #000760;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.founders h1 {
+    font-size: 42px;
+}
+
+.founders h1,
+h2,
+h3,
+p {
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+    text-align: center;
+}
+
+.founders h2,
+h3 {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+}
+
+.founders h3 {
+    font-weight: 400;
+}
+
+.founders .blue-card p {
+    font-weight: 100;
+    font-size: 26px;
+}
+
+.information-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.information-container p {
+    display: block;
+    font-size: clamp(10px, 1.5vw, 30px) !important;
+
+}
+
+.inria-sans-bold {
+    font-weight: 700;
+}
+
+.white-section {
+    background-color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.section-title {
+    font-size: 42px;
+}
+
+.grid-container-socio1 {
+    max-width: 100%;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 758px;
+    margin-top: 30px;
+}
+
+.grid-container-socio1 .blue-card {
+    margin-right: 0px;
+}
+
+.grid-container-socio1 img {
+    display: block;
+    width: 356px;
+}
+
+.grid-container-socio2 img {
+    display: block;
+    width: 405px;
+}
+
+.grid-container-socio2 {
+    margin: 89px 0px 0 0px;
+    max-width: 100%;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 708px 1fr;
+    justify-content: space-between;
+}
+
+.blue-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-blue);
+    width: 100%;
+    color: white;
+    padding: 40px 60px 0px 60px;
+}
+
+.grid-container-socio2 img {
+    display: block;
+    justify-self: end;
+    margin-right: 0px;
+}
+
+.contact-spacing {
+    height: 20vh;
+}
+
+.contact-section h1,
+h2 {
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+    text-align: left;
+    font-weight: 700;
+    font-size: 60px;
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+}
+
+.contact-section h2 span {
+    color: var(--secondary-blue);
+}
+
+.contact-section form {
+    color: white;
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+}
+
+.blue-bg {
+    position: relative;
+    background-color: var(--primary-blue);
+    overflow: hidden;
+}
+
+.contact-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.forms-container h1 {
+    margin-bottom: 20px;
+}
+
+.contact-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: clamp(300px, 80%, 1200px);
+    object-fit: cover;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 0;
+    padding-left: 15px;
+}
+
+.contact-form input::placeholder {
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 165px;
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.contact-form textarea::placeholder, .contact-form input {
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+}
+
+.contact-form button {
+    cursor: pointer;
+    background-color: var(--secondary-blue);
+    width: 160px;
+    height: 45px;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.contact-form {
+    width: 82.5%;
+}
+
+.contact-form div {
+    margin-top: 20px;
+}
+
+.contact-form .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form div input,
+.contact-form div textarea {
+    margin-top: 5px;
+}
+
+@media (max-width: 1200px){
+    .contact-img{
+        display: none;
+    }
+
+    .blue-bg{
+        background-image: url("../imgs/foto-contato-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .forms-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .forms-container h1 {
+        margin: 0 auto;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .forms-container h1 span {
+        display: block;           
+        width: max-content;      
+        margin: 0 auto;          
+    }
+
+    .forms-container h1 br {
+        display: none;
+    }
+
+    .forms-container h2 { 
+        margin-top: 10px;       
+    }
+}
+
+@media (max-width: 800px ) {
+
+    .forms-container h1 {
+        font-size: 2rem;
+    }
+
+    .forms-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .forms-container label {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input::placeholder {
+        font-size: 1rem;
+    }
+
+    .contact-form textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .founders .grid-container-socio1,
+    .founders .grid-container-socio2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .founders .grid-container-socio2 {
+        flex-direction: column-reverse;
+    }
+
+    .founders img {
+        width: 62%;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .founders .blue-card {
+        width: 80%;
+        height: 350px;
+        margin-bottom: 0;
+        padding: 2rem;
+    }
+
+    .founders .blue-card h2 {
+        font-size: 1.75rem;
+    }
+
+    .founders .blue-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .founders .blue-card p {
+        margin-top: 10px;
+        font-size: 1.12rem;
+    }
+
+    .founders .section-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width:801px) and (max-width:1200px) {
+
+    .founders .grid-container-socio1,
+    .founders .grid-container-socio2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .founders .grid-container-socio2 {
+        flex-direction: column-reverse;
+    }
+
+    .founders img {
+        width: 42%;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .founders .blue-card {
+        width: 80%;
+        height: 480px;
+        margin-bottom: 0;
+        padding: 2rem;
+    }
+
+    .founders .blue-card h2 {
+        font-size: 3rem;
+    }
+
+    .founders .blue-card h3 {
+        font-size: 2.5rem;
+    }
+
+    .founders .blue-card p {
+        font-size: 2rem;
+    }
+
+    .founders .section-title {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) { 
+    .contact-section {
+        max-width: 1100px;
+        padding-top: 20px;
+    }
+
+    .contact-img {
+        width: 70%;
+    }
+
+    .contact-section h1 {
+        font-size: 45px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-form div {
+        margin-top: 10px;
+    }
+
+    .contact-section form {
+        font-size: 18px;
+    }
+
+    .forms-container h1 {
+        margin-bottom: 5px;
+    }
+
+    .contact-form textarea {
+        height: 120px;
+    }
+}
+
+@media (min-width: 1601px) and (min-width: 2200px) {
+    .founders h1 {
+        font-size: 10rem;
+    }
+
+    .founders h2 {
+        font-size: 6rem;
+    }
+
+    .founders h3 {
+        font-size: 4rem;
+    }
+
+    .founders .information-container p {
+        font-size: 3.25rem;
+    }
+
+    .section-title-container{
+        margin-bottom: 15rem;
+    }
+
+    .contact-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70%;
+        object-fit:fill
+    }
+
+    .founders .grid-container-socio1,
+    .founders .grid-container-socio2 {
+        display: flex;        
+        gap: 100px;                    
+        width: auto;                                    
+    }
+
+    .grid-container-socio1, .grid-container-socio2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-container-socio1 img, .grid-container-socio2 img {
+        display: block;
+        width: 60%;
+    }
+
+    .blue-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .grid-container-socio1, .grid-container-socio2{
+        width: 100%;
+    }
+
+    .white-section {
+        max-width: clamp(1200px, 80vw, 2200px);
+    }
+
+    .contact-section {
+        max-width: clamp(1400px, 80vw, 2600px);;
+    }
+
+    .contact-section .forms-container h1 {
+        font-size: 5rem;
+    }
+
+    .contact-section .forms-container h2 {
+        font-size: 3rem;
+    }
+
+    .contact-section .forms-container input::placeholder,
+    .contact-section .forms-container textarea::placeholder  {
+        font-size: 2rem;
+    }
+
+    .contact-section .forms-container label {
+        font-size: 2.5rem;
+    }
+
+    .contact-section .forms-container input {
+        height: 75px;
+    }
+
+    .contact-section .forms-container textarea {
+        height: 350px;
+    }
+
+    .contact-form button {
+        width: 30%;
+        height: 60px;
+        font-size: 2rem;
+        border: 2px solid white;
+    }
+}
+
+@media (min-width: 3200px) {
+    .contact-section .forms-container h1 {
+        font-size: 7rem;
+    }
+
+    .contact-section .forms-container h2 {
+        font-size: 5rem;
+    }
+
+    .contact-section .forms-container input::placeholder,
+    .contact-section .forms-container textarea::placeholder  {
+        font-size: 3rem;
+    }
+
+    .contact-section .forms-container label {
+        display: block;
+        font-size: 4rem;
+        margin-bottom: 0rem;
+    }
+
+    .contact-section .forms-container input {
+        height: 120px;
+        padding: 0 0 0 1rem;
+        margin: 0;
+    }
+
+    .contact-section .forms-container textarea {
+        height: 450px;
+        padding: 0 0 0 1rem;
+        margin: 0;
+    }
+
+    .contact-form button {
+        width: 30%;
+        height: 90px;
+        font-size: 3rem;
+        border: 4px solid white;
+    }
+
+    .contact-form div {
+        margin-top: 3rem;
+    }
+}
+
+
 
 /* end parte Renan */
