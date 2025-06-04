@@ -158,25 +158,14 @@ header nav a:hover::after {
 
     header nav a {
         font-size: 1.2rem;
-        color: white; /* se quiser contraste */
+        color: white;
         text-decoration: none;
     }
 }
 
-/* destacar qual é a página atual na header - melhor implementar num arquivo js e css geral 
-
-header nav a.active {
-    color: #00aaff;
-}
-
-header nav a.active::after {
-    width: 100%;
-} 
-
-*/
-
 .dropdown {
   position: relative;
+  display: flex;
 }
 
 .dropbtn {
@@ -185,17 +174,24 @@ header nav a.active::after {
 
 .dropdown-menu {
   position: absolute;
-  min-width: 25vw;
+  top: 1.2vw;
+  left: -2vw;
+  min-width: 20vw;
   max-width: 35vw;
+  max-height: 90vh;
 
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
+
   border-radius: 8px;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;       /* deixa q os cards “quebrem” linha */
   gap: 1rem;
-  
+
+  overflow-y: scroll;
+  scrollbar-width: none; /* tirar scrollbar em diferentes navegadores */
+  -ms-overflow-style: none;
+
   opacity: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   
@@ -203,6 +199,10 @@ header nav a.active::after {
   transform: translateX(-50%) scale(0);
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
   z-index: 50;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -226,7 +226,7 @@ header nav a.active::after {
   flex-direction: column;
   gap: 0.5rem;
 
-  flex: 0 1 300px;
+  flex: 0 1 200px;
   min-width: 20vw;
   max-width: 30vw;
   min-height: 9rem;
@@ -239,7 +239,7 @@ header nav a.active::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0.8);
   transform-origin: center center;
 
   background: transparent;
@@ -248,7 +248,7 @@ header nav a.active::after {
   font-weight: bold;
   text-align: center;
   line-height: 1.4;
-  width: 80%;
+  width: 70%;
   white-space: normal;
 
   opacity: 0;
@@ -270,7 +270,7 @@ header nav a.active::after {
 .dropdown-menu .card:hover h3,
 .dropdown-menu .card:hover p,
 .dropdown-menu .card:hover .atributos {
-  opacity: 0.2;
+  opacity: 0.1;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -290,6 +290,7 @@ header nav a.active::after {
 }
 .dropdown-menu .card .atributos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 0.5rem;
   transition: opacity 0.3s ease-in-out;
@@ -304,6 +305,82 @@ header nav a.active::after {
   border: 0.5px solid white;
   border-radius: 15px;
   transition: opacity 0.3s ease-in-out;
+}
+
+.submenu-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .dropdown .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;     
+  }
+
+  .dropdown .dropbtn {
+    display: block;
+    padding: 0.55rem 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .dropdown .submenu-mobile {
+    display: none;
+    margin: 0;           
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    flex-direction: column;
+  }
+  .dropdown.open .submenu-mobile {
+    display: block;      
+  }
+
+  .dropdown .submenu-mobile li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+  }
+  .dropdown .submenu-mobile li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dropdown .dropdown-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+  }
+
+  .dropdown .dropdown-menu .card {
+    flex: 1 1 90%;       
+    max-width: 90vw;
+    height: auto;        
+    min-height: 10rem;
+    padding: 1.2rem;
+  }
+
+  .dropdown .dropdown-menu .card .atributos {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .dropdown .dropdown-menu .card::before {
+    display: none;
+  }
 }
 
 section#hero {

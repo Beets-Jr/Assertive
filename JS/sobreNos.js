@@ -30,10 +30,38 @@ menuToggle.addEventListener('click', () => {
     overlay.classList.toggle('active');
 });
 
-// Fechar ao clicar fora do menu
 overlay.addEventListener('click', () => {
     nav.classList.remove('show');
     overlay.classList.remove('active');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdown = document.querySelector('.js-dropdown');
+  const btn = document.querySelector('.js-dropbtn');
+
+  btn.addEventListener('click', function(e) {
+    const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    if (viewportWidth <= 768) {
+      e.preventDefault();        // impede a âncora de rolar a página
+      dropdown.classList.toggle('open');
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    if (viewportWidth <= 768) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    }
+  });
+
+  window.addEventListener('resize', function() {
+    const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    if (viewportWidth > 768) {
+      dropdown.classList.remove('open');
+    }
+  });
 });
 
 /* end parte Thales */
