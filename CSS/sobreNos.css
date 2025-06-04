@@ -475,17 +475,25 @@ h3 {
 .information-container {
     display: flex;
     align-items: center;
-    flex: 1;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+
 }
 
 .information-container p {
     display: block;
-    font-size: clamp(10px, 1.5vw, 30px) !important;
+    font-size: clamp(18px, 1.1vw, 50px) !important;
+    line-height: 1.6;
 
+}
+
+@media (max-width: 2200px) {
+    .information-container p {
+        font-size: 15px !important;
+    }
 }
 
 .inria-sans-bold {
