@@ -31,6 +31,16 @@
     padding: 0 2rem;
 }
 
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 .hero-content {
     position: absolute;
     left: 10%;
