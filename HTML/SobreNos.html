@@ -1,5 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assertive</title>
+  
+  <link rel="stylesheet" href="../CSS/sobreNos.css">
+  <link rel="stylesheet" href="../CSS/header-footer.css">
+
+</head>
+<body>
+<!-- Thales Header -->
+<header class="header-transparent"> 
+  <div class="logo-header fade-in-left"> 
+    <a href="home.html"> 
+      <img src="../imgs/logo-ksnip_20250416-205452-removebg-preview 1.png"> 
+    </a> 
+  </div>
+  
+  <div class="menu-toggle">
+    &#9776;  <!-- símbolo de 3 barrinhas -->
+  </div>
+
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="#hero">Quem somos</a>
+
+    <div class="dropdown js-dropdown">
+      
+      <a href="#servicos" class="dropbtn js-dropbtn">Serviços</a>
+      
+      <div class="dropdown-menu">
+
+        <!-- === Card 1: Inteligência de mercado === -->
+        <div class="card"
+            data-hover-text="Conheça o perfil dos seus clientes com nosso produto de Inteligência de mercado!">
+          <h3>Inteligência de mercado</h3>
+          <p>
+            Conheça profundamente o setor dos seus potenciais clientes. 
+            Entenda suas necessidades e desafios.
+          </p>
+          <div class="atributos">
+            <p>Análise Territorial</p>
+            <p>Share de Mercado</p>
+          </div>
+        </div>
+
+        <!-- === Card 2: Treinamento de Prospecção === -->
+        <div class="card"
+            data-hover-text="Transforme sua abordagem comercial com nosso Treinamento de Prospecção!">
+          <h3>Treinamento de Prospecção</h3>
+          <p>
+            Planeje e estruture sua estratégia de prospecção ativa. 
+            Ganhe visibilidade para sua empresa.
+          </p>
+          <div class="atributos">
+            <p>Pesquisa e análise de leads</p>
+            <p>Abordagem personalizada</p>
+          </div>
+        </div>
+
+        <!-- === Card 3: Prospecção Assertive === -->
+        <div class="card"
+            data-hover-text="Conheça nossa prospecção estratégica que alcança o segmento desejado pro seu produto!">
+          <h3>Prospecção Assertive</h3>
+          <p>
+            A partir das necessidades do cliente, traçamos objetivos 
+            e estratégias para atingir o público‑alvo.
+          </p>
+          <div class="atributos">
+            <p>Planejamento estratégico</p>
+            <p>Gestão da Informação</p>
+          </div>
+        </div>
+      </div>
+
+       <ul class="submenu-mobile">
+        <li><a href="InteligenciaDeMercado.html">Inteligência de mercado</a></li>
+        <li><a href="treinamento-prospeccao.html">Treinamento de Prospecção</a></li>
+        <li><a href="ProspeccaoAssertive.html">Prospecção Assertive</a></li>
+      </ul>
+
+    </div>
+
+    <a href="Contato.html">Contato</a>
+  </nav>
+</header>
+
+<!-- escurecer ao dar toggle no menu mobile-->
+<div class="overlay"> </div>
+
+<!-- end thales header -->
+
+<!-- Thales Hero -->
+<section id="hero">
+  <div class="hero-inner"> 
+    <h1 class="hero-title fade-in-left">Seja bem-vindo, <br> Conheça a Assertive</h1>
+    <div class="hero-content">
+      <p>
+        A Assertive Brasil surge no mercado com intuito de conectar empresas através da Prospecção B2B. 
+        Contamos com profissionais que possuem mais de 15 anos de experiência atuando em empresas multinacionais.
+      </p>  
+    </div>
+  </div>
+</section>
+
+<!-- end Thales Hero -->
+
+<!-- Renan Pessoas -->
+  
+<!-- end Renan Pessoas -->
+
+<!--end parte Murillo -->
+<!-- end parte Murillo -->
+
+
+
+<!-- Renan contato -->
+  
+<!-- end Renan contato -->
+  
+<!-- Thales footer -->
+
+<!-- end Thales footer -->
+  <script src="../JS/header-footer.js"> </script>
+  <script src="../JS/sobreNos.js"> </script>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -30,7 +160,6 @@
 
   <!-- Renan Pessoas -->
   <!-- Para ver as animações melhor, remover comentário abaixo -->
-  <section class="contact-section"></section>
 
   <section class="white-section founders">
     <div class="section-title-container">
@@ -200,7 +329,62 @@
     </div>
   </section>
 
-  <section class="contact-section"></section>
+  <footer>
+  <div class="footer-content">
+    
+    <div class="footer-top">
+      
+      <div class="info-contato">
+        <p onclick="copiarTexto('(11) 3368-0002', this)"> 
+          <img class="img-icon" src="../imgs/telefone-Vector.svg" alt="Telefone"> 
+          (11) 3368-0002 <span class="copiado-msg"> Copiado! </span> 
+        </p>
+        <p onclick="copiarTexto('contato@assertivebrasil.com.br', this)"> 
+          <img class="img-icon" src="../imgs/mail-Vector.svg" alt="Email"> 
+          contato@assertivebrasil.com.br <span class="copiado-msg"> Copiado! </span>
+        </p>
+      </div>
+
+      <div class="logo-footer">
+        <a href="Home.html"> 
+          <img src="../imgs/logo-ksnip_20250416-205452-removebg-preview 1.png" alt="Logo Assertive">
+        </a>
+      </div>
+
+      <div class="redes-sociais">
+        <a href="https://www.instagram.com/assertivebrasil/" target="_blank">
+          <img class="img-icon" src="../imgs/ig-Icon.svg" alt="Instagram"> @assertivebrasil
+        </a>
+        <a href="https://www.linkedin.com/company/assertivebrasil/" target="_blank">
+          <img class="img-icon" src="../imgs/linkedin-Icon.svg" alt="LinkedIn"> /company/assertivebrasil
+        </a>
+      </div>
+
+    </div>
+
+    <div class="localizacao-assertive">
+      <div class="endereco">
+        <p onclick="copiarTexto('Av. Marquês de São Vicente, 446 - Barra Funda - SP', this)">
+          <img class="img-icon" src="../imgs/local-Icon.svg" alt="Localização">
+          Av. Marquês de São Vicente, 446 - Barra Funda - SP <span class="copiado-msg"> Copiado! </span>
+        </p>
+      </div>
+
+      <div class="mapa">
+        <a href="https://www.google.com/maps/dir/-23.5798528,-47.5365376/Av.+Marquês+de+S.+Vicente,+446+-+Várzea+da+Barra+Funda,+São+Paulo+-+SP,+01139-000/"
+           target="_blank">
+          <img src="../imgs/ksnip_20250413-192008 1.png" alt="Mapa da localização"/>
+        </a> 
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Assertive. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
 
   <script src="../JS/sobreNos.js"></script>
   <!-- end Renan contato -->
