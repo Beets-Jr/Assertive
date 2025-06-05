@@ -1,33 +1,19 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(async (entry) => {
-      if (entry.isIntersecting) {
-        const initialValue = Number(entry.target.innerHTML);
-        let time, increment
+    const videoContainer = document.querySelector(['.video']);
 
-        increment = Math.ceil(Math.sqrt(initialValue));
+    [
+        {top: '75px', left: '4%'},
+        {bottom: '75px', left: '6%'},
+        {top: '150px', left: '20%'},
+        {top: '100px', right: '12%'},
+        {bottom: '100px', right: '7%'},
+    ].forEach((item) => {
+        const circle = document.createElement('div');
+        circle.classList.add('video-background-circle');
+        Object.entries(item).forEach(([key, value]) => {
+            circle.style[key] = value;
+        })
 
-        if (initialValue < 100) time = 100;
-        else if (initialValue < 10000) time = 20;
-        else time = 5;
-
-        entry.target.innerHTML = 0;
-
-        for (let i = 0; i < initialValue; i += increment) {
-            await new Promise(r => setTimeout(() => {
-                const newValue = entry.target.innerHTML = i + increment > initialValue
-                    ? initialValue
-                    : i;
-                r(newValue);
-            }, time))
-        }
-      }
+        videoContainer.appendChild(circle);
     });
-  });
-
-  const numbers = document.querySelectorAll([
-    '.number',
-  ]);
-
-  numbers.forEach((item) => observer.observe(item));
 })
