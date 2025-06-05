@@ -2,6 +2,10 @@
     --fonte-assertive: 'Inria Sans', sans-serif;
 }
 
+header, footer {
+  font-size: 16px;
+}
+
 .header-solid {
     background: linear-gradient(90deg, rgba(9, 148, 180, 1) 0%, rgba(2, 81, 146, 1) 30%, rgba(28, 32, 85, 1) 100%);
 }
@@ -58,7 +62,7 @@ header::before {
 
 .menu-toggle {
     display: none;
-    font-size: 2rem;
+    font-size: 2em;
     color: white;
     cursor: pointer;
     margin-right: 2%;
@@ -131,12 +135,12 @@ header nav a:hover::after {
     header nav {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.5em;
         position: fixed;
         top: 70px;
         right: 5px;
         width: 40%;
-        padding: 2rem 1.5rem;
+        padding: 2em 1.5em;
         
         background: rgba(255, 255, 255, 0.1); /* transparente */
         backdrop-filter: blur(10px); /* vidro fosco */
@@ -156,7 +160,7 @@ header nav a:hover::after {
     }
 
     header nav a {
-        font-size: 1.2rem;
+        font-size: 1.2em;
         color: white;
         text-decoration: none;
     }
@@ -182,10 +186,10 @@ header nav a:hover::after {
   background: rgba(255,255,255,0.05);
 
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1em;
   display: flex;
-  flex-wrap: wrap;       /* deixa q os cards “quebrem” linha */
-  gap: 1rem;
+  flex-wrap: wrap;       /* deixa q os cards “quebem” linha */
+  gap: 1em;
 
   overflow-y: scroll;
   scrollbar-width: none; /* tirar scrollbar em diferentes navegadores */
@@ -216,19 +220,19 @@ header nav a:hover::after {
 
   background: linear-gradient(88deg,  rgba(9,148,180,1) 0%,rgba(2,41,69,1) 100%);
   border-radius: 8px;
-  padding: 1.2rem;
+  padding: 1.2em;
   color: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   font-family: var(--fonte-assertive);
 
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.5em;
 
   flex: 0 1 200px;
   min-width: 20vw;
   max-width: 30vw;
-  min-height: 9rem;
+  min-height: 9em;
 
   transition: background 0.3s ease-in-out;
 }
@@ -243,7 +247,7 @@ header nav a:hover::after {
 
   background: transparent;
   color: #0994B4;       
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   line-height: 1.4;
@@ -275,14 +279,14 @@ header nav a:hover::after {
 
 .dropdown-menu .card h3 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   line-height: 1.2;
   transition: opacity 0.3s ease-in-out;
 }
 .dropdown-menu .card p {
   margin: 0;
   margin-top: 5%;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   line-height: 1.4;
   flex-grow: 1;
   transition: opacity 0.3s ease-in-out;
@@ -291,16 +295,16 @@ header nav a:hover::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: 0.5em;
   transition: opacity 0.3s ease-in-out;
 }
 .dropdown-menu .card .atributos p {
   max-width: fit-content;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   font-family: var(--fonte-assertive);
   white-space: nowrap;
   margin: 0;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25em 0.5em;
   border: 0.5px solid white;
   border-radius: 15px;
   transition: opacity 0.3s ease-in-out;
@@ -321,7 +325,7 @@ header nav a:hover::after {
 
   .dropdown .dropbtn {
     display: block;
-    padding: 0.55rem 1rem;
+    padding: 0.55em 1em;
     color: white;
     text-decoration: none;
   }
@@ -329,8 +333,8 @@ header nav a:hover::after {
   .dropdown .submenu-mobile {
     display: none;
     margin: 0;           
-    margin-top: 0.5rem;
-    padding-left: 1.5rem;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
     flex-direction: column;
   }
   .dropdown.open .submenu-mobile {
@@ -339,14 +343,14 @@ header nav a:hover::after {
 
   .dropdown .submenu-mobile li {
     list-style: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
   }
   .dropdown .submenu-mobile li a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1em;
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1em;
     border-radius: 4px;
   }
 
@@ -361,7 +365,7 @@ header nav a:hover::after {
     overflow-y: scroll;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
+    gap: 1em;
 
     opacity: 0;
     transform: translateX(-50%) scale(0);
@@ -379,13 +383,13 @@ header nav a:hover::after {
     flex: 1 1 90%;       
     max-width: 90vw;
     height: auto;        
-    min-height: 10rem;
-    padding: 1.2rem;
+    min-height: 10em;
+    padding: 1.2em;
   }
 
   .dropdown .dropdown-menu .card .atributos {
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.4em;
   }
 
   .dropdown .dropdown-menu .card::before {
@@ -397,13 +401,13 @@ footer {
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, rgba(9, 148, 180, 1) 0%, rgba(0, 4, 57, 1) 100%);
-    padding: 2rem;
+    padding: 2em;
 }
 
 .footer-content {
     color: white;
     font-family: var(--fonte-assertive);
-    font-size: 1.2rem;
+    font-size: 1.2em;
 
 }
 
@@ -432,7 +436,7 @@ footer {
     margin: 4vh auto;
     gap: 24vw;
     border-bottom: 2px solid white;
-    padding-bottom: 2rem;
+    padding-bottom: 2em;
 }
 
  .info-contato p, .endereco p {
@@ -471,13 +475,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 2em;
 }
 
 .mapa img {
     max-width: 100%;
     height: auto;
-    margin-top: 1rem;
+    margin-top: 1em;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -489,9 +493,9 @@ footer {
 
 
 .footer-bottom {
-    margin-top: 2rem;
+    margin-top: 2em;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: white;
 }
 
@@ -506,7 +510,7 @@ footer {
     .footer-top {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 2em;
     }
 
     .info-contato, .redes-sociais {
@@ -517,6 +521,6 @@ footer {
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .footer-top {
-        gap: 1.5rem; 
+        gap: 1.5em; 
     }
 }
