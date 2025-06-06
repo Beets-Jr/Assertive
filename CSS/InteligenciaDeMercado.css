@@ -67,7 +67,7 @@ body {
     justify-content: space-around;
     margin: auto;
     padding: 7rem 1rem 10rem;
-    max-width: 1200px;
+    max-width: 75rem;
 }
 
 .market-intelligence-what-is-it > article > h3 {
@@ -76,8 +76,8 @@ body {
     border: solid 1rem rgba(#000, .03);
     position: relative;
     background: var(--primary-blue)
-                border-box /* background-origin */
-                padding-box /* background-clip */;
+                border-box
+                padding-box;
     border-radius: 1rem;
     color: white;
     font-size: 1.2rem;
@@ -103,8 +103,8 @@ body {
 
 .market-intelligence-what-is-it > article {
     flex: 1;
-    max-width: 400px;
-    min-width: 300px;
+    max-width: 25rem;
+    min-width: 18.75rem;
 }
 
 .market-intelligence-what-is-it > article > p {
@@ -113,8 +113,8 @@ body {
 }
 
 .market-intelligence-what-is-it-vertical-bar {
-    height: 200px;
-    width: 4px;
+    height: 12.5rem;
+    width: .25rem;
     background: var(--secondary-blue);
     background: linear-gradient(var(--secondary-blue) 50%, var(--primary-blue) 100%);
 }
@@ -133,11 +133,10 @@ body {
     color: white;
     font-size: 2.5rem;
     margin: auto;
-    max-width: 700px;
     padding: 2rem;
     text-align: center;
     transform: translateY(-50%);
-    width: 80%;
+    width: 50vw;
 }
 
 .market-intelligence-main-functions-cards-container {
@@ -146,7 +145,7 @@ body {
     column-gap: 2rem;
     justify-content: space-around;
     margin: auto;
-    max-width: 1200px;
+    max-width: 75rem;
     padding-bottom: 6rem;
     row-gap: 10rem;
 }
@@ -156,8 +155,8 @@ body {
     border: 2px solid white;
     border-radius: 1rem;
     color: white;
-    min-height: 200px;
-    min-width: 300px;
+    min-height: 12.5rem;
+    min-width: 18.75rem;
     padding: 1.5rem 1rem;
     text-align: center;
     width: calc(100% / 3);
@@ -181,16 +180,16 @@ body {
     border-bottom: 2px solid white;
     border-left: 2px solid white;
     bottom: 12rem;
-    height: 300px;
+    height: 18.75rem;
     position: absolute;
-    transform: translateX( calc(50vw - 600px / 2) );
-    width: 600px;
+    transform: translateX( calc(50vw - 37.5rem / 2) );
+    width: 37.5rem;
 }
 
 
 .market-intelligence-how-the-service-works {
     margin: auto;
-    max-width: 1200px;
+    max-width: 75rem;
 }
 
 .market-intelligence-how-the-service-works > h2 {
@@ -202,11 +201,11 @@ body {
 
 @media (max-width: 500px) {
     .market-intelligence-what-is-it > article {
-        min-width: 250px;
+        min-width: 15.75rem;
     }
 
     .market-intelligence-main-functions-card {
-        min-width: 100px;
+        min-width: 6.25rem;
         width: 70%;
     }
 }
@@ -216,6 +215,10 @@ body {
     .market-intelligence-main-functions-lines,
     .market-intelligence-main-functions-card.card-hidden {
         display: none;
+    }
+
+    .market-intelligence-main-functions > h2 {
+        width: 90vw;
     }
 }
 
@@ -247,6 +250,88 @@ body {
     }
 }
 
+.how-it-works-container {
+    margin: auto;
+    max-width: 75rem;
+    padding: 5rem 1rem;
+}
+
+.how-it-works-container > h2 {
+    color: var(--primary-blue);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.information-container .dot{
+    display: none;
+}
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: auto 0.2rem 1fr;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.dots-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+.how-it-works-grid>hr {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    background-color: var(--secondary-blue);
+    justify-self: center;
+}
+
+.information-container {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.information-container div{
+    height: 4.75rem;
+}
+
+.information-container div h1{
+    font-size: 1.8rem;
+    margin-bottom: .75rem;
+}
+
+.information-container div p{
+    font-size: 1.3rem;
+}
+
+.dot {
+    width: 4.75rem;
+    height: 4.75rem;
+    background-color: var(--secondary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.information-container > div:last-child {
+    height: 13rem;
+}
+
 @media (max-width: 1200px) {
     .market-intelligence-main-functions-lines {
         transform: translateX( calc(25vw) );
@@ -271,8 +356,8 @@ body {
         height: 0px;
     }
     100% {
-        height: 350px;
-        width: 450px;
+        height: 21.75rem;
+        width: 28.25rem;
     }
 }
 
@@ -284,4 +369,71 @@ body {
   .expand-animation {
     animation: expand 1.5s ease-out;
   }
+}
+
+
+
+
+@media (max-width: 1199px){
+    .how-it-works-container > h2 {
+        text-align: center;
+    }
+
+    .how-it-works-container hr{
+        display: none;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns:  1fr;
+        justify-items: center;
+        column-gap: 0;
+    }
+
+    .information-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 3rem;
+        width: 100%;
+        max-width: 75%;
+    }
+
+    .dots-container {
+        display: none;
+    }
+
+    .information-container .dot{
+        display: flex;
+        margin: 0 auto;
+        
+    }
+
+    .information-container div h1{
+        margin-bottom: 0;
+    }
+
+    .information-container > div:last-child {
+        height: auto;
+    }
+
+    .dot {
+        margin-top: 2rem;
+    }
+
+    .information-container div:not(.dot){
+        height: auto;
+    }
+}
+
+@media (min-width: 2000px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 3000px) {
+    :root {
+        font-size: 36px;
+    }
 }
