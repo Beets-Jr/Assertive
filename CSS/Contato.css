@@ -193,6 +193,18 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+button.success {
+  background-color: #2a7f62;
+  color: #fff;
+  width: 200px;
+}
+button.error {
+  background-color: #b00020;
+  color: #fff;
+  width: 200px;
+}
+
+
 @media (max-width: 1200px){
     .contact-img{
         display: none;

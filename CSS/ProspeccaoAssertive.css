@@ -91,6 +91,7 @@
 
 .btn-primary:hover {
     background-color: #06215f;
+    cursor: pointer;
 }
 
 /* end Hero */
