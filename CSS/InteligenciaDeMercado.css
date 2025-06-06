@@ -1,0 +1,439 @@
+:root {
+    --primary-font: "Inria Sans", sans-serif;
+    --secondary-font: "League Spartan", "Inria Sans", sans-serif;
+    --primary-blue: #15194B;
+    --secondary-blue: #0994B4;
+    --third-blue: #000760;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+.market-intelligence-hero {
+    background: url("../imgs/market-intelligence-what-is-it.jpg") no-repeat 120% top/75%, linear-gradient(to right, #02052F, #06090E 20%);
+    height: 100vh;
+    width: 100vw;
+}
+
+.market-intelligence-hero-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    padding: 5%;
+    width: 40%;
+}
+
+.market-intelligence-hero-content > h1 {
+    font-size: 4.5rem;
+}
+
+.market-intelligence-hero-content > p {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.market-intelligence-hero-content > button {
+    background-color: #132769;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 1.5rem 6rem;
+    transition: .1s;
+    width: fit-content;
+}
+
+.market-intelligence-hero-content > button:hover {
+    background-color: var(--secondary-blue);
+    cursor: pointer;
+}
+
+.market-intelligence-what-is-it {
+    align-items: flex-start;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    padding: 7rem 1rem 10rem;
+    max-width: 75rem;
+}
+
+.market-intelligence-what-is-it > article > h3 {
+    /* fonte: https://css-tricks.com/blurred-borders-in-css/ */
+    text-align: center;
+    border: solid 1rem rgba(#000, .03);
+    position: relative;
+    background: var(--primary-blue)
+                border-box
+                padding-box;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin-bottom: 2rem;
+}
+
+.market-intelligence-what-is-it > article > h3:before {
+    /* fonte: https://css-tricks.com/blurred-borders-in-css/ */
+    position: absolute;
+    z-index: -1;
+    top: -.5rem; right: -.5rem; bottom: -.5rem; left: -.5rem;
+    border: inherit;
+    border-color: transparent;
+    background: inherit;
+    background-clip: border-box;
+    -webkit-filter: blur(.2rem);
+            filter: blur(.2rem);
+    content: '';
+    border-radius: inherit;
+    clip-path: inset(0 round 1rem);
+}
+
+.market-intelligence-what-is-it > article {
+    flex: 1;
+    max-width: 25rem;
+    min-width: 18.75rem;
+}
+
+.market-intelligence-what-is-it > article > p {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.market-intelligence-what-is-it-vertical-bar {
+    height: 12.5rem;
+    width: .25rem;
+    background: var(--secondary-blue);
+    background: linear-gradient(var(--secondary-blue) 50%, var(--primary-blue) 100%);
+}
+
+
+.market-intelligence-main-functions {
+    background: var(--primary-blue) url("../imgs/market-intelligence-main-functions.jpg") no-repeat top;
+    background-size: cover;
+    position: relative;
+}
+
+.market-intelligence-main-functions > h2 {
+    background: var(--secondary-blue);
+    background: linear-gradient(var(--third-blue) 0%, var(--primary-blue) 100%);
+    border-radius: 2rem;
+    color: white;
+    font-size: 2.5rem;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    transform: translateY(-50%);
+    width: 50vw;
+}
+
+.market-intelligence-main-functions-cards-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    column-gap: 2rem;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 75rem;
+    padding-bottom: 6rem;
+    row-gap: 10rem;
+}
+
+.market-intelligence-main-functions-card {
+    background-color: var(--primary-blue);
+    border: 2px solid white;
+    border-radius: 1rem;
+    color: white;
+    min-height: 12.5rem;
+    min-width: 18.75rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    width: calc(100% / 3);
+    z-index: 1;
+}
+
+.market-intelligence-main-functions-card > h3 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.market-intelligence-main-functions-card > h3::before {
+    content: '\002b62';
+}
+
+.market-intelligence-main-functions-card.card-hidden {
+    visibility: hidden;
+}
+
+.market-intelligence-main-functions-lines {
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    bottom: 12rem;
+    height: 18.75rem;
+    position: absolute;
+    transform: translateX( calc(50vw - 37.5rem / 2) );
+    width: 37.5rem;
+}
+
+
+.market-intelligence-how-the-service-works {
+    margin: auto;
+    max-width: 75rem;
+}
+
+.market-intelligence-how-the-service-works > h2 {
+    color: var(--primary-blue);
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+
+@media (max-width: 500px) {
+    .market-intelligence-what-is-it > article {
+        min-width: 15.75rem;
+    }
+
+    .market-intelligence-main-functions-card {
+        min-width: 6.25rem;
+        width: 70%;
+    }
+}
+
+@media (max-width: 710px) {
+    .market-intelligence-what-is-it-vertical-bar.first-bar,
+    .market-intelligence-main-functions-lines,
+    .market-intelligence-main-functions-card.card-hidden {
+        display: none;
+    }
+
+    .market-intelligence-main-functions > h2 {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .market-intelligence-main-functions-cards-container {
+        row-gap: 2rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .market-intelligence-hero {
+        background-position: center ;
+        background-size: cover;
+    }
+
+    .market-intelligence-hero-content {
+        backdrop-filter: blur(5px) brightness(50%);
+        height: 100vh;
+        padding: 10%;
+        width: 100%;
+    }
+
+    .market-intelligence-hero-content > h1 {
+        text-align: center;
+    }
+
+    .market-intelligence-what-is-it-vertical-bar.second-bar {
+        display: none;
+    }
+}
+
+.how-it-works-container {
+    margin: auto;
+    max-width: 75rem;
+    padding: 5rem 1rem;
+}
+
+.how-it-works-container > h2 {
+    color: var(--primary-blue);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.information-container .dot{
+    display: none;
+}
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: auto 0.2rem 1fr;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.dots-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+.how-it-works-grid>hr {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    background-color: var(--secondary-blue);
+    justify-self: center;
+}
+
+.information-container {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.information-container div{
+    height: 4.75rem;
+}
+
+.information-container div h1{
+    font-size: 1.8rem;
+    margin-bottom: .75rem;
+}
+
+.information-container div p{
+    font-size: 1.3rem;
+}
+
+.dot {
+    width: 4.75rem;
+    height: 4.75rem;
+    background-color: var(--secondary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.information-container > div:last-child {
+    height: 13rem;
+}
+
+@media (max-width: 1200px) {
+    .market-intelligence-main-functions-lines {
+        transform: translateX( calc(25vw) );
+        width: 50%;
+    }
+}
+
+@keyframes visible-by-left-block {
+    0% {
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expand {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        height: 21.75rem;
+        width: 28.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .visible-by-left-block-animation {
+    animation: visible-by-left-block .75s ease-in-out;
+  }
+
+  .expand-animation {
+    animation: expand 1.5s ease-out;
+  }
+}
+
+
+
+
+@media (max-width: 1199px){
+    .how-it-works-container > h2 {
+        text-align: center;
+    }
+
+    .how-it-works-container hr{
+        display: none;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns:  1fr;
+        justify-items: center;
+        column-gap: 0;
+    }
+
+    .information-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 3rem;
+        width: 100%;
+        max-width: 75%;
+    }
+
+    .dots-container {
+        display: none;
+    }
+
+    .information-container .dot{
+        display: flex;
+        margin: 0 auto;
+        
+    }
+
+    .information-container div h1{
+        margin-bottom: 0;
+    }
+
+    .information-container > div:last-child {
+        height: auto;
+    }
+
+    .dot {
+        margin-top: 2rem;
+    }
+
+    .information-container div:not(.dot){
+        height: auto;
+    }
+}
+
+@media (min-width: 2000px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 3000px) {
+    :root {
+        font-size: 36px;
+    }
+}
