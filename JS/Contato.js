@@ -39,49 +39,43 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// inicialização adequada da lib
-// inicializar EmailJS
-emailjs.init("qR40mo582M-dJfrZR");
 
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const btn  = form.querySelector('button[type="submit"]');
-  // guardamos o texto e as classes originais
-  const originalText    = btn.innerText;
-  const originalClasses = btn.className;
+  const originalText = btn.innerText;
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  form.addEventListener('submit', async e => {
+    e.preventDefault();              // para não navegar
+    btn.disabled = true;
+    btn.innerText = 'Enviando…';
 
-    // estado “enviando”
-    btn.disabled    = true;
-    btn.innerText   = 'Enviando…';
-    btn.className   = originalClasses; // remove possíveis classes de feedback
+    // coleta dos campos do form
+    const data = Object.fromEntries(new FormData(form));
 
-    emailjs.sendForm('contact_service', 'template_pzny7fl', this)
-      .then(() => {
-        // sucesso
-        btn.innerText = 'Mensagem enviada!';
-        btn.classList.add('success');
-        form.reset();
-      })
-      .catch(err => {
-        console.error('EmailJS error:', err);
-        // erro
-        btn.innerText = 'Falha ao enviar';
-        btn.classList.add('error');
-      })
-      .finally(() => {
-        // volta ao normal depois de 3s
-        setTimeout(() => {
-          btn.disabled  = false;
-          btn.innerText = originalText;
-          btn.className = originalClasses;
-        }, 3000);
+    try {
+      const res = await fetch('/enviar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       });
-  });
-};
 
+      if (!res.ok) throw new Error(res.statusText);
+
+      // sucesso
+      btn.innerText = '✔ Enviado!';
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      btn.innerText = '✖ Falha ao enviar';
+    } finally {
+      setTimeout(() => {
+        btn.disabled  = false;
+        btn.innerText = originalText;
+      }, 3000);
+    }
+  });
+});
 
 
 /* end parte Renan */
