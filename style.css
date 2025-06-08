@@ -1,0 +1,12 @@
+/*
+Theme Name: assertive
+Theme URI: http://assertive.com
+Author: Beets Jr
+Author URI: https://beetsjr.com.br/
+Description: Thema criado pela Beets Jr. para a Assertive
+Version: 1.0
+*/
+
+@import 'CSS/header-footer.css';
+@import 'CSS/sobreNos.css';
+@import 'CSS/sobreNosTransicoes.css';
