@@ -2,11 +2,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const videoContainer = document.querySelector(['.video']);
 
     [
-        {top: '75px', left: '4%'},
-        {bottom: '75px', left: '6%'},
-        {top: '150px', left: '20%'},
-        {top: '100px', right: '12%'},
-        {bottom: '100px', right: '7%'},
+        {top: '5rem', left: '4%'},
+        {bottom: '5rem', left: '6%'},
+        {top: '10rem', left: '20%'},
+        {top: '7rem', right: '12%'},
+        {bottom: '7rem', right: '7%'},
     ].forEach((item) => {
         const circle = document.createElement('div');
         circle.classList.add('video-background-circle');
