@@ -31,4 +31,16 @@ function the_field($field, $page = NULL, $unique = true) {
 add_action( 'wp_enqueue_scripts', 'assertive_css' );
 add_action( 'wp_enqueue_scripts', 'assertive_scripts' );
 
+/*
+Parte Renan
+*/
+
+/*
+Parte JH
+*/
+
+/*
+Parte Murillo
+*/
+
 ?>
