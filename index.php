@@ -13,4 +13,16 @@
   </section>
 <?php endif; ?>
 
+<?php
+/* Parte Renan */
+?>
+
+<?php
+/* Parte JH */
+?>
+
+<?php
+/* Parte Murillo */
+?>
+
 <?php get_footer() ?>
