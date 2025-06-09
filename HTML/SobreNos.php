@@ -1,15 +1,19 @@
 <?php
 // Template Name: SobreNos
 ?>
-  <?php get_header() ?>
+
+<?php get_header() ?>
+
+<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
 
   <section id="hero">
     <div class="hero-inner">
-      <h1 class="hero-title fade-in-left">Seja bem-vindo, <br> Conheça a Assertive</h1>
+      <h1 class="hero-title fade-in-left">
+        <?php the_field('sobre_nos_hero_title'); ?>
+      </h1>
       <div class="hero-content">
         <p>
-          A Assertive Brasil surge no mercado com intuito de conectar empresas através da Prospecção B2B.
-          Contamos com profissionais que possuem mais de 15 anos de experiência atuando em empresas multinacionais.
+          <?php the_field('sobre_nos_hero_description'); ?>
         </p>
       </div>
     </div>
@@ -25,24 +29,15 @@
 
       <div class="blue-card">
         <div class="title-container">
-          <h2 class="inria-sans-bold">Renato Caitano</h3>
+          <h2 class="inria-sans-bold">
+            <?php the_field('sobre_nos_founders_co_founder_name'); ?>
+          </h3>
             <h3>Sócio Co-fundador</h3>
         </div>
 
         <div class="information-container">
           <p>
-            Sócio co-fundador, traz consigo 18 anos de experiência em vendas. Ao longo de sua carreira, trabalhou em
-            multinacionais, onde se destacou como gestor de alta performance, liderando equipes e superando metas
-            desafiadoras.
-            Graduado em Marketing, pós-graduado em Gestão de Pessoas com ênfase em Liderança e MBA em Economia e Gestão
-            Empresarial.
-            Sua formação acadêmica, combinada com sua vasta experiência prática, proporcionando uma visão estratégica e
-            aprofundada sobre o mercado.
-            Com uma paixão por desenvolver talentos e otimizar processos, Renato se dedica a criar equipes de vendas
-            motivadas e eficazes. Ele acredita que o sucesso em vendas vai além de números; trata-se de construir
-            relacionamentos duradouros e entender profundamente as necessidades dos clientes.
-            Renato é um profissional comprometido em transformar desafios em oportunidades, contribuindo
-            significativamente para o crescimento e a excelência das empresas que atende.
+            <?php the_field('sobre_nos_founders_co_founder_description'); ?>
           </p>
         </div>
       </div>
@@ -52,25 +47,15 @@
     <div class="grid-container-socio2">
       <div class="blue-card">
         <div class="title-container">
-          <h2 class="inria-sans-bold">Larissa Tavares</h2>
+          <h2 class="inria-sans-bold">
+            <?php the_field('sobre_nos_founders_founder_name'); ?>
+          </h2>
           <h3>Sócia fundadora</h3>
         </div>
 
         <div class="information-container">
           <p>
-            Formada em Administração de Empresas e Pós-graduada em Gestão, MBA em Gestão de Negócios, ela combina
-            conhecimento acadêmico com uma rica vivência prática.
-            Ao longo de sua carreira, se destacou na implantação de projetos em empresas nacionais e multinacionais,
-            sempre com foco em resultados tangíveis.
-            Sua verdadeira paixão, no entanto, é o desenvolvimento de equipes comerciais de alta performance.
-            Com uma abordagem que une técnicas de vendas eficazes e estratégias inovadoras, ela tem treinado e
-            qualificado times para superarem suas metas e se destacarem no mercado.
-            Larissa, acredita que o sucesso na prospecção é fruto da combinação de conhecimento, adaptação às dinâmicas
-            do mercado e um forte alinhamento com os objetivos da empresa. Com essa filosofia, ela tem ajudado
-            organizações a transformarem desafios em oportunidades, elevando o padrão de excelência em suas operações
-            comerciais.
-            Seu compromisso em transformar desafios em oportunidades tem sido fundamental para o crescimento e a
-            excelência dos negócios que atende.
+            <?php the_field('sobre_nos_founders_founder_description'); ?>
           </p>
         </div>
       </div>
@@ -148,5 +133,7 @@
     <p>Transformamos resultados</p>
     <p>Em histórias de sucesso</p>
   </aside>
+
+<?php endwhile; endif; ?>
 
 <?php get_footer() ?>
