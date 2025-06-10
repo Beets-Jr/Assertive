@@ -76,6 +76,12 @@ function sobre_nos_founders() {
   ]);
 
   $sobre_nos_founders_box->add_field([
+    'id' => 'sobre_nos_founders_co_founder',
+    'name' => esc_html__('Co-fundador', 'cmb2'),
+    'type' => 'title',
+  ]);
+
+  $sobre_nos_founders_box->add_field([
     'id' => 'sobre_nos_founders_co_founder_photo',
     'name' => esc_html__('Foto do co-fundador', 'cmb2'),
     'type' => 'file',
@@ -91,12 +97,6 @@ function sobre_nos_founders() {
         'image/png',
       ]
     ]
-  ]);
-
-  $sobre_nos_founders_box->add_field([
-    'id' => 'sobre_nos_founders_co_founder',
-    'name' => esc_html__('Co-fundador', 'cmb2'),
-    'type' => 'title',
   ]);
 
   $sobre_nos_founders_box->add_field([
@@ -139,14 +139,14 @@ function sobre_nos_how_the_work() {
   ]);
 
   $sobre_nos_how_the_work_box->add_group_field($sobre_nos_how_the_work_cards, [
-    'id' => 'sobre_nos_how_the_work_card_title',
+    'id' => 'title',
     'name' => esc_html__('Título', 'cmb2'),
     'desc' => esc_html__('Título exibido no topo do card', 'cmb2'),
     'type' => 'text_medium',
   ]);
 
   $sobre_nos_how_the_work_box->add_group_field($sobre_nos_how_the_work_cards, [
-    'id' => 'sobre_nos_how_the_work_card_description',
+    'id' => 'description',
     'name' => esc_html__('Descrição', 'cmb2'),
     'desc' => esc_html__('Descrição no corpo do card', 'cmb2'),
     'type' => 'text',
@@ -192,14 +192,14 @@ function sobre_nos_who_we_are() {
   ]);
 
   $sobre_nos_who_we_are_box->add_group_field($sobre_nos_who_we_are_cards, [
-    'id' => 'sobre_nos_who_we_are_cards_title',
+    'id' => 'title',
     'name' => esc_html__('Título', 'cmb2'),
     'desc' => esc_html__('Título exibido no topo do card', 'cmb2'),
     'type' => 'text_medium',
   ]);
 
   $sobre_nos_who_we_are_box->add_group_field($sobre_nos_who_we_are_cards, [
-    'id' => 'sobre_nos_who_we_are_cards_description',
+    'id' => 'description',
     'name' => esc_html__('Descrição', 'cmb2'),
     'desc' => esc_html__('Descrição no corpo do card', 'cmb2'),
     'type' => 'textarea_small',

@@ -1,5 +1,6 @@
 <?php
 
+require_once( dirname(__FILE__) . '/CMB2/cmb2Home.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2SobreNos.php' );
 
 function assertive_css() {

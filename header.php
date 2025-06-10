@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<?php $home = get_page_by_title('Home'); ?>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +29,10 @@
   <header class="header-transparent">
     <div class="logo-header fade-in-left">
       <a href="home.html">
-        <img src="../imgs/logo-ksnip_20250416-205452-removebg-preview 1.png">
+        <?php
+          $logo = wp_get_attachment_image_src(get_field('logo_assertive_id', $home->ID), 'large')[0];
+        ?>
+        <img src="<?php echo $logo ?>" alt="logo assertive">
       </a>
     </div>
 

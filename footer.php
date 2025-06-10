@@ -1,3 +1,5 @@
+<?php $home = get_page_by_title('Home'); ?>
+
   <div class="contact-spacing"></div>
 
   <section class="blue-bg">
@@ -51,27 +53,30 @@
 
         <div class="info-contato">
           <p onclick="copiarTexto('(11) 3368-0002', this)">
-            <img class="img-icon" src="../imgs/telefone-Vector.svg" alt="Telefone">
+            <img class="img-icon" src="<?php echo get_template_directory_uri() ?>/imgs/telefone-Vector.svg" alt="Telefone">
             (11) 3368-0002 <span class="copiado-msg"> Copiado! </span>
           </p>
           <p onclick="copiarTexto('contato@assertivebrasil.com.br', this)">
-            <img class="img-icon" src="../imgs/mail-Vector.svg" alt="Email">
+            <img class="img-icon" src="<?php echo get_template_directory_uri() ?>/imgs/mail-Vector.svg" alt="Email">
             contato@assertivebrasil.com.br <span class="copiado-msg"> Copiado! </span>
           </p>
         </div>
 
         <div class="logo-footer">
           <a href="Home.html">
-            <img src="../imgs/logo-ksnip_20250416-205452-removebg-preview 1.png" alt="Logo Assertive">
+            <?php
+              $logo = wp_get_attachment_image_src(get_field('logo_assertive_id', $home->ID), 'large')[0];
+            ?>
+            <img src="<?php echo $logo ?>" alt="logo da Assertive" class="mvv-image">
           </a>
         </div>
 
         <div class="redes-sociais">
           <a href="https://www.instagram.com/assertivebrasil/" target="_blank">
-            <img class="img-icon" src="../imgs/ig-Icon.svg" alt="Instagram"> @assertivebrasil
+            <img class="img-icon" src="<?php echo get_template_directory_uri() ?>/imgs/ig-Icon.svg" alt="Instagram"> @assertivebrasil
           </a>
           <a href="https://www.linkedin.com/company/assertivebrasil/" target="_blank">
-            <img class="img-icon" src="../imgs/linkedin-Icon.svg" alt="LinkedIn"> /company/assertivebrasil
+            <img class="img-icon" src="<?php echo get_template_directory_uri() ?>/imgs/linkedin-Icon.svg" alt="LinkedIn"> /company/assertivebrasil
           </a>
         </div>
 
@@ -80,7 +85,7 @@
       <div class="localizacao-assertive">
         <div class="endereco">
           <p onclick="copiarTexto('Av. Marquês de São Vicente, 446 - Barra Funda - SP', this)">
-            <img class="img-icon" src="../imgs/local-Icon.svg" alt="Localização">
+            <img class="img-icon" src="<?php echo get_template_directory_uri() ?>/imgs/local-Icon.svg" alt="Localização">
             Av. Marquês de São Vicente, 446 - Barra Funda - SP <span class="copiado-msg"> Copiado! </span>
           </p>
         </div>
@@ -88,7 +93,10 @@
         <div class="mapa">
           <a href="https://www.google.com/maps/dir/-23.5798528,-47.5365376/Av.+Marquês+de+S.+Vicente,+446+-+Várzea+da+Barra+Funda,+São+Paulo+-+SP,+01139-000/"
             target="_blank">
-            <img src="../imgs/ksnip_20250413-192008 1.png" alt="Mapa da localização" />
+            <?php
+              $map = wp_get_attachment_image_src(get_field('map_preview_id', $home->ID), 'large')[0];
+            ?>
+            <img src="<?php echo $map ?>" alt="Mapa da localização" class="mvv-image">
           </a>
         </div>
       </div>

@@ -119,6 +119,11 @@ section#hero .hero-content {
     margin: 8em 2em 4em;
 }
 
+.how-the-work-cards-container,
+.how-the-work-cards-container > li {
+    list-style: none;
+}
+
 .how-the-work-card,
 .mvv-card {
     background-color: var(--primary-blue);
@@ -230,14 +235,15 @@ section#hero .hero-content {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin-top: 2em;
     gap: 2em;
+    margin-top: 2em;
 }
 
 .mvv-card {
     border-radius: .5em;
     font-size: 1.3em;
     font-weight: bold;
+    list-style-type: 'none';
     width: 36em;
 }
 
