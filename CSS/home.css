@@ -1,3 +1,370 @@
+:root {
+    --primary-blue: #15194B;
+    --secondary-blue: #0994B4;
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.inria-sans-font{
+    font-family: "Inria Sans", sans-serif;
+    font-style: normal;
+}
+
+.inria-sans-regular {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.inria-sans-bold {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-light {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.solutions-section{
+    height: 100%;
+    padding-bottom: 10vh;
+    background: #C7EEFF;
+    background: linear-gradient(180deg,rgba(199, 238, 255, 1) 0%, rgba(9, 97, 180, 1) 100%);
+}
+
+.solutions-content{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.solutions-content .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.solutions-content .title h1{
+    color: white;
+    font-size: 4.5rem;
+    width: 50%;
+    text-align: center;
+}
+
+.solutions-content .title h2 {
+    font-size: 3rem;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 3.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: #0994B4;
+    background: linear-gradient(90deg,rgba(9, 148, 180, 1) 0%, rgba(2, 41, 69, 1) 100%);
+    border-radius: 10px;
+    box-shadow:
+        0 10px 18px rgba(0,0,0,.28), 
+        0 25px 45px rgba(0,0,0,.20);
+    padding: 2rem;
+}
+
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(28rem, 1fr));
+    gap: 15rem 30rem;               
+    justify-items: center;     
+    margin-top: 10rem;   
+}
+
+.cards-grid .card-container:nth-child(3){
+    grid-column: 1 / -1;         
+    justify-self: center;        
+}
+
+.cards-grid .card h3{
+    font-size: 3rem;
+    color: white;
+}
+
+.cards-grid .card p{
+    font-size: 1.85rem;
+    color: white;
+}
+
+.cards-grid .card .characteristics{
+    display: flex;
+}
+
+.cards-grid .card .characteristics div{
+    color: white;
+    font-size: 1.05rem;
+    margin-right: 0.5rem;
+    border: solid white 1px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card-container{
+    width: 50rem;                
+    height: 25rem;
+    perspective: 1000px;          
+    position: relative;           
+    border-radius: 10px;
+}
+
+.card-inner{
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .8s ease;
+    border-radius: 10px;
+}
+
+.card-container:hover .card-inner,
+.card-container:focus-within .card-inner{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.card-inner .card{                
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;                
+}
+
+.front-card{
+    background: linear-gradient(90deg,#0994B4 0%,#022945 100%);
+    color:#fff;
+}
+
+.back-card{
+    transform: rotateY(180deg);
+    background: linear-gradient(0deg,#fff 65%,#3f99da 100%);
+    color: var(--secondary-blue);
+}
+
+.back-card p{
+    margin: auto auto;
+    color: var(--secondary-blue);
+    text-align: center;
+}
+
+.cards-grid .card-container .card-inner .back-card .sc-blue{
+    color: var(--secondary-blue);
+    font-size: 3rem;
+}
+
+.back-card a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -0.1rem;
+    top: -0.1rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.from-left {
+  transform: translateX(-120px);
+}
+
+.reveal.from-right {
+  transform: translateX(120px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0)      rotateZ(0deg); }
+  50%     { transform: translateY(-1rem)  rotateZ(.6deg); }
+}
+
+.card-container{                               
+  animation: float 2s ease-in-out infinite; /* Mudar aqui (o tempo) para deixar mais lento/rapido o flutuar */
+  will-change: transform;                      
+}
+
+.cards-grid .card-container:nth-child(2){ animation-delay: 1.4s; }
+.cards-grid .card-container:nth-child(3){ animation-delay: 2.8s; }
+
+
+
+@media ((min-width: 350px) and (max-width: 399px)){
+    :root{
+        font-size: 38%;
+    }
+
+    .cards-grid {
+        gap: 10rem;
+    }
+}
+
+@media ((min-width: 400px) and (max-width: 599px)){
+    :root{
+        font-size: 47%;
+    }
+
+    .cards-grid {
+        gap: 10rem;
+    }
+}
+
+@media ((min-width: 600px) and (max-width: 799px)){
+    :root{
+        font-size: 65%;
+    }
+
+    .cards-grid {
+        gap: 10rem;
+    }
+}
+
+@media ((min-width: 800px) and (max-width: 999px)){
+    :root{
+        font-size: 78%;
+    }
+
+    .cards-grid {
+        gap: 5rem;
+    }
+}
+
+@media ((min-width: 1000px) and (max-width: 1299px)){
+    :root{
+        font-size: 90%;
+    }
+
+    .cards-grid {
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .solutions-section{
+        height: 100%;
+        padding-bottom: 50px;
+    }
+
+    .cards-grid {
+        grid-template-columns: minmax(28rem, 1fr);
+        margin-top: 5rem;
+    }
+
+    .cards-grid .card:nth-child(3) {
+        grid-column: auto;
+    }
+
+    .solutions-content .title h1 {
+        font-size: 3rem;
+        width: 75%;
+    }
+
+    .solutions-content .title h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        height: 105%;
+        max-width: 50rem;
+        padding: 2.4rem;
+
+        border-radius: 1rem;
+        background: linear-gradient(180deg, #0994B4 0%, #022945 100%);
+        box-shadow:
+            0 10px 18px rgba(0, 0, 0, .18),
+            0 25px 45px rgba(0, 0, 0, .10);
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .back-card{
+        transform: rotateY(180deg);
+        background: linear-gradient(0deg,#fff 65%,#3f99da 100%);
+        color: var(--secondary-blue);
+    }
+}
+
+@media ((min-width: 2200px) and (max-width: 2999px)) {
+    :root{
+        font-size: 80%;
+    }
+
+    .solutions-content{
+        max-width: 180rem;
+    }
+
+    .card{
+        width: 65rem;
+        height: 28rem;
+    }
+}
+
+@media (min-width: 3000px) {
+    :root{
+        font-size: 110%;
+    }
+
+    .solutions-content{
+        max-width: 240rem;
+    }
+
+    .card{
+        width: 65rem;
+        height: 28rem;
+    }
+
+    .solutions-section{
+        height: 100%;
+        padding-bottom: 10vh;
+        background: #C7EEFF;
+        background: linear-gradient(180deg,rgba(199, 238, 255, 1) 0%, rgba(9, 97, 180, 1) 100%);
+    }
+}
+
 /* Parte THALES */
 * {
   margin: 0;
