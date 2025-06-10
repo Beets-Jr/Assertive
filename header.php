@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assertive</title>
+
+  <!-- Fonte Inria Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Fonte League Spartan -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- INíCIO HEAD WP -->
+  <?php wp_head(); ?>
+  <!-- FIM HEAD WP -->
+</head>
+
+<body>
+  <header class="header-transparent">
+    <div class="logo-header fade-in-left">
+      <a href="home.html">
+        <img src="../imgs/logo-ksnip_20250416-205452-removebg-preview 1.png">
+      </a>
+    </div>
+
+    <div class="menu-toggle">
+      &#9776; <!-- símbolo de 3 barrinhas -->
+    </div>
+
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="#hero">Quem somos</a>
+
+      <div class="dropdown js-dropdown">
+
+        <a href="#servicos" class="dropbtn js-dropbtn">Serviços</a>
+
+        <div class="dropdown-menu">
+
+          <div class="card"
+            data-hover-text="Conheça o perfil dos seus clientes com nosso produto de Inteligência de mercado!">
+            <h3>Inteligência de mercado</h3>
+            <p>
+              Conheça profundamente o setor dos seus potenciais clientes.
+              Entenda suas necessidades e desafios.
+            </p>
+            <div class="atributos">
+              <p>Análise Territorial</p>
+              <p>Share de Mercado</p>
+            </div>
+          </div>
+          <div class="card" data-hover-text="Transforme sua abordagem comercial com nosso Treinamento de Prospecção!">
+            <h3>Treinamento de Prospecção</h3>
+            <p>
+              Planeje e estruture sua estratégia de prospecção ativa.
+              Ganhe visibilidade para sua empresa.
+            </p>
+            <div class="atributos">
+              <p>Pesquisa e análise de leads</p>
+              <p>Abordagem personalizada</p>
+            </div>
+          </div>
+
+          <div class="card"
+            data-hover-text="Conheça nossa prospecção estratégica que alcança o segmento desejado pro seu produto!">
+            <h3>Prospecção Assertive</h3>
+            <p>
+              A partir das necessidades do cliente, traçamos objetivos
+              e estratégias para atingir o público‑alvo.
+            </p>
+            <div class="atributos">
+              <p>Planejamento estratégico</p>
+              <p>Gestão da Informação</p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="submenu-mobile">
+          <li><a href="InteligenciaDeMercado.html">Inteligência de mercado</a></li>
+          <li><a href="treinamento-prospeccao.html">Treinamento de Prospecção</a></li>
+          <li><a href="ProspeccaoAssertive.html">Prospecção Assertive</a></li>
+        </ul>
+
+      </div>
+
+      <a href="Contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- escurecer ao dar toggle no menu mobile -->
+  <div class="overlay"> </div>

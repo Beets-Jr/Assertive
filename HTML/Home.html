@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Documento</title>
 
+    <link rel="stylesheet" href="../CSS/Home.css">
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+    <link rel="stylesheet" href="../CSS/home-video.css">
 
     <!-- Fonte Inria Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
@@ -20,17 +23,122 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-</head>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
 <body>
     <!-- Hero (Tahles) -->
+    <header class="header-transparent"> 
+        <div class="logo-header fade-in-left"> 
+            <a href="home.html"> 
+            <img src="../imgs/logo-ksnip_20250416-205452-removebg-preview 1.png"> 
+            </a> 
+        </div>
+        
+        <div class="menu-toggle">
+            &#9776;  <!-- símbolo de 3 barrinhas -->
+        </div>
+        
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="SobreNos.html">Quem somos</a>
+
+                <div class="dropdown js-dropdown">
+                
+                <a href="#servicos" class="dropbtn js-dropbtn">Serviços</a>
+                
+                <div class="dropdown-menu">
+
+                    <!-- === Card 1: Inteligência de mercado === -->
+                    <div class="card"
+                        data-hover-text="Conheça o perfil dos seus clientes com nosso produto de Inteligência de mercado!">
+                    <h3>Inteligência de mercado</h3>
+                    <p>
+                        Conheça profundamente o setor dos seus potenciais clientes. 
+                        Entenda suas necessidades e desafios.
+                    </p>
+                    <div class="atributos">
+                        <p>Análise Territorial</p>
+                        <p>Share de Mercado</p>
+                    </div>
+                    </div>
+
+                    <!-- === Card 2: Treinamento de Prospecção === -->
+                    <div class="card"
+                        data-hover-text="Transforme sua abordagem comercial com nosso Treinamento de Prospecção!">
+                    <h3>Treinamento de Prospecção</h3>
+                    <p>
+                        Planeje e estruture sua estratégia de prospecção ativa. 
+                        Ganhe visibilidade para sua empresa.
+                    </p>
+                    <div class="atributos">
+                        <p>Pesquisa e análise de leads</p>
+                        <p>Abordagem personalizada</p>
+                    </div>
+                    </div>
+
+                    <!-- === Card 3: Prospecção Assertive === -->
+                    <div class="card"
+                        data-hover-text="Conheça nossa prospecção estratégica que alcança o segmento desejado pro seu produto!">
+                    <h3>Prospecção Assertive</h3>
+                    <p>
+                        A partir das necessidades do cliente, traçamos objetivos 
+                        e estratégias para atingir o público‑alvo.
+                    </p>
+                    <div class="atributos">
+                        <p>Planejamento estratégico</p>
+                        <p>Gestão da Informação</p>
+                    </div>
+                    </div>
+
+            </div>
+
+            <ul class="submenu-mobile">
+                <li><a href="InteligenciaDeMercado.html">Inteligência de mercado</a></li>
+                <li><a href="treinamento-prospeccao.html">Treinamento de Prospecção</a></li>
+                <li><a href="ProspeccaoAssertive.html">Prospecção Assertive</a></li>
+            </ul>
+
+            </div>
+
+            <a href="Contato.html">Contato</a>
+            </nav>
+        </header>
+
+    <div class="overlay"> </div>
+
+    <!-- Hero (Tahles) -->
+        <section id="hero">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="../videos/0_Presentation_Business_1280x720.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+        
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <div class="hero-texto">
+                        <h1>Somos especialistas em <br><span>potencializar resultados</span></h1>
+                        <p>
+                            Conheça nossa equipe de prospecção para inteligência<br>
+                            de mercado de acordo com as necessidades da sua empresa.
+                        </p>
+                        <a href="#contato" class="btn-cta">Comece Agora!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- End Hero -->
 
     <!-- Video Murillo (Em stand by por enquanto) -->
+    <div class="video">
+        <video controls preload="metadata" id="home_video">
+            <source src="../imgs/home_video.mp4" type="video/mp4" />
+        </video>
+    </div>
     <!-- End video -->
-     
+
     <!-- Cards Solucoes (Renan) -->
-    <div class="solutions-section">
+     <div class="solutions-section">
         <div class="solutions-content">
             <div class="title">
                 <h2 class="montserrat-regular">Como podemos te ajudar</h2>
@@ -128,15 +236,198 @@
         </div>
     </div>
 
-    <script src="../JS/home.js"></script>
-
     <!-- End card Renan -->
 
     <!-- Cards segmentos (Thales) -->
-    <!-- End card segmentos --!>
+    <section class="segmentos-atendidos">
+        <h2 class="titulo-secao">Segmentos Atendidos</h2>
+
+        <div class="cards-container">
+
+            <!-- 1 -->
+            <div class="card">
+                <div class="card-inner">
+
+                    <div class="card-front">
+                        <h3>Consultoria Tributária</h3>
+                        <p>
+                            O setor tributário lida com desafios constantes como mudanças na legislação, concorrência
+                            acirrada e
+                            dificuldade de comunicação com o público‑alvo. Muitas consultorias enfrentam ciclos de venda
+                            longos
+                            e dependem apenas de indicações ou marketing passivo.
+                        </p>
+                    </div>
+
+                    <div class="card-back">
+
+                        <h3>Consultoria Tributária</h3>
+                        <p>
+                            Nossa consultoria atua como um braço comercial, estruturando e
+                            executando uma prospecção ativa estratégica — direcionada para CFOs,
+                            controllers e decisores técnicos, com argumentos claros e valor consultivo.
+                            Geramos oportunidades reais de negócio para que sua equipe técnica
+                            foque no que faz melhor: entregar resultados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Consultoria Financeira</h3>
+                        <p>
+                            Consultorias financeiras – como BPO, planejamento e controladoria – enfrentam o desafio de
+                            educar o
+                            mercado sobre a importância da gestão financeira. À venda, muitas vezes, é técnica e
+                            consultiva,
+                            exigindo acesso a decisores que nem sempre estão conscientes de seus próprios problemas.
+                        </p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Consultoria Financeira</h3>
+                        <p>
+                            Criamos estratégias de prospecção personalizadas para atrair empresas no
+                            momento certo: em fase de crescimento, reestruturação ou expansão.
+                            Entregamos leads qualificados com real interesse, permitindo que sua
+                            consultoria atue com previsibilidade e consistência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Segurança Patrimonial e Facilities</h3>
+                        <p>
+                            Empresas de segurança patrimonial e facilities enfrentam forte concorrência, alta
+                            sensibilidade a
+                            preço e dificuldade em acessar os decisores corretos – como gestores prediais, diretores de
+                            operações e compradores corporativos.
+                        </p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Segurança Patrimonial e Facilities</h3>
+                        <p>
+                            Com inteligência de mercado, mapeamos alvos estratégicos e realizamos
+                            abordagens personalizadas que posicionam seu serviço como solução e
+                            não apenas como custo. Reduzimos o ciclo de vendas e ampliamos a
+                            geração de novas oportunidades comerciais com foco em valor, e não
+                            apenas em preço.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Logística e Transporte</h3>
+                        <p>
+                            Empresas de logística e transporte precisam se diferenciar em um mercado competitivo e com
+                            decisões
+                            técnicas, baseadas em confiança. Encontrar novos clientes qualificados, com necessidades
+                            logísticas
+                            reais, exige tempo e análise – algo que o time interno nem sempre consegue priorizar.
+                        </p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Logística e Transporte</h3>
+                        <p>Desenvolvemos campanhas direcionadas para segmentos com maior
+                        necessidade logística, utilizando dados, perfil de consumo e timing de
+                        compra. Geramos conversas qualificadas com tomadores de decisão que
+                        estão prontos para ouvir propostas com foco em eficiência e custo-
+                        benefício.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Empresas de Tecnologia e Software</h3>
+                        <p>
+                            O mercado jurídico tem passado por transformações profundas. A concorrência aumentou, o
+                            cliente está
+                            mais exigente e a prospecção ativa, antes vista com reservas, tornou‑se uma necessidade –
+                            desde que
+                            feita com inteligência, ética e estratégia.
+                        </p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Consultorias de RH</h3>
+                        <p>Consultorias de Recursos Humanos exercem um papel fundamental nas
+                        empresas: apoiar na atração, desenvolvimento e retenção de talentos. No
+                        entanto, vender soluções de RH — como recrutamento e seleção, gestão
+                        por competências, clima organizacional, programas de treinamento ou
+                        folha de pagamento — exige tempo, abordagem consultiva e acesso
+                        direto a decisores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Consultorias e Escritórios de Advocacia</h3>
+                        <p>
+                            O mercado jurídico tem passado por transformações profundas. A concorrência aumentou, o
+                            cliente está
+                            mais exigente e a prospecção ativa, antes vista com reservas, tornou‑se uma necessidade –
+                            desde que
+                            feita com inteligência, ética e estratégia.
+                        </p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Consultorias e Escritórios de Advocacia</h3>
+                        <p> O mercado jurídico tem passado por transformações profundas. A
+                        concorrência aumentou, o cliente está mais exigente e a prospecção ativa,
+                        antes vista com reservas, tornou-se uma necessidade — desde que feita
+                        com inteligência, ética e estratégia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End card segmentos -->
 
     <!-- Numeros (Murillo) -->
+    <section id="numbers">
+        <div class="metricas-container">
+            <div class="metrica">
+                <img src="../imgs/segmentos-atendidos.svg" alt="Ícone Segmentos">
+                <p class="number">80</p>
+                <p class="descricao">Segmentos<br>Atendidos</p>
+            </div>
+            <div class="metrica">
+                <img src="../imgs/empresas-potencializadas.svg" alt="Ícone Empresas">
+                <p class="number">300</p>
+                <p class="descricao">Empresas<br>potencializadas</p>
+            </div>
+            <div class="metrica">
+                <img src="../imgs/oportunidades-criadas.svg" alt="Ícone Oportunidades">
+                <p class="number">30000</p>
+                <p class="descricao">Oportunidades<br>Criadas</p>
+            </div>
+        </div>
+    </section> 
     <!-- end numeros -->
-    
+
+    <script src="../JS/Home.js"></script>
+    <script src="../JS/home.js"> </script>
+    <script src="../JS/header-footer.js"> </script>
+    <script src="../JS/home-video.js"> </script>
 </body>
 </html>

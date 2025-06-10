@@ -1,56 +1,143 @@
+:root {
+    /* Fontes */
+    --fonte-assertive: 'Inria Sans', sans-serif;
+    --primary-font: 'Inria Sans', sans-serif;
+    --secondary-font: 'League Spartan', 'Inria Sans', sans-serif;
+
+    /* Cores */
+    --primary-blue: #15194B;
+    --secondary-blue: #0994B4;
+    --third-blue: #000760;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 /* Parte Thales */
+
+section#hero {
+    background: url('../imgs/cidade-alt-4.png') no-repeat center center/cover;
+    background-position: center left;
+    display: flex;
+    height: 100vh;
+    justify-content: left;
+    padding: 2em;
+}
+
+section#hero .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-top: 12vh;
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+
+section#hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5em;
+    max-width: 30vw; 
+    background-color: rgba(0, 4, 57, 0.22);
+    backdrop-filter: blur(2px);
+    border-radius: 1.25em;
+    color: white;
+    font-family: var(--fonte-assertive);
+    /* animação de entrada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-1.25em);
+    animation: fadeInLeft 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-content:hover {
+    transform: translateX(0) scale(1.02);
+    box-shadow: 0 .5em 1.25em rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    font-size: 2.5em;
+    color: white;
+    font-family: var(--fonte-assertive);
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    max-width: 30vw;
+    animation-delay: 0.2s;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-1.25em);
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 /* end parte Thales */
 
 /* Parte Murillo */
 
-:root {
-    --primary-font: "Inria Sans", sans-serif;
-    --secondary-font: "League Spartan", "Inria Sans", sans-serif;
-    --third-blue: #000760;
-}
-
 .how-the-work {
     margin: 0 auto;
-    max-width: 1200px;
-    padding-bottom: 12rem;
-    padding-top: 12rem;
+    max-width: 75em;
+    padding-bottom: 12em;
+    padding-top: 12em;
     text-align: center;
 }
 
 .how-the-work h2 {
     color: var(--primary-blue);
-    font: normal bold 4rem var(--primary-font);
+    font: normal bold 4em var(--primary-font);
     text-align: center;
 }
 
 .how-the-work-cards-container {
     align-items: center;
     display: flex;
-    gap: 2.5rem;
+    gap: 2.5em;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 8rem 2rem 4rem;
+    margin: 8em 2em 4em;
 }
 
 .how-the-work-card,
 .mvv-card {
     background-color: var(--primary-blue);
-    border-radius: 1rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    border-radius: 1em;
+    box-shadow: 0px .25em .25em rgba(0, 0, 0, .25);
     color: white;
-    font-size: 1.2rem;
-    padding: 2rem;
+    font-size: 1.2em;
+    padding: 2em;
 }
 
 .how-the-work-card {
-    height: 24rem;
-    max-width: 22rem;
+    flex: 1;
+    height: 24em;
+    max-width: 22em;
 }
 
 .how-the-work-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
+    font-size: 1.6em;
+    margin-bottom: 2.5em;
 }
 
 .how-the-work-card p {
@@ -60,12 +147,12 @@
 .how-the-work button {
     background-color: var(--third-blue);
     border: none;
-    border-radius: 1rem;
+    border-radius: 1em;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: bold;
-    margin: 1rem;
-    padding: 1rem 3rem;
+    margin: 1em;
+    padding: 1em 3em;
     transition: background-color .2s, scale .2s;
 }
 
@@ -77,20 +164,20 @@
 
 .who-we-are {
     color: var(--primary-blue);
-    font-size: 1.2rem;
-    max-width: 1200px;
+    font-size: 1.2em;
+    max-width: 75em;
     margin: auto;
 }
 
 .who-we-are h2 {
     color: var(--primary-blue);
-    font: normal bold 4rem var(--primary-font);
+    font: normal bold 4em var(--primary-font);
     text-align: center;
 }
 
 .who-we-are-introduction {
     font-weight: 600;
-    margin: 10rem 2rem 6rem;
+    margin: 10em 2em 6em;
     position: relative;
 }
 
@@ -98,15 +185,15 @@
 .who-we-are-introduction::after {
     content: '';
     display: block;
-    height: 4rem;
-    width: 4rem;
+    height: 4em;
+    width: 4em;
 }
 
 .who-we-are-introduction::before {
     border-left: 1px solid var(--secondary-blue);
     border-top: 1px solid var(--secondary-blue);
     position: absolute;
-    top: -2rem;
+    top: -2em;
 }
 
 .who-we-are-introduction::after {
@@ -114,80 +201,81 @@
     border-bottom: 1px solid var(--secondary-blue);
     position: absolute;
     right: 0;
-    bottom: -2rem;
+    bottom: -2em;
 }
 
 .who-we-are-introduction p {
-    margin: 3rem;
+    font-size: 1em;
+    margin: 3em;
     text-align: left;
 }
 
 .mvv {
     align-items: center;
     display: flex;
-    gap: 10rem;
-    max-width: 1200px;
+    gap: 10em;
+    max-width: 75em;
     margin: auto;
 }
 
 .mvv-img-container {
-    padding-top: 5rem;
+    padding-top: 5em;
 }
 
 .mvv-image {
-    width: 190px;
+    width: 11.875em;
 }
 
 .mvv-cards-container {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin-top: 2rem;
-    gap: 2rem;
+    margin-top: 2em;
+    gap: 2em;
 }
 
 .mvv-card {
-    border-radius: .5rem;
-    font-size: 1.3rem;
-    font-weight: bold;;
-    width: 36rem;
+    border-radius: .5em;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 36em;
 }
 
 .mvv-card h3 {
-    font-size: 2rem;
+    font-size: 2em;
     font-family: var(--secondary-font);
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .mvv-second-card {
-    margin-left: 270px;
+    margin-left: 13em;
 }
 
 .mvv-line {
     background-color: var(--primary-blue);
-    border-radius: 5px;
-    height: 5px;
+    border-radius: .375em;
+    height: .375em;
     position: absolute;
 }
 
 .mvv-first-line {
-    transform: rotateZ(-45deg) translateY(-30px) translateX(250px);
-    width: 220px;
+    transform: rotateZ(-45deg) translateY(-1.875em) translateX(15.625em);
+    width: 13.75em;
 }
 
 .mvv-second-line {
-    transform: translateY(-90px) translateX(190px);
-    width: 420px;
+    transform: translateY(-5.625em) translateX(11.875em);
+    width: 26.25em;
 }
 
 .mvv-third-line {
-    transform: rotateZ(45deg) translateY(-90px) translateX(130px);
-    width: 220px;
+    transform: rotateZ(45deg) translateY(-5.625em) translateX(8.125em);
+    width: 13.75em;
 }
 
 .mvv-end-message {
     color: var(--primary-blue);
-    margin: 10rem auto 0;
+    margin: 10em auto 0;
     text-transform: uppercase;
 }
 
@@ -196,89 +284,14 @@
 }
 
 .mvv-end-message p:first-child {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     font-weight: lighter;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .mvv-end-message p:last-child {
-    font-size: 2.2rem;
+    font-size: 2.2em;
     font-weight: bold;
-}
-
-@media (max-width: 1200px) {
-    .mvv-img-container {
-        width: 16vw;
-    }
-
-    .mvv-card {
-        width: 60vw;
-        z-index: 1;
-    }
-
-    .mvv-second-card {
-        margin-left: 2rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .how-the-work {
-        padding-bottom: 4rem;
-    }
-
-    .how-the-work h2 {
-        font-size: 2.2rem;
-    }
-
-    .how-the-work-cards-container {
-        margin-top: 2rem;
-    }
-
-    .how-the-work-card {
-        height: fit-content;
-    }
-
-    .who-we-are h2 {
-        font-size: 2.2rem
-    }
-
-    .who-we-are-introduction {
-        margin: 4rem 1rem 6rem;
-        font-size: 1rem;
-    }
-
-    .who-we-are-introduction::before {
-        top: -1rem;
-    }
-
-    .who-we-are-introduction::after {
-        bottom: -1rem;
-    }
-
-    .who-we-are-introduction p {
-        margin: 1rem;
-    }
-
-    .mvv-img-container {
-        display: none;
-    }
-
-    .mvv-cards-container {
-        text-align: center;
-    }
-
-    .mvv-card {
-        width: 90%;
-        margin: auto;
-    }
-
-    .mvv-second-card {
-        margin: 1rem auto;
-    }
-
-    .mvv-end-message p:first-child {
-        margin-bottom: 4rem;
-    }
 }
 
 @keyframes visible-block {
@@ -299,21 +312,6 @@
 /* end parte Murillo */
 
 /* Parte Renan */
-:root {
-    --primary-blue: #15194B;
-    --secondary-blue: #0994B4;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-}
-
 .founders h1 {
     font-size: 42px;
 }
@@ -346,16 +344,16 @@ h3 {
 .information-container {
     display: flex;
     align-items: center;
-    flex: 1;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100%;
+    padding: 2rem;
+    gap: 40px;
 }
 
 .information-container p {
     display: block;
-    font-size: clamp(10px, 1.5vw, 30px) !important;
+    font-size: clamp(18px, 1.1vw, 50px);
+    line-height: 1.6;
 
 }
 
@@ -383,6 +381,7 @@ h3 {
 
 .grid-container-socio1 {
     max-width: 100%;
+    max-height: 1250px;
     width: 1200px;
     display: grid;
     grid-template-columns: 1fr 758px;
@@ -418,7 +417,7 @@ h3 {
     background-color: var(--primary-blue);
     width: 100%;
     color: white;
-    padding: 40px 60px 0px 60px;
+    padding-top: 2rem;
 }
 
 .grid-container-socio2 img {
@@ -555,49 +554,98 @@ h2 {
     margin-top: 5px;
 }
 
-@media (max-width: 1200px){
-    .contact-img{
-        display: none;
-    }
+/* end parte Renan */
 
-    .blue-bg{
-        background-image: url("../imgs/foto-contato-mobile.png");
-        background-repeat: no-repeat;
-        background-position: center;
+@media (max-width: 768px) {
+    section#hero {
+        background-image: url('../imgs/cidade-mobile.png');
         background-size: cover;
-    }
-
-    .forms-container {
-        display: flex;
-        flex-direction: column;
+        background-position: center center;
+        background-repeat: no-repeat;
         justify-content: center;
+        padding: 1em;
+    }
+
+    section#hero .hero-inner {
         align-items: center;
-        width: 100%;
-        height: 100%;
+        gap: 1em;
     }
 
-    .forms-container h1 {
-        margin: 0 auto;
-        text-align: left;
-        align-self: flex-start;
+    section#hero .hero-content {
+        max-width: 90%;
+        padding: 1.5em;
+        text-align: center;
     }
 
-    .forms-container h1 span {
-        display: block;           
-        width: max-content;      
-        margin: 0 auto;          
+    .hero-title {
+        font-size: 1.8em;
+        max-width: 90%;
+        text-align: center;
     }
 
-    .forms-container h1 br {
-        display: none;
-    }
-
-    .forms-container h2 { 
-        margin-top: 10px;       
+    .hero-content p {
+        font-size: 1em;
     }
 }
 
-@media (max-width: 800px ) {
+@media (max-width: 800px) {
+    .how-the-work {
+        padding-bottom: 4em;
+    }
+
+    .how-the-work h2 {
+        font-size: 2.2em;
+    }
+
+    .how-the-work-cards-container {
+        margin-top: 2em;
+    }
+
+    .how-the-work-card {
+        height: fit-content;
+    }
+
+    .who-we-are h2 {
+        font-size: 2.2em
+    }
+
+    .who-we-are-introduction {
+        margin: 4em 1em 6em;
+        font-size: 1em;
+    }
+
+    .who-we-are-introduction::before {
+        top: -1em;
+    }
+
+    .who-we-are-introduction::after {
+        bottom: -1em;
+    }
+
+    .who-we-are-introduction p {
+        margin: 1em;
+    }
+
+    .mvv-img-container {
+        display: none;
+    }
+
+    .mvv-cards-container {
+        text-align: center;
+    }
+
+    .mvv-card {
+        width: 90% !important;
+        margin: auto !important;
+    }
+
+    .mvv-second-card {
+        margin: 1em auto;
+    }
+
+    .mvv-end-message p:first-child {
+        margin-bottom: 4em;
+    }
 
     .forms-container h1 {
         font-size: 2rem;
@@ -639,9 +687,7 @@ h2 {
 
     .founders .blue-card {
         width: 80%;
-        height: 350px;
-        margin-bottom: 0;
-        padding: 2rem;
+        height: max-content;
     }
 
     .founders .blue-card h2 {
@@ -653,19 +699,16 @@ h2 {
     }
 
     .founders .blue-card p {
-        margin-top: 10px;
         font-size: 1.12rem;
     }
 
     .founders .section-title {
         text-align: center;
         font-size: 3rem;
-        margin-bottom: 32px;
     }
 }
 
 @media (min-width:801px) and (max-width:1200px) {
-
     .founders .grid-container-socio1,
     .founders .grid-container-socio2 {
         display: flex;
@@ -686,9 +729,6 @@ h2 {
 
     .founders .blue-card {
         width: 80%;
-        height: 480px;
-        margin-bottom: 0;
-        padding: 2rem;
     }
 
     .founders .blue-card h2 {
@@ -707,6 +747,82 @@ h2 {
         text-align: center;
         font-size: 4rem;
         margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    section#hero .hero-inner {
+        padding-top: 8vh;
+        margin-top: 3vh;
+        margin-left: 2vw;
+        gap: 1em;
+    }
+
+    section#hero .hero-content {
+        max-width: 50vw;
+        padding: 2em;
+    }
+
+    .hero-title {
+        font-size: 2em;
+        max-width: 50vw;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .mvv-img-container {
+        width: 16vw;
+    }
+
+    .mvv-card {
+        width: 60vw;
+        z-index: 1;
+    }
+
+    .mvv-second-card {
+        margin-left: 2em;
+    }
+
+    .contact-img{
+        display: none;
+    }
+
+    .blue-bg{
+        background-image: url("../imgs/foto-contato-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .forms-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .forms-container h1 {
+        margin: 0 auto;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .forms-container h1 span {
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .forms-container h1 br {
+        display: none;
+    }
+
+    .forms-container h2 {
+        margin-top: 10px;
     }
 }
 
@@ -748,6 +864,7 @@ h2 {
 @media (min-width: 1601px) and (min-width: 2200px) {
     .founders h1 {
         font-size: 10rem;
+        margin-top: 10rem;
     }
 
     .founders h2 {
@@ -759,7 +876,7 @@ h2 {
     }
 
     .founders .information-container p {
-        font-size: 3.25rem;
+        font-size: 2.5rem;
     }
 
     .section-title-container{
@@ -777,9 +894,9 @@ h2 {
 
     .founders .grid-container-socio1,
     .founders .grid-container-socio2 {
-        display: flex;        
-        gap: 100px;                    
-        width: auto;                                    
+        display: flex;
+        gap: 100px;
+        width: auto;
     }
 
     .grid-container-socio1, .grid-container-socio2 {
@@ -809,7 +926,7 @@ h2 {
     }
 
     .contact-section {
-        max-width: clamp(1400px, 80vw, 2600px);;
+        max-width: clamp(1400px, 80vw, 2600px);
     }
 
     .contact-section .forms-container h1 {
@@ -845,7 +962,52 @@ h2 {
     }
 }
 
+@media (max-width: 2200px) {
+    .information-container p {
+        font-size: 15px !important;
+    }
+}
+
+@media (min-width: 1960px) {
+    section#hero,
+    section.how-the-work,
+    section.who-we-are,
+    section.mvv,
+    section.mvv,
+    aside.mvv-end-message {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 2400px) {
+    section#hero,
+    section.how-the-work,
+    section.who-we-are,
+    section.mvv,
+    section.mvv,
+    aside.mvv-end-message {
+        font-size: 32px;
+    }
+}
+
 @media (min-width: 3200px) {
+    section#hero,
+    section.how-the-work,
+    section.mvv,
+    section.mvv,
+    aside.mvv-end-message {
+        font-size: 40px;
+    }
+
+    section.who-we-are {
+        max-width: 80vw;
+        font-size: 60px;
+    }
+
+    .white-section {
+        max-width: clamp(2200px, 80vw, 3000px);
+    }
+
     .contact-section .forms-container h1 {
         font-size: 7rem;
     }
@@ -888,7 +1050,3 @@ h2 {
         margin-top: 3rem;
     }
 }
-
-
-
-/* end parte Renan */
