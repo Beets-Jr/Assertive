@@ -29,3 +29,16 @@ numbers.forEach (item => {
   item.textContent = '0'; 
   observer.observe(item);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (!e.currentTarget.classList.contains('is-flipped')) {
+        cards.forEach(c => c.classList.remove('is-flipped'));
+      }
+      e.currentTarget.classList.toggle('is-flipped');
+    });
+  });
+});
