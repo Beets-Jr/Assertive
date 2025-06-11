@@ -188,8 +188,170 @@
 
     <!-- End card Renan -->
 
-    <!-- Cards segmentos (Thales) -->
-    <!-- End card segmentos --!>
+     <!-- Cards segmentos (Thales) -->
+    <section class="segmentos-atendidos">
+        <h2 class="titulo-secao">Segmentos Atendidos</h2>
+
+        <div class="cards-container">
+
+            <!-- 1 -->
+            <div class="card-geral">
+                <div class="card-inner2">
+
+                    <div class="card-front2">
+                        <h3>Consultoria Tributária</h3>
+                        <p>
+                            O setor tributário lida com desafios constantes como mudanças na legislação, concorrência
+                            acirrada e
+                            dificuldade de comunicação com o público‑alvo. Muitas consultorias enfrentam ciclos de venda
+                            longos
+                            e dependem apenas de indicações ou marketing passivo.
+                        </p>
+                    </div>
+
+                    <div class="card-back2">
+
+                        <h3>Consultoria Tributária</h3>
+                        <p>
+                            Nossa consultoria atua como um braço comercial, estruturando e
+                            executando uma prospecção ativa estratégica — direcionada para CFOs,
+                            controllers e decisores técnicos, com argumentos claros e valor consultivo.
+                            Geramos oportunidades reais de negócio para que sua equipe técnica
+                            foque no que faz melhor: entregar resultados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card-geral">
+                <div class="card-inner2">
+                    <div class="card-front2">
+                        <h3>Consultoria Financeira</h3>
+                        <p>
+                            Consultorias financeiras – como BPO, planejamento e controladoria – enfrentam o desafio de
+                            educar o
+                            mercado sobre a importância da gestão financeira. À venda, muitas vezes, é técnica e
+                            consultiva,
+                            exigindo acesso a decisores que nem sempre estão conscientes de seus próprios problemas.
+                        </p>
+                    </div>
+                    <div class="card-back2">
+                        <h3>Consultoria Financeira</h3>
+                        <p>
+                            Criamos estratégias de prospecção personalizadas para atrair empresas no
+                            momento certo: em fase de crescimento, reestruturação ou expansão.
+                            Entregamos leads qualificados com real interesse, permitindo que sua
+                            consultoria atue com previsibilidade e consistência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card-geral">
+                <div class="card-inner2">
+                    <div class="card-front2">
+                        <h3>Segurança Patrimonial e Facilities</h3>
+                        <p>
+                            Empresas de segurança patrimonial e facilities enfrentam forte concorrência, alta
+                            sensibilidade a
+                            preço e dificuldade em acessar os decisores corretos – como gestores prediais, diretores de
+                            operações e compradores corporativos.
+                        </p>
+                    </div>
+                    <div class="card-back2">
+                        <h3>Segurança Patrimonial e Facilities</h3>
+                        <p>
+                            Com inteligência de mercado, mapeamos alvos estratégicos e realizamos
+                            abordagens personalizadas que posicionam seu serviço como solução e
+                            não apenas como custo. Reduzimos o ciclo de vendas e ampliamos a
+                            geração de novas oportunidades comerciais com foco em valor, e não
+                            apenas em preço.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card-geral">
+                <div class="card-inner2">
+                    <div class="card-front2">
+                        <h3>Logística e Transporte</h3>
+                        <p>
+                            Empresas de logística e transporte precisam se diferenciar em um mercado competitivo e com
+                            decisões
+                            técnicas, baseadas em confiança. Encontrar novos clientes qualificados, com necessidades
+                            logísticas
+                            reais, exige tempo e análise – algo que o time interno nem sempre consegue priorizar.
+                        </p>
+                    </div>
+                    <div class="card-back2">
+                        <h3>Logística e Transporte</h3>
+                        <p>Desenvolvemos campanhas direcionadas para segmentos com maior
+                        necessidade logística, utilizando dados, perfil de consumo e timing de
+                        compra. Geramos conversas qualificadas com tomadores de decisão que
+                        estão prontos para ouvir propostas com foco em eficiência e custo-
+                        benefício.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card-geral">
+                <div class="card-inner2">
+                    <div class="card-front2">
+                        <h3>Empresas de Tecnologia e Software</h3>
+                        <p>
+                            O mercado jurídico tem passado por transformações profundas. A concorrência aumentou, o
+                            cliente está
+                            mais exigente e a prospecção ativa, antes vista com reservas, tornou‑se uma necessidade –
+                            desde que
+                            feita com inteligência, ética e estratégia.
+                        </p>
+                    </div>
+                    <div class="card-back2">
+                        <h3>Consultorias de RH</h3>
+                        <p>Consultorias de Recursos Humanos exercem um papel fundamental nas
+                        empresas: apoiar na atração, desenvolvimento e retenção de talentos. No
+                        entanto, vender soluções de RH — como recrutamento e seleção, gestão
+                        por competências, clima organizacional, programas de treinamento ou
+                        folha de pagamento — exige tempo, abordagem consultiva e acesso
+                        direto a decisores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card-geral">
+                <div class="card-inner2">
+                    <div class="card-front2">
+                        <h3>Consultorias e Escritórios de Advocacia</h3>
+                        <p>
+                            O mercado jurídico tem passado por transformações profundas. A concorrência aumentou, o
+                            cliente está
+                            mais exigente e a prospecção ativa, antes vista com reservas, tornou‑se uma necessidade –
+                            desde que
+                            feita com inteligência, ética e estratégia.
+                        </p>
+                    </div>
+                    <div class="card-back2">
+                        <h3>Consultorias e Escritórios de Advocacia</h3>
+                        <p> O mercado jurídico tem passado por transformações profundas. A
+                        concorrência aumentou, o cliente está mais exigente e a prospecção ativa,
+                        antes vista com reservas, tornou-se uma necessidade — desde que feita
+                        com inteligência, ética e estratégia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End card segmentos -->
 
     <!-- Numeros (Murillo) -->
     <!-- end numeros -->
