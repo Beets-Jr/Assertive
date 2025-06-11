@@ -7,20 +7,33 @@
 <?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?> 
  <!-- Hero (Tahles) -->
         <section id="hero">
+            <?php
+            // Busca o array salvo pelo CMB2
+            $video_url = get_post_meta( get_the_ID(), 'hero_video_apresentacao', true );
+            ?>
             <video autoplay muted loop playsinline class="bg-video">
-                <source src="<?php echo get_stylesheet_directory_uri(); ?>/videos/0_Presentation_Business_1280x720.mp4" type="video/mp4">
+                <source 
+                src="<?php echo esc_url( $video_url ); ?>"
+                type="video/mp4"
+                >
                 Seu navegador não suporta vídeo em HTML5.
             </video>
+            
         
             <div class="hero-overlay">
                 <div class="hero-content">
                     <div class="hero-texto">
-                        <h1>Somos especialistas em <br><span>potencializar resultados</span></h1>
-                        <p>
-                            Conheça nossa equipe de prospecção para inteligência<br>
-                            de mercado de acordo com as necessidades da sua empresa.
-                        </p>
-                        <a href="#contato" class="btn-cta">Comece Agora!</a>
+                        <h1><?php the_field('hero_titulo_l1') ?> <br><span><?php the_field('hero_titulo_l2') ?></span></h1>
+                        
+                            <?php
+                                $subtitulo = get_post_meta( get_the_ID(), 'hero_subtitulo', true );
+                                echo wpautop( $subtitulo );
+                            ?>
+
+                            <!-- Conheça nossa equipe de prospecção para inteligência<br>
+                            de mercado de acordo com as necessidades da sua empresa. -->
+                        
+                        <a href="#contato" class="btn-cta"><?php the_field('texto_botao') ?></a>
                     </div>
                 </div>
             </div>

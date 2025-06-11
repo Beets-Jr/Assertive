@@ -1,5 +1,6 @@
 <?php
 
+// SEÇÃO SERVIÇOS
 function home_cards() {
   $home_cards_box = new_cmb2_box([
     'id' => 'servicos_box',
@@ -127,5 +128,78 @@ function home_cards() {
 
 }
 
+// END SEÇÃO SERVIÇOS
+
+// Seção HERO
+
+function hero_home() {
+  $hero_home_box = new_cmb2_box([
+    'id' => 'hero_home_box',
+    'title' => 'Primeira seção da página',
+    'object_types' => ['page'],
+    'show_on' => [
+      'key' => 'page-template',
+      'value' => 'page-home.php',
+    ]
+  ]);
+
+  $hero_home_box->add_field([
+    'id' => 'hero_titulo_l1',
+    'name' => esc_html__('Primeira linha do título da primeira seção', 'cmb2'),
+    'desc' => esc_html__('Primeiro e maior título na seção', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $hero_home_box->add_field([
+    'id' => 'hero_titulo_l2',
+    'name' => esc_html__('Segunda linha do título da primeira seção', 'cmb2'),
+    'desc' => esc_html__('Primeiro e maior título na seção', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $hero_home_box->add_field([
+    'id' => 'hero_subtitulo',
+    'name' => esc_html__('Subtítulo da primeira seção', 'cmb2'),
+    'desc' => esc_html__('IMPORTANTE: Coloque no máximo 7-8 palavras por linha', 'cmb2'),
+    'type' => 'textarea_small',
+    'options' => array(
+    'textarea_rows' => 3,
+    'wpautop'       => true,
+    'media_buttons'=> false,
+    'teeny'         => true,
+    ),
+  ]);
+
+  $hero_home_box->add_field([
+    'id' => 'texto_botao',
+    'name' => esc_html__('Texto do botão', 'cmb2'),
+    'desc' => esc_html__('Coloque algo curto, como "Comece Agora!"', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $hero_home_box->add_field( array(
+  'name'       => 'Vídeo de Apresentação',
+  'id'         => 'hero_video_apresentacao',
+  'type'       => 'file',
+  'options'    => array(
+    'url' => false,
+  ),
+  'query_args' => array(
+    'type' => array(
+      'video/mp4',
+      'video/ogg',
+      'video/webm',
+    ),
+  ),
+  'attributes' => array(
+    'accept' => 'video/*',
+  ),
+  'text'       => array(
+    'add_upload_file_text' => 'Selecionar Vídeo' 
+  ),
+) );
+}
+
+add_action('cmb2_admin_init', 'hero_home');
 add_action('cmb2_admin_init', 'home_cards');
 ?>

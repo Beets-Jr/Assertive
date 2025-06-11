@@ -39,7 +39,7 @@
 
 <header class="header-transparent"> 
         <div class="logo-header fade-in-left"> 
-            <a href="home.html"> 
+            <a href="/"> 
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png"> 
             </a> 
         </div>
@@ -49,7 +49,7 @@
         </div>
         
             <nav>
-                <a href="Home.html">Home</a>
+                <a href="/">Home</a>
                 <a href="#hero">Quem somos</a>
 
                 <div class="dropdown js-dropdown">
