@@ -58,3 +58,7 @@
     <!-- Copie até AQUI para inserir o footer -->
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/header-footer.js"></script>
+
+    <?php wp_footer(); ?>
+</body>
+</html>

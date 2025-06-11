@@ -1,45 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php get_header() ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name'); ?></title>
+<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
+  <section class="container">
+    <h1 class="subtitulo"><?php the_title(); ?></h1>
+    <div style="color: white; text-align: center">
+      <?php the_content(); ?>
+    </div>
+  </section>
+<?php endwhile; else : ?>
+  <section class="container" style="color: white; text-align: center">
+    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  </section>
+<?php endif; ?>
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/header-footer.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/Contato.css">
+<?php
+/* Parte Renan */
+?>
 
-    <!-- Fonte Inria Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+<?php
+/* Parte JH */
+?>
 
-    <!-- Fonte Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+<?php
+/* Parte Murillo */
+?>
 
-    <?php wp_head(); ?>
-
-</head>
-
-<body>
-    <!-- Hero (Tahles) -->
-    <!-- End Hero -->
-
-    <!-- Video Murillo (Em stand by por enquanto) -->
-    <!-- End video -->
-
-    <?php get_header(); ?>
-
-    
-    
-    <?php get_footer(); ?>
-    
-    <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer() ?>

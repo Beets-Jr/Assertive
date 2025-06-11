@@ -2,45 +2,46 @@
 // Template Name: Início
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php get_header(); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name'); ?></title>
+<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?> 
+ <!-- Hero (Tahles) -->
+        <section id="hero">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="<?php echo get_stylesheet_directory_uri(); ?>/videos/0_Presentation_Business_1280x720.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+        
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <div class="hero-texto">
+                        <h1>Somos especialistas em <br><span>potencializar resultados</span></h1>
+                        <p>
+                            Conheça nossa equipe de prospecção para inteligência<br>
+                            de mercado de acordo com as necessidades da sua empresa.
+                        </p>
+                        <a href="#contato" class="btn-cta">Comece Agora!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- End Hero -->
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/header-footer.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/Contato.css">
-
-    <!-- Fonte Inria Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <!-- Fonte Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <?php wp_head(); ?>
-
-</head>
-
-<body>
-
-    <?php get_header(); ?>
+<!-- Video Murillo (Em stand by por enquanto) -->
+    <div class="video">
+        <video controls preload="metadata" id="home_video">
+            <source src="../imgs/home_video.mp4" type="video/mp4" />
+        </video>
+    </div>
+<!-- End video -->
 
 <!-- Cards Solucoes (Renan) -->
+
     <div class="solutions-section">
         <div class="solutions-content">
             <div class="title">
-                <h2 class="montserrat-regular">Como podemos te ajudar</h2>
-                <h1 class="montserrat-bold">Soluções Personalizadas para o Seu Negocio</h1>
+                <h2 class="montserrat-regular"><?php the_field('cards_titulo') ?></h2> 
+                <h1 class="montserrat-bold"><?php the_field('cards_subtitulo') ?></h1>
             </div>
 
             <div class="cards-grid">
@@ -48,18 +49,27 @@
                     <div class="card-inner left">
 
                         <div class="card front-card">
-                            <h3 class="inria-sans-bold">Inteligência de Mercado</h3>
+                            <h3 class="inria-sans-bold"><?php the_field('titulo_card_1') ?></h3>
 
                             <p class="inria-sans-regular">
-                                Conheça profundamente o setor dos seus potenciais clientes.
-                                Entenda suas necessidades e desafios.
+                                <?php the_field('texto_card_1') ?>
+                                <!-- Conheça profundamente o setor dos seus potenciais clientes.
+                                Entenda suas necessidades e desafios. -->
                             </p>
 
+                            <?php
+                            $caracteristicas1 = get_field_group('caracteristicas1'); ?>
                             <div class="characteristics montserrat-light">
+                                <?php if (isset($caracteristicas1)) { foreach ($caracteristicas1 as $c) { ?>
+                                    <div><?php echo $c['caracteristica_nome']; ?></div>
+                                <?php } } ?>
+                            </div>
+
+                            <!-- <div class="characteristics montserrat-light">
                                 <div>Análise da concorrência</div>
                                 <div>Análise Territorial</div>
                                 <div>Share de mercado</div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="card back-card">
@@ -76,18 +86,28 @@
                     <div class="card-inner right">
 
                         <article class="card front-card">
-                            <h3 class="inria-sans-bold">Treinamento de Prospecção</h3>
+                            <h3 class="inria-sans-bold"><?php the_field('titulo_card_2') ?></h3>
 
                             <p class="inria-sans-regular">
-                                Planeje e estruture sua estratégia de prospecção ativa. Expanda seu negócio,
+                                <?php the_field('texto_card_2') ?>
+                                <!-- Planeje e estruture sua estratégia de prospecção ativa. Expanda seu negócio,
                                 ganhe visibilidade para sua empresa e aumente seu retorno sobre o investimento
-                                utilizando da nossa expertise.
+                                utilizando da nossa expertise. -->
                             </p>
 
+                            <?php
+                            $caracteristicas2 = get_field_group('caracteristicas2'); ?>
                             <div class="characteristics montserrat-light">
+                                <?php if (isset($caracteristicas2)) { foreach ($caracteristicas2 as $c) { ?>
+                                    <div><?php echo $c['caracteristica_nome']; ?></div>
+                                <?php } } ?>
+                            </div>
+
+                            <!-- <div class="characteristics montserrat-light">
                                 <div>Pesquisa e análise de novos leads</div>
                                 <div>Abordagem consultiva e personalizada</div>
-                            </div>
+                            </div> -->
+
                         </article>
 
                         <article class="card back-card">
@@ -102,22 +122,31 @@
                 </div>
 
                 <div class="card-container">
-                    <div class="card-inner left">
+                    <div class="card-inner">
 
                         <article class="card front-card">
-                            <h3 class="inria-sans-bold">Prospecção Assertive</h3>
+                            <h3 class="inria-sans-bold"><?php the_field('titulo_card_3') ?></h3>
 
                             <p class="inria-sans-regular">
-                                A partir das necessidades do cliente, traçamos objetivos e estratégias para seu
+                                <?php the_field('texto_card_3') ?>
+                                <!-- A partir das necessidades do cliente, traçamos objetivos e estratégias para seu
                                 produto atingir o segmento e público alvo desejados, com uma equipe preparada
-                                com as informações e técnicas de negociação necessárias para as vendas.
+                                com as informações e técnicas de negociação necessárias para as vendas. -->
                             </p>
 
+                            <?php
+                            $caracteristicas3 = get_field_group('caracteristicas3'); ?>
                             <div class="characteristics montserrat-light">
+                                <?php if (isset($caracteristicas3)) { foreach ($caracteristicas3 as $c) { ?>
+                                    <div><?php echo $c['caracteristica_nome']; ?></div>
+                                <?php } } ?>
+                            </div>
+
+                            <!-- <div class="characteristics montserrat-light">
                                 <div>Análise das necessidades</div>
                                 <div>Planejamento estratégico</div>
                                 <div>Gestão da Informação</div>
-                            </div>
+                            </div> -->
                         </article>
 
                         <article class="card back-card">
@@ -135,6 +164,8 @@
     </div>
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/Home.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home-video.js"> </script>
 
     <!-- End card Renan -->
 
@@ -143,55 +174,14 @@
 
     <!-- Numeros (Murillo) -->
     <!-- end numeros -->
+        
+    <!-- Include da seção contato -->
+    <?php 
+        $contato_partial = get_stylesheet_directory() . '/contato.php';
+        include $contato_partial;
+    ?>
+    <!-- end include seção contato -->
 
-    <!-- Seção contato -->
-    <section class="blue-bg">
-    <img class="contact-img" src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/foto-contato.png" alt="">
+<?php endwhile; else : endif; ?>
 
-    <div id="contato" class="contact-section">
-        <div class="forms-container">
-            <h1><span>Chegou a hora de </span><br> escalar seus resultados</h1>
-            <h2>Fale com nossos <span>especialistas!</span></h2>
-            
-            <form class="contact-form" action="" method="POST">
-            <div>
-                <label for="nome">Nome</label>
-                <br>
-                <input type="text" id="nome" placeholder="Informe seu nome" name="nome" required>
-            </div>
-
-            <div>
-                <label for="email">E-mail</label>
-                <br>
-                <input type="email" id="email" placeholder="Informe um email para contato" name="email" required>
-            </div>
-
-            <div>
-                <label for="celphone">Celular</label>
-                <br>
-                <input type="tel" id="celphone" placeholder="Informe um celular para contato" name="celphone" required>
-            </div>
-
-            <div>
-                <label for="mensagem">Mensagem</label>
-                <br>
-                <textarea id="mensagem" name="mensagem" placeholder="Conte-nos mais sobre sua empresa e o serviço buscado" rows="5" required></textarea>
-            </div>
-
-            <div class="button-container">
-                <button type="submit">Enviar</button>
-            </div>
-            </form>
-        </div>
-
-        </div>
-    </section>
-
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/Contato.js"></script>
-    <!-- end seção contato -->
-
-    <?php get_footer(); ?>
-    
-    <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
