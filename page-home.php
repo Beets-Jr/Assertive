@@ -8,8 +8,7 @@
  <!-- Hero (Tahles) -->
         <section id="hero">
             <?php
-            // Busca o array salvo pelo CMB2
-            $video_url = get_post_meta( get_the_ID(), 'hero_video_apresentacao', true );
+            $video_url = get_post_meta( get_the_ID(), 'hero_video', true );
             ?>
             <video autoplay muted loop playsinline class="bg-video">
                 <source 
@@ -42,8 +41,15 @@
 
 <!-- Video Murillo (Em stand by por enquanto) -->
     <div class="video">
+        <?php
+        $video_url = get_post_meta( get_the_ID(), 'video_apresentacao', true );
+        ?>
         <video controls preload="metadata" id="home_video">
-            <source src="../imgs/home_video.mp4" type="video/mp4" />
+            <source 
+            src="<?php echo esc_url( $video_url ); ?>"
+            type="video/mp4"
+            >
+            Seu navegador não suporta vídeo em HTML5.
         </video>
     </div>
 <!-- End video -->

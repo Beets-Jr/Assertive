@@ -4,7 +4,10 @@
 
 <!-- Seção contato -->
     <?php 
-        $contato_id = 20;
+        if ( empty( $contato_id ) ) {
+            $contato_page = get_page_by_path( 'contato' );
+            $contato_id   = $contato_page ? $contato_page->ID : get_the_ID();
+        }
     ?>
 
     <section class="blue-bg">

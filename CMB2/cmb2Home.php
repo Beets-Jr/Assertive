@@ -178,28 +178,64 @@ function hero_home() {
   ]);
 
   $hero_home_box->add_field( array(
-  'name'       => 'Vídeo de Apresentação',
-  'id'         => 'hero_video_apresentacao',
-  'type'       => 'file',
-  'options'    => array(
-    'url' => false,
-  ),
-  'query_args' => array(
-    'type' => array(
-      'video/mp4',
-      'video/ogg',
-      'video/webm',
+    'name'       => 'Vídeo de Fundo',
+    'id'         => 'hero_video',
+    'type'       => 'file',
+    'options'    => array(
+      'url' => false,
     ),
-  ),
-  'attributes' => array(
-    'accept' => 'video/*',
-  ),
-  'text'       => array(
-    'add_upload_file_text' => 'Selecionar Vídeo' 
-  ),
-) );
+    'query_args' => array(
+      'type' => array(
+        'video/mp4',
+        'video/ogg',
+        'video/webm',
+      ),
+    ),
+    'attributes' => array(
+      'accept' => 'video/*',
+    ),
+    'text'       => array(
+      'add_upload_file_text' => 'Selecionar Vídeo' 
+    ),
+  ));
+
+}
+
+function videoap_home() {
+  $videoap_home_box = new_cmb2_box([
+    'id' => 'videoap_home_box',
+    'title' => 'Seção com o vídeo de apresentação',
+    'object_types' => ['page'],
+    'show_on' => [
+      'key' => 'page-template',
+      'value' => 'page-home.php',
+    ]
+  ]);
+  
+  $videoap_home_box->add_field( array(
+    'name'       => 'Vídeo de Apresentação',
+    'id'         => 'video_apresentacao',
+    'type'       => 'file',
+    'options'    => array(
+      'url' => false,
+    ),
+    'query_args' => array(
+      'type' => array(
+        'video/mp4',
+        'video/ogg',
+        'video/webm',
+      ),
+    ),
+    'attributes' => array(
+      'accept' => 'video/*',
+    ),
+    'text'       => array(
+      'add_upload_file_text' => 'Selecionar Vídeo' 
+    ),
+  ));
 }
 
 add_action('cmb2_admin_init', 'hero_home');
+add_action('cmb2_admin_init', 'videoap_home');
 add_action('cmb2_admin_init', 'home_cards');
 ?>

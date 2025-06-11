@@ -38,8 +38,13 @@
 <body>
 
 <header class="header-transparent"> 
-        <div class="logo-header fade-in-left"> 
-            <a href="/"> 
+        <div class="logo-header fade-in-left">
+            <!-- Se o header estiver na home, scrolla tudo pra cima, se não vai pra home -->
+            <?php if ( is_page('Início') ) : ?> 
+                <a href="#hero">
+            <?php else : ?>
+                <a href="/">
+            <?php endif; ?>
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png"> 
             </a> 
         </div>
@@ -49,7 +54,13 @@
         </div>
         
             <nav>
-                <a href="/">Home</a>
+                <!-- Se o header estiver na home, scrolla tudo pra cima, se não vai pra home -->
+                <?php if ( is_page('Início') ) : ?>
+                    <a href="#hero">Home</a>
+                <?php else : ?>
+                    <a href="/">Home</a>
+                <?php endif; ?>
+                
                 <a href="#hero">Quem somos</a>
 
                 <div class="dropdown js-dropdown">

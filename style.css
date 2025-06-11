@@ -13,6 +13,7 @@ Version: 1.0
     --third-blue: #000760;
     --primary-font: "Inria Sans", sans-serif;
     --secondary-font: "League Spartan", "Inria Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 .solutions-content{
