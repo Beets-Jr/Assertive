@@ -909,7 +909,7 @@ h2 {
     .card-container,
     .card-container .card-inner,
     .card-container .card-inner .card {
-        height: 550px;
+        height: 600px;
         width: 95%;
         margin: auto;
     }
