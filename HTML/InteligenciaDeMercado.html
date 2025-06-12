@@ -6,6 +6,7 @@
   <title>Inteligência de Mercado | Assertive</title>
 
   <link rel="stylesheet" href="../CSS/InteligenciaDeMercado.css">
+  <link rel="stylesheet" href="../CSS/sobreNos.css">
 
   <!-- Fonte Inria Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +25,48 @@
             <button type="button" onclick="navigateToContact()">Entre em Contato</button>
         </div>
     </header>
+
+    <div class="grid-container-socio1">
+      <img src="php echo $co_founder_photo " alt="Sócio Renato Caitano, co-fundador">
+
+      <div class="card-container">
+        <div class="card-inner">
+          <div class="card front-card">
+            <h2 class="inria-sans-bold">
+              ?php the_field('sobre_nos_founders_co_founder_name'); ?
+            </h2>
+            <h3>Sócio Co-fundador</h3>
+          </div>
+
+          <div class="card back-card">
+            <p>
+              ?php the_field('sobre_nos_founders_co_founder_description'); ?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-container-socio2">
+      <div class="card-container">
+        <div class="card-inner">
+          <div class="card front-card">
+            <h2 class="inria-sans-bold">
+              ?php the_field('sobre_nos_founders_founder_name'); ?
+            </h2>
+            <h3>Sócia fundadora</h3>
+          </div>
+
+          <div class="card back-card">
+            <p>
+              ?php the_field('sobre_nos_founders_founder_description'); ?
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="teste" alt="Sócia Larissa Tavares, fundadora">
+    </div>
+  </section>
 
     <section class="market-intelligence-what-is-it">
         <article class="market-intelligence-what-is-it-card">

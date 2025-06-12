@@ -417,14 +417,6 @@ h3 {
     justify-content: space-between;
 }
 
-.card-container{
-    width: 50rem;
-    height: 25rem;
-    perspective: 1000px;
-    position: relative;
-    border-radius: 10px;
-}
-
 .card-inner{
     width: 100%; height: 100%;
     transform-style: preserve-3d;
@@ -432,25 +424,39 @@ h3 {
     border-radius: 10px;
 }
 
+.title-back-card {
+    display: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.title-back-card > h2,
+.title-back-card > h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+}
+
+.flip-card,
 .card-container:hover .card-inner,
 .card-container:focus-within .card-inner{
     transform: rotateY(180deg);
     cursor: pointer;
 }
 
-.card-inner .card {
+.card-inner .card{
     position: absolute;
     inset: 0;
     border-radius: inherit;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
 }
 
 .front-card{
-    background: linear-gradient(90deg,#0994B4 0%,#022945 100%);
+    background: var(--primary-blue);
     color:#fff;
 }
 
@@ -460,31 +466,24 @@ h3 {
     color: var(--secondary-blue);
 }
 
-.back-card p{
+.back-card p {
     margin: auto auto;
-    color: var(--secondary-blue);
+    color: var(--primary-blue);
     text-align: center;
 }
 
-.cards-grid .card-container .card-inner .back-card .sc-blue{
+.cards-grid .card-container .card-inner .back-card .sc-blue {
     color: var(--secondary-blue);
     font-size: 3rem;
 }
 
-.back-card a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: -0.1rem;
-    top: -0.1rem;
-}
-
-.blue-card {
+.card-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--primary-blue);
     width: 100%;
     color: white;
+    perspective: 1000px;
+    position: relative;
     padding-top: 2rem;
 }
 
@@ -622,8 +621,22 @@ h2 {
     margin-top: 5px;
 }
 
-/* end parte Renan */
+@keyframes flip-card {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  .flip-card-animation {
+    animation: flip-card .5s ease-in-out;
+  }
+}
+
+/* end parte Renan */
 @media (max-width: 768px) {
     section#hero {
         background-image: url('../imgs/cidade-mobile.png');
@@ -735,6 +748,20 @@ h2 {
         font-size: 1rem;
     }
 
+    .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .title-back-card {
+        display: block;
+    }
+
+    .card-container:hover .card-inner,
+    .card-container:focus-within .card-inner{
+        transform: none;
+        cursor: none;
+    }
+
     .founders .grid-container-socio1,
     .founders .grid-container-socio2 {
         display: flex;
@@ -777,6 +804,16 @@ h2 {
 }
 
 @media (min-width:801px) and (max-width:1200px) {
+    .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-container:hover .card-inner,
+    .card-container:focus-within .card-inner{
+        transform: none;
+        cursor: none;
+    }
+
     .founders .grid-container-socio1,
     .founders .grid-container-socio2 {
         display: flex;
@@ -851,6 +888,30 @@ h2 {
 
     .mvv-second-card {
         margin-left: 2em;
+    }
+
+    .grid-container-socio1,
+    .grid-container-socio2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .grid-container-socio1 img,
+    .grid-container-socio2 img {
+        margin-bottom: 1rem;
+    }
+
+    .card-container {
+        position: static;
+    }
+
+    .card-container,
+    .card-container .card-inner,
+    .card-container .card-inner .card {
+        height: 550px;
+        width: 95%;
+        margin: auto;
     }
 
     .contact-img{

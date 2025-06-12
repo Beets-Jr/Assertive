@@ -35,56 +35,51 @@
       <div class="card-container">
         <div class="card-inner">
           <div class="card front-card">
-            <div class="title-container">
-              <h2 class="inria-sans-bold">
-                <?php the_field('sobre_nos_founders_co_founder_name'); ?>
-              </h3>
-                <h3>Sócio Co-fundador</h3>
-            </div>
+            <h2 class="inria-sans-bold">
+              <?php the_field('sobre_nos_founders_co_founder_name'); ?>
+            </h2>
+            <h3>Sócio Co-fundador</h3>
           </div>
 
           <div class="card back-card">
-            <div class="information-container">
-              <p>
-                <?php the_field('sobre_nos_founders_co_founder_description'); ?>
-              </p>
+            <div class="title-back-card">
+              <h2 class="inria-sans-bold">
+                <?php the_field('sobre_nos_founders_co_founder_name'); ?>
+              </h2>
+              <h3>Sócio Co-fundador</h3>
             </div>
+            <p>
+              <?php the_field('sobre_nos_founders_co_founder_description'); ?>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-container-socio2">
+      <div class="card-container">
+        <div class="card-inner">
+          <div class="card front-card">
+            <h2 class="inria-sans-bold">
+              <?php the_field('sobre_nos_founders_founder_name'); ?>
+            </h2>
+            <h3>Sócia fundadora</h3>
+          </div>
+
+          <div class="card back-card">
+            <div class="title-back-card">
+              <h2 class="inria-sans-bold">
+                <?php the_field('sobre_nos_founders_founder_name'); ?>
+              </h2>
+              <h3>Sócia fundadora</h3>
+            </div>
+            <p>
+              <?php the_field('sobre_nos_founders_founder_description'); ?>
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- <div class="blue-card">
-        <div class="title-container">
-          <h2 class="inria-sans-bold">
-            <?php the_field('sobre_nos_founders_co_founder_name'); ?>
-          </h3>
-            <h3>Sócio Co-fundador</h3>
-        </div>
-
-        <div class="information-container">
-          <p>
-            <?php the_field('sobre_nos_founders_co_founder_description'); ?>
-          </p>
-        </div>
-      </div> -->
-
-    </div>
-
-    <div class="grid-container-socio2">
-      <div class="blue-card">
-        <div class="title-container">
-          <h2 class="inria-sans-bold">
-            <?php the_field('sobre_nos_founders_founder_name'); ?>
-          </h2>
-          <h3>Sócia fundadora</h3>
-        </div>
-
-        <div class="information-container">
-          <p>
-            <?php the_field('sobre_nos_founders_founder_description'); ?>
-          </p>
-        </div>
-      </div>
       <?php
         $founder_photo = wp_get_attachment_image_src(get_field('sobre_nos_founders_founder_photo_id'), 'large')[0];
       ?>
