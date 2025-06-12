@@ -665,8 +665,9 @@ div.video > video {
 .metricas-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10vw;
-  margin-top: 60px;
+  height: 20vh;
   flex-wrap: wrap;
   text-align: center;
 }

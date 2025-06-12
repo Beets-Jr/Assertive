@@ -77,6 +77,7 @@ function home_cards() {
     'options' => [
       'group_title' => 'Característica {#}',
       'add_button' => 'Adicionar característica',
+      'remove_button' => 'Remover característica',
       'sortable' => true,
     ]
   ]);
@@ -97,6 +98,7 @@ function home_cards() {
     'options' => [
       'group_title' => 'Característica {#}',
       'add_button' => 'Adicionar característica',
+      'remove_button' => 'Remover característica',
       'sortable' => true,
     ]
   ]);
@@ -116,6 +118,7 @@ function home_cards() {
     'options' => [
       'group_title' => 'Característica {#}',
       'add_button' => 'Adicionar característica',
+      'remove_button' => 'Remover característica',
       'sortable' => true,
     ]
   ]);
@@ -235,7 +238,64 @@ function videoap_home() {
   ));
 }
 
+function segmentos_home(){
+  $home_segmentos_box = new_cmb2_box([
+    'id' => 'segmentos_box',
+    'title' => 'Seção Segmentos Atendidos',
+    'object_types' => ['page'],
+    'show_on' => [
+      'key' => 'page-template',
+      'value' => 'page-home.php',
+    ]
+  ]);
+
+  $home_segmentos_box->add_field([
+    'id' => 'titulo_secao_segmentos',
+    'name' => esc_html__('Título da Seção', 'cmb2'),
+    'desc' => esc_html__('Primeiro texto que aparece, acima dos cards', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $cards_segmentos = $home_segmentos_box->add_field([
+    'name' => 'Cards Segmentos Atendidos',
+    'id' => 'cards_segmentos',
+    'type' => 'group',
+    'repeatable' => true,
+    'options' => [
+      'group_title' => 'Card {#}',
+      'add_button' => 'Adicionar Card',
+      'remove_button' => 'Remover Card',
+      'sortable' => true,
+    ]
+  ]);
+
+  $home_segmentos_box->add_group_field($cards_segmentos, [
+    'name' => 'Título Card da frente',
+    'id' => 'front_card_title',
+    'type' => 'text',
+  ]);
+
+  $home_segmentos_box->add_group_field($cards_segmentos, [
+    'name' => 'Texto Card da frente',
+    'id' => 'front_card_text',
+    'type' => 'textarea_small',
+  ]);
+
+  $home_segmentos_box->add_group_field($cards_segmentos, [
+    'name' => 'Título Card de trás',
+    'id' => 'back_card_title',
+    'type' => 'text',
+  ]);
+
+  $home_segmentos_box->add_group_field($cards_segmentos, [
+    'name' => 'Texto Card de trás',
+    'id' => 'back_card_text',
+    'type' => 'textarea_small',
+  ]);
+}
+
 add_action('cmb2_admin_init', 'hero_home');
 add_action('cmb2_admin_init', 'videoap_home');
 add_action('cmb2_admin_init', 'home_cards');
+add_action('cmb2_admin_init', 'segmentos_home');
 ?>
