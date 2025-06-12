@@ -247,7 +247,50 @@ button.error {
     }
 }
 
-@media (max-width: 800px ) {
+@media (max-width: 400px ) {
+
+    .forms-container h1 {
+        font-size: 24px;
+    }
+
+    .forms-container h2 {
+        font-size: 18px;
+    }
+
+    .forms-container label {
+        font-size: 14px;
+    }
+
+    .forms-container input{
+        height: 30px;
+        padding: 0;
+        padding-left: 5px;
+    }
+
+    .forms-container textarea{
+        padding: 0;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    .forms-container div{
+        margin-top: 10px;
+    }
+
+    .contact-form input::placeholder {
+        font-size: 12px;
+    }
+
+    .contact-form textarea::placeholder {
+        font-size: 12px;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
 
     .forms-container h1 {
         font-size: 32px;

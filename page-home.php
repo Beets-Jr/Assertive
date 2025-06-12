@@ -22,15 +22,12 @@
             <div class="hero-overlay">
                 <div class="hero-content">
                     <div class="hero-texto">
-                        <h1><?php the_field('hero_titulo_l1') ?> <br><span><?php the_field('hero_titulo_l2') ?></span></h1>
+                        <h1><?php the_field('hero_titulo_l1') ?> <br><span></span></h1>
                         
                             <?php
                                 $subtitulo = get_post_meta( get_the_ID(), 'hero_subtitulo', true );
                                 echo wpautop( $subtitulo );
                             ?>
-
-                            <!-- Conheça nossa equipe de prospecção para inteligência<br>
-                            de mercado de acordo com as necessidades da sua empresa. -->
                         
                         <a href="#contato" class="btn-cta"><?php the_field('texto_botao') ?></a>
                     </div>
@@ -72,8 +69,6 @@
 
                             <p class="inria-sans-regular">
                                 <?php the_field('texto_card_1') ?>
-                                <!-- Conheça profundamente o setor dos seus potenciais clientes.
-                                Entenda suas necessidades e desafios. -->
                             </p>
 
                             <?php
@@ -84,17 +79,12 @@
                                 <?php } } ?>
                             </div>
 
-                            <!-- <div class="characteristics montserrat-light">
-                                <div>Análise da concorrência</div>
-                                <div>Análise Territorial</div>
-                                <div>Share de mercado</div>
-                            </div> -->
                         </div>
 
                         <div class="card back-card">
                             <a href="../HTML/ProspeccaoAssertive.html"></a>
                             <p class="inria-sans-bold sc-blue">
-                                Conheça o perfil dos seus clientes com nosso produto de Inteligência de mercado!
+                                <?php the_field('texto_card_tras_1') ?>
                             </p>
                         </div>
 
@@ -109,9 +99,6 @@
 
                             <p class="inria-sans-regular">
                                 <?php the_field('texto_card_2') ?>
-                                <!-- Planeje e estruture sua estratégia de prospecção ativa. Expanda seu negócio,
-                                ganhe visibilidade para sua empresa e aumente seu retorno sobre o investimento
-                                utilizando da nossa expertise. -->
                             </p>
 
                             <?php
@@ -122,18 +109,12 @@
                                 <?php } } ?>
                             </div>
 
-                            <!-- <div class="characteristics montserrat-light">
-                                <div>Pesquisa e análise de novos leads</div>
-                                <div>Abordagem consultiva e personalizada</div>
-                            </div> -->
-
                         </article>
 
                         <article class="card back-card">
                             <a href="../HTML/InteligenciaDeMercado.html"></a>
                             <p class="inria-sans-bold sc-blue">
-                                Transforme sua abordagem comercial com nosso 
-                                Treinamento de Prospecção!
+                                <?php the_field('texto_card_tras_2') ?>
                             </p>
                         </article>
 
@@ -148,9 +129,6 @@
 
                             <p class="inria-sans-regular">
                                 <?php the_field('texto_card_3') ?>
-                                <!-- A partir das necessidades do cliente, traçamos objetivos e estratégias para seu
-                                produto atingir o segmento e público alvo desejados, com uma equipe preparada
-                                com as informações e técnicas de negociação necessárias para as vendas. -->
                             </p>
 
                             <?php
@@ -161,17 +139,12 @@
                                 <?php } } ?>
                             </div>
 
-                            <!-- <div class="characteristics montserrat-light">
-                                <div>Análise das necessidades</div>
-                                <div>Planejamento estratégico</div>
-                                <div>Gestão da Informação</div>
-                            </div> -->
                         </article>
 
                         <article class="card back-card">
                             <a href="../HTML/TreinamentoProspeccao.html"></a>
                             <p class="inria-sans-bold sc-blue">
-                                Conheça nossa prospecção estratégica que alcança o segmento desejado pro seu produto!
+                                <?php the_field('texto_card_tras_3') ?>
                             </p>
                         </article>
 
@@ -228,18 +201,18 @@
         <div class="metricas-container">
             <div class="metrica">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/segmentos-atendidos.svg" alt="Ícone Segmentos">
-                <p class="number">80</p>
-                <p class="descricao">Segmentos<br>Atendidos</p>
+                <p class="number"><?php the_field('valor_numero1') ?></p>
+                <p class="descricao"><?php the_field('titulo_numero1') ?></p>
             </div>
             <div class="metrica">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/empresas-potencializadas.svg" alt="Ícone Empresas">
-                <p class="number">300</p>
-                <p class="descricao">Empresas<br>potencializadas</p>
+                <p class="number"><?php the_field('valor_numero2') ?></p>
+                <p class="descricao"><?php the_field('titulo_numero2') ?></p>
             </div>
             <div class="metrica">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/oportunidades-criadas.svg" alt="Ícone Oportunidades">
-                <p class="number">30000</p>
-                <p class="descricao">Oportunidades<br>Criadas</p>
+                <p class="number"><?php the_field('valor_numero3') ?></p>
+                <p class="descricao"><?php the_field('titulo_numero3') ?></p>
             </div>
         </div>
     </section> 

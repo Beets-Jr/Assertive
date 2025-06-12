@@ -41,6 +41,13 @@ function home_cards() {
   ]);
 
   $home_cards_box->add_field([
+    'id' => 'texto_card_tras_1',
+    'name' => esc_html__('Texto de trás do Card 1', 'cmb2'),
+    'desc' => esc_html__('Texto de trás do card mais à ESQUERDA, primeira fileira', 'cmb2'),
+    'type' => 'textarea_small',
+  ]);
+
+  $home_cards_box->add_field([
     'id' => 'titulo_card_2',
     'name' => esc_html__('Título do Card 2', 'cmb2'),
     'desc' => esc_html__('Título do card mais à DIREITA, primeira fileira', 'cmb2'),
@@ -55,6 +62,13 @@ function home_cards() {
   ]);
 
   $home_cards_box->add_field([
+    'id' => 'texto_card_tras_2',
+    'name' => esc_html__('Texto de trás do Card 2', 'cmb2'),
+    'desc' => esc_html__('Texto de trás do card mais à DIREITA, primeira fileira', 'cmb2'),
+    'type' => 'textarea_small',
+  ]);
+
+  $home_cards_box->add_field([
     'id' => 'titulo_card_3',
     'name' => esc_html__('Título do Card 3', 'cmb2'),
     'desc' => esc_html__('Título do card de baixo', 'cmb2'),
@@ -65,6 +79,13 @@ function home_cards() {
     'id' => 'texto_card_3',
     'name' => esc_html__('Texto do Card 3', 'cmb2'),
     'desc' => esc_html__('Texto do card de baixo', 'cmb2'),
+    'type' => 'textarea_small',
+  ]);
+
+  $home_cards_box->add_field([
+    'id' => 'texto_card_tras_3',
+    'name' => esc_html__('Texto de trás do Card 3', 'cmb2'),
+    'desc' => esc_html__('Texto de trás do card de baixo', 'cmb2'),
     'type' => 'textarea_small',
   ]);
 
@@ -294,8 +315,63 @@ function segmentos_home(){
   ]);
 }
 
+function numeros_home(){
+  $home_numeros_box = new_cmb2_box([
+    'id' => 'numeros_home_box',
+    'title' => 'Números',
+    'object_types' => ['page'],
+    'show_on' => [
+      'key' => 'page-template',
+      'value' => 'page-home.php',
+    ]
+  ]);
+
+  $home_numeros_box->add_field([
+    'id' => 'titulo_numero1',
+    'name' => esc_html__('Título do primeiro número', 'cmb2'),
+    'desc' => esc_html__('Texto que fica embaixo do número (do que se trata esse número)', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $home_numeros_box->add_field([
+    'id' => 'valor_numero1',
+    'name' => esc_html__('Valor do número', 'cmb2'),
+    'desc' => esc_html__('Insira alguma quantidade', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $home_numeros_box->add_field([
+    'id' => 'titulo_numero2',
+    'name' => esc_html__('Título do segundo número', 'cmb2'),
+    'desc' => esc_html__('Texto que fica embaixo do número (do que se trata esse número)', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $home_numeros_box->add_field([
+    'id' => 'valor_numero2',
+    'name' => esc_html__('Valor do número', 'cmb2'),
+    'desc' => esc_html__('Insira alguma quantidade', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $home_numeros_box->add_field([
+    'id' => 'titulo_numero3',
+    'name' => esc_html__('Título do terceiro número', 'cmb2'),
+    'desc' => esc_html__('Texto que fica embaixo do número (do que se trata esse número)', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+ $home_numeros_box->add_field([
+    'id' => 'valor_numero3',
+    'name' => esc_html__('Valor do número', 'cmb2'),
+    'desc' => esc_html__('Insira alguma quantidade', 'cmb2'),
+    'type' => 'text',
+  ]);
+}
+
 add_action('cmb2_admin_init', 'hero_home');
 add_action('cmb2_admin_init', 'videoap_home');
 add_action('cmb2_admin_init', 'home_cards');
 add_action('cmb2_admin_init', 'segmentos_home');
+add_action('cmb2_admin_init', 'numeros_home');
 ?>

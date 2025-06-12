@@ -628,6 +628,7 @@ div.video > video {
 .segmentos-atendidos {
   font-family: var(--fonte-assertive);
   margin-top: 40px;
+  margin-bottom: 40px;
   padding: 40px 20px;
 
   text-align: center;
@@ -667,7 +668,7 @@ div.video > video {
   justify-content: center;
   align-items: center;
   gap: 10vw;
-  height: 20vh;
+  height: fit-content;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -693,12 +694,23 @@ div.video > video {
 
 .metrica .descricao {
   font-size: 1.5rem;
+  width: 80%;
   font-weight: bold;
   color: #15194B;
   line-height: 1.4;
 }
 
+.hero-overlay{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
 @media ((max-width: 699px)) {
+  .btn-cta{
+    margin: 0 auto;
+  }
+
   .card-front2 h3,
   .card-back2 h3 {
     font-size: 1rem;
@@ -740,9 +752,53 @@ div.video > video {
     justify-content: center;
     margin: 0 auto;
   }
+
+  .hero-texto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 85%;
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 @media ((min-width: 700px) and (max-width: 1399px)) {
+  .btn-cta{
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .hero-texto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-texto h1{
+    font-size: 4rem;
+  }
+
+  .hero-texto p{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-content {
+    width: 85%;
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+
   .card-front2 h3,
   .card-back2 h3 {
     font-size: 1rem;
@@ -804,9 +860,11 @@ div.video > video {
 @media (min-width: 1600px) {
     .hero-texto h1 {
     font-size: 4rem;
+    width: 85%;
   }
   
   .hero-texto p {
+    width: 85%;
     font-size: 1.75rem;
   }
 
@@ -818,9 +876,12 @@ div.video > video {
   
 
 @media (min-width: 2000px) {
-  .hero-texto h1 { font-size: 4rem; }
-  .hero-texto p  { font-size: 2.5rem; }
-  .btn-cta       { font-size: 2rem; padding: 1.5rem 3rem; }
+  .hero-texto h1 {
+    width: 85%;
+    font-size: 6rem; 
+  }
+  .hero-texto p  { width: 85%; font-size: 3rem; margin-top: 2.5rem; text-align: justify;}
+  .btn-cta       { font-size: 3rem; margin-top: 2.5rem; padding: 1.5rem 5rem; }
 
   .metrica img {
   width: 78px;
@@ -860,12 +921,23 @@ div.video > video {
   color: #15194B;
   line-height: 1.4;
 }
+
+  .hero-content {
+    max-width: 1200px;
+  }
 }
 
 @media (min-width: 3000px) {
-  .hero-texto h1 { font-size: 4.5rem; }
-  .hero-texto p  { font-size: 3rem; }
-  .btn-cta       { font-size: 2.5rem; padding: 2rem 3.5rem; }
+  .hero-texto h1 { 
+    width: 75%;
+    font-size: 8.5rem; 
+  }
+  .hero-texto p  { 
+    width: 75%;
+    font-size: 5rem; 
+    margin-top: 5rem;
+  }
+  .btn-cta       { font-size: 3.5rem; padding: 3rem 5.5rem; border-radius: 2rem; margin-top: 5rem; }
   .cards-container {          
     max-width: 2600px;
     gap: 2vw;
@@ -880,6 +952,10 @@ div.video > video {
   .card-front2 p,
   .card-back2 p {
     font-size: 2rem;
+  }
+
+  .hero-content {
+    max-width: 2000px;
   }
 }
 

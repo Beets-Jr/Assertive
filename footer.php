@@ -16,9 +16,13 @@
                 </div>
     
                 <div class="logo-footer">
-                    <a href="Home.html">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png" alt="Logo Assertive">
-                    </a>
+                    <?php if ( is_page('Início') ) : ?> 
+                        <a href="#hero">
+                    <?php else : ?>
+                        <a href="/">
+                    <?php endif; ?>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png" alt="Logo Assertive">
+                        </a>
                 </div>
     
                 <div class="redes-sociais">
