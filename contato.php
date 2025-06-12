@@ -18,7 +18,7 @@
             <h1><span><?php the_field('contato_titulo_l1', $contato_id) ?> </span><br> <?php the_field('contato_titulo_l2', $contato_id) ?></h1>
             <h2><?php the_field('contato_subtitulo', $contato_id) ?><span> <?php the_field('contato_subtitulo_azul', $contato_id) ?></span></h2>
 
-            <form class="contact-form" action="" method="POST">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/myzjkppj" method="POST" data-form>
             <div>
                 <label for="nome"><?php the_field('label_nome', $contato_id) ?></label>
                 <br>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="button-container">
-                <button type="submit"><?php the_field('texto_botao', $contato_id) ?></button>
+                <button type="submit" data-button><?php the_field('texto_botao', $contato_id) ?></button>
             </div>
             </form>
         </div>
