@@ -769,7 +769,86 @@ div.video > video {
 
 }
 
-@media ((min-width: 700px) and (max-width: 1399px)) {
+@media ((min-width: 700px) and (max-width: 999px)) {
+  .btn-cta{
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .hero-texto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-texto h1{
+    font-size: 4rem;
+  }
+
+  .hero-texto p{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-content {
+    width: 85%;
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-front2 h3,
+  .card-back2 h3 {
+    font-size: 1rem;
+  }
+
+  .card-front2 p,
+  .card-back2 p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .titulo-secao {
+  font-size: 2rem;
+}
+
+.metrica img {
+  width: 45px;
+  height: 45px;
+}
+
+.metrica .number {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #15194B;
+  margin-bottom: 4px;
+}
+
+.metrica .descricao {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #15194B;
+  line-height: 1.4;
+}
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centraliza cada linha */
+    gap: 24px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .card-geral {
+    /* garante até 3 por linha, mas só ocupa o “espaço que precisa” e deixa o gap */
+    flex: 0 1 calc(50% - 24px);
+    box-sizing: border-box;
+  }
+}
+
+@media ((min-width: 1000px) and (max-width: 1399px)) {
   .btn-cta{
     font-size: 2rem;
     margin: 0 auto;
@@ -834,11 +913,15 @@ div.video > video {
 
   .cards-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
-    max-width: 65vw;
+    max-width: 1200px;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

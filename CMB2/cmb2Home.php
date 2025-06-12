@@ -169,14 +169,7 @@ function hero_home() {
 
   $hero_home_box->add_field([
     'id' => 'hero_titulo_l1',
-    'name' => esc_html__('Primeira linha do título da primeira seção', 'cmb2'),
-    'desc' => esc_html__('Primeiro e maior título na seção', 'cmb2'),
-    'type' => 'text',
-  ]);
-
-  $hero_home_box->add_field([
-    'id' => 'hero_titulo_l2',
-    'name' => esc_html__('Segunda linha do título da primeira seção', 'cmb2'),
+    'name' => esc_html__('Título da seção', 'cmb2'),
     'desc' => esc_html__('Primeiro e maior título na seção', 'cmb2'),
     'type' => 'text',
   ]);
