@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="card back-card">
-                            <a href="../HTML/ProspeccaoAssertive.html"></a>
+                            <a href="/ProspeccaoAssertive.php"></a>
                             <p class="inria-sans-bold sc-blue">
                                 <?php the_field('texto_card_tras_1') ?>
                             </p>
@@ -112,7 +112,7 @@
                         </article>
 
                         <article class="card back-card">
-                            <a href="../HTML/InteligenciaDeMercado.html"></a>
+                            <a href="/InteligenciaDeMercado.php"></a>
                             <p class="inria-sans-bold sc-blue">
                                 <?php the_field('texto_card_tras_2') ?>
                             </p>
@@ -142,7 +142,7 @@
                         </article>
 
                         <article class="card back-card">
-                            <a href="../HTML/TreinamentoProspeccao.html"></a>
+                            <a href="/TreinamentoProspeccao.php"></a>
                             <p class="inria-sans-bold sc-blue">
                                 <?php the_field('texto_card_tras_3') ?>
                             </p>
