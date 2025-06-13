@@ -1,9 +1,24 @@
 /* Parte Thales */
 
+window.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && window.innerWidth < 1200) {
+        entry.target.classList.add('flip-card-animation');
+      } else if (!entry.isIntersecting && window.innerWidth < 1200) {
+        entry.target.classList.remove('flip-card-animation');
+      }
+    });
+  });
+
+  const items = document.querySelectorAll([
+    '.card-inner'
+  ]);
+
+  items.forEach((item) => observer.observe(item))
+})
+
 /* end parte Thales */
-
-
-
 
 /* Parte Murillo */
 
@@ -86,4 +101,3 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /* end parte Renan */
-
