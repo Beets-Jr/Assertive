@@ -2,6 +2,8 @@
 // Template Name: SobreNos
 ?>
 
+<?php $home = get_page_by_title('Home'); ?>
+
 <?php get_header() ?>
 
 <?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
@@ -25,113 +27,121 @@
     </div>
 
     <div class="grid-container-socio1">
-      <img src="../imgs/socio.png" alt="Sócio Renato Caitano, co-fundador">
+      <?php
+        $co_founder_photo = wp_get_attachment_image_src(get_field('sobre_nos_founders_co_founder_photo_id'), 'large')[0];
+      ?>
+      <img src="<?php echo $co_founder_photo ?>" alt="Sócio Renato Caitano, co-fundador">
 
-      <div class="blue-card">
-        <div class="title-container">
-          <h2 class="inria-sans-bold">
-            <?php the_field('sobre_nos_founders_co_founder_name'); ?>
-          </h3>
+      <div class="card-container">
+        <div class="card-inner">
+          <div class="card front-card">
+            <h2 class="inria-sans-bold">
+              <?php the_field('sobre_nos_founders_co_founder_name'); ?>
+            </h2>
             <h3>Sócio Co-fundador</h3>
-        </div>
+          </div>
 
-        <div class="information-container">
-          <p>
-            <?php the_field('sobre_nos_founders_co_founder_description'); ?>
-          </p>
+          <div class="card back-card">
+            <div class="title-back-card">
+              <h2 class="inria-sans-bold">
+                <?php the_field('sobre_nos_founders_co_founder_name'); ?>
+              </h2>
+              <h3>Sócio Co-fundador</h3>
+            </div>
+            <p>
+              <?php the_field('sobre_nos_founders_co_founder_description'); ?>
+            </p>
+          </div>
         </div>
       </div>
-
     </div>
 
     <div class="grid-container-socio2">
-      <div class="blue-card">
-        <div class="title-container">
-          <h2 class="inria-sans-bold">
-            <?php the_field('sobre_nos_founders_founder_name'); ?>
-          </h2>
-          <h3>Sócia fundadora</h3>
-        </div>
+      <div class="card-container">
+        <div class="card-inner">
+          <div class="card front-card">
+            <h2 class="inria-sans-bold">
+              <?php the_field('sobre_nos_founders_founder_name'); ?>
+            </h2>
+            <h3>Sócia fundadora</h3>
+          </div>
 
-        <div class="information-container">
-          <p>
-            <?php the_field('sobre_nos_founders_founder_description'); ?>
-          </p>
+          <div class="card back-card">
+            <div class="title-back-card">
+              <h2 class="inria-sans-bold">
+                <?php the_field('sobre_nos_founders_founder_name'); ?>
+              </h2>
+              <h3>Sócia fundadora</h3>
+            </div>
+            <p>
+              <?php the_field('sobre_nos_founders_founder_description'); ?>
+            </p>
+          </div>
         </div>
       </div>
-      <img src="../imgs/socia.png" alt="Sócia Larissa Tavares, fundadora">
+
+      <?php
+        $founder_photo = wp_get_attachment_image_src(get_field('sobre_nos_founders_founder_photo_id'), 'large')[0];
+      ?>
+      <img src="<?php echo $founder_photo ?>" alt="Sócia Larissa Tavares, fundadora">
     </div>
   </section>
 
   <section class="how-the-work">
     <h2>Como Trabalhamos</h2>
 
-    <div class="how-the-work-cards-container">
-      <article class="how-the-work-card">
-        <h3>Propósito</h3>
-        <p>Nosso objetivo é impulsionar a receita dos clientes por meio da prospecção B2B e inteligência de mercado,
-          gerando crescimento de forma significativa.</p>
-      </article>
+    <ul class="how-the-work-cards-container">
+      <?php
+        $cards = get_field('sobre_nos_how_the_work_cards');
+        if (isset( $cards )): foreach ($cards as $card):
+      ?>
+        <li class="how-the-work-card">
+            <h3><?php echo $card['title'] ?></h3>
+            <p><?php echo $card['description'] ?></p>
+        </li>
+      <?php endforeach; endif; ?>
+    </ul>
 
-      <article class="how-the-work-card">
-        <h3>Responsabilidade</h3>
-        <p>Conduzimos a prospecção com foco no cliente e respeito à LGPD, garantindo o uso ético e seguro das
-          informações em todo o processo comercial.</p>
-      </article>
-
-      <article class="how-the-work-card">
-        <h3>Resultados</h3>
-        <p>Buscamos gerar resultados concretos e lucrativos, contribuindo diretamente para o crescimento e sucesso dos
-          nossos clientes.</p>
-      </article>
-    </div>
-
-    <button>Conheça nossos serviços</button>
+    <button><?php the_field("sobre_nos_how_the_work_button") ?></button>
   </section>
 
   <section class="who-we-are">
     <h2>Quem somos</h2>
 
     <article class="who-we-are-introduction">
-      <p>A Assertive Brasil é uma empresa formada por profissionais com ampla experiência em prospecção de clientes B2B
-        e mapeamento de mercado. </p>
-
-      <p>Nossa missão é buscar novas oportunidades de negócios para empresas de diversos portes e segmentos,
-        potencializando os resultados comerciais.</p>
+      <p><?php the_field("sobre_nos_who_we_are_text") ?></p>
     </article>
   </section>
 
   <section class="mvv">
     <div class="mvv-img-container">
-      <img src="../imgs/logo.png" alt="imagem do logo da Assertive" class="mvv-image">
+      <?php
+        $logo = wp_get_attachment_image_src(get_field('logo_assertive_id', $home->ID), 'large')[0];
+      ?>
+      <img src="<?php echo $logo ?>" alt="imagem do logo da Assertive" class="mvv-image">
 
       <div class="mvv-line mvv-first-line"></div>
       <div class="mvv-line mvv-second-line"></div>
       <div class="mvv-line mvv-third-line"></div>
     </div>
 
-    <div class="mvv-cards-container">
-      <article class="mvv-card">
-        <h3>Missão</h3>
-        <p>Criar soluções em relacionamentos comerciais para empresas de todos os portes e potencializar seus
-          resultados!</p>
-      </article>
-
-      <article class="mvv-card mvv-second-card">
-        <h3>Visão</h3>
-        <p>Revolucionar o mercado, conectar o máximo de empresas com resultados expressivos!</p>
-      </article>
-
-      <article class="mvv-card">
-        <h3>Valores</h3>
-        <p>Integridade, Respeito, Transparência Resultados</p>
-      </article>
-    </div>
+    <ul class="mvv-cards-container">
+      <?php
+        $coutn = 0;
+        $cards = get_field('sobre_nos_who_we_are_cards');
+        if (isset( $cards )): foreach ($cards as $card):
+      ?>
+        <li class="mvv-card <?php if ($count == 1): echo "mvv-second-card"; endif; ?>">
+          <h3><?php echo $card['title'] ?></h3>
+          <p><?php echo $card['description'] ?></p>
+        </li>
+      <?php $count++; endforeach; endif; ?>
+    </ul>
   </section>
 
   <aside class="mvv-end-message">
-    <p>Transformamos resultados</p>
-    <p>Em histórias de sucesso</p>
+    <p><?php the_field("sobre_nos_end_message_top") ?></p>
+    <p><?php the_field("sobre_nos_end_message_bottom") ?></p>
   </aside>
 
 <?php endwhile; endif; ?>
