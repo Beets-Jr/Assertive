@@ -4,15 +4,15 @@ window.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting && window.innerWidth < 1200) {
-        entry.target.classList.add('flip-card-animation');
+        entry.target.classList.add('sobreNos-flip-card-animation');
       } else if (!entry.isIntersecting && window.innerWidth < 1200) {
-        entry.target.classList.remove('flip-card-animation');
+        entry.target.classList.remove('sobreNos-flip-card-animation');
       }
     });
   });
 
   const items = document.querySelectorAll([
-    '.card-inner'
+    '.sobreNos-card-inner'
   ]);
 
   items.forEach((item) => observer.observe(item))
@@ -26,37 +26,52 @@ window.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible-block-animation');
+        entry.target.classList.add('sobreNos-visible-block-animation');
       }
     });
   });
 
   observer.observe(document.querySelector([
-    '.who-we-are-introduction'
+    '.sobreNos-who-we-are-introduction'
   ]));
 })
+
+function sobreNos_showServices() {
+  const dropdownMenu = document.getElementsByClassName('dropdown-menu')[0];
+  const menuToggle = document.querySelector('.menu-toggle');
+  const btn = document.querySelector('.js-dropbtn');
+
+  dropdownMenu.classList.add("dropdown-hover-forced");
+
+  menuToggle.click();
+  setTimeout(() => {
+    btn.click();
+  }, 100);
+}
+
+document.addEventListener("mouseup", function(event) {
+  const dropdownMenu = document.getElementsByClassName('dropdown-menu')[0];
+
+  if (!dropdownMenu.contains(event.target)) {
+  dropdownMenu.classList.remove("dropdown-hover-forced");
+  }
+});
 
 /* end parte Murillo */
 
 /* Parte Renan */
-
-// sobreNos.js
-
-// sobreNos.js
-// sobreNos.js
-// sobreNos.js
 window.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll([
-    '.grid-container-socio1 img',
-    '.grid-container-socio1 .blue-card',
-    '.grid-container-socio2 img',
-    '.grid-container-socio2 .blue-card',
-    '.contact-img',
-    '.forms-container h1',
-    '.forms-container h2',
-    '.contact-form > div',
-    '.contact-form .button-container',
-    '.mvv-card',
+    '.sobreNos-grid-container-socio1 img',
+    '.sobreNos-grid-container-socio1 .sobreNos-blue-card',
+    '.sobreNos-grid-container-socio2 img',
+    '.sobreNos-grid-container-socio2 .sobreNos-blue-card',
+    '.sobreNos-contact-img',
+    '.sobreNos-forms-container h1',
+    '.sobreNos-forms-container h2',
+    '.sobreNos-contact-form > div',
+    '.sobreNos-contact-form .sobreNos-button-container',
+    '.sobreNos-mvv-card',
   ].join(','));
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -80,15 +95,15 @@ window.addEventListener('DOMContentLoaded', () => {
     let offset;
 
     if (el.tagName === 'IMG') {
-      if (el.closest('.grid-container-socio1')) {
+      if (el.closest('.sobreNos-grid-container-socio1')) {
         offset = -baseOffset;
-      } else if (el.closest('.grid-container-socio2')) {
+      } else if (el.closest('.sobreNos-grid-container-socio2')) {
         offset = baseOffset;
       } else {
         offset = -baseOffset;
       }
     } else {
-      if (el.closest('.grid-container-socio2') && el.classList.contains('blue-card')) {
+      if (el.closest('.sobreNos-grid-container-socio2') && el.classList.contains('sobreNos-blue-card')) {
         offset = -baseOffset;
       } else {
         offset = baseOffset;

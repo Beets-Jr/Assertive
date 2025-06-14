@@ -22,7 +22,34 @@ body {
 
 /* Parte Thales */
 
-section#hero {
+.dropdown-hover-forced {
+  opacity: 1 !important;
+  transform: translateX(-50%) scale(1) !important;
+}
+
+#sobreNos-hero {
+    position: relative;
+    height: 100vh;
+    /* background-image: url('../imgs/'); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.sobreNos-hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 60, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2rem;
+}
+
+section#sobreNos-hero {
     background: url('../imgs/cidade-alt-4.png') no-repeat center center/cover;
     background-position: center left;
     display: flex;
@@ -31,7 +58,7 @@ section#hero {
     padding: 2em;
 }
 
-section#hero .hero-inner {
+section#sobreNos-hero .sobreNos-hero-inner {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -40,7 +67,7 @@ section#hero .hero-inner {
     margin-left: 2vw;
 }
 
-section#hero .hero-content {
+section#sobreNos-hero .sobreNos-hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,12 +86,12 @@ section#hero .hero-content {
     animation-delay: 0.2s;
 }
 
-.hero-content:hover {
+.sobreNos-hero-content:hover {
     transform: translateX(0) scale(1.02);
     box-shadow: 0 .5em 1.25em rgba(0, 0, 0, 0.3);
 }
 
-.hero-title {
+.sobreNos-hero-title {
     font-size: 2.5em;
     color: white;
     font-family: var(--fonte-assertive);
@@ -74,12 +101,12 @@ section#hero .hero-content {
     animation-delay: 0.2s;
 }
 
-.hero-content p {
+.sobreNos-hero-content p {
     font-size: 1.5em;
     line-height: 1.2;
 }
 
-.fade-in-left {
+.sobreNos-fade-in-left {
     opacity: 0;
     transform: translateX(-1.25em);
     animation: fadeInLeft 1s ease-out forwards;
@@ -96,7 +123,7 @@ section#hero .hero-content {
 
 /* Parte Murillo */
 
-.how-the-work {
+.sobreNos-how-the-work {
     margin: 0 auto;
     max-width: 75em;
     padding-bottom: 12em;
@@ -104,13 +131,13 @@ section#hero .hero-content {
     text-align: center;
 }
 
-.how-the-work h2 {
+.sobreNos-how-the-work h2 {
     color: var(--primary-blue);
     font: normal bold 4em var(--primary-font);
     text-align: center;
 }
 
-.how-the-work-cards-container {
+.sobreNos-how-the-work-cards-container {
     align-items: center;
     display: flex;
     gap: 2.5em;
@@ -119,13 +146,13 @@ section#hero .hero-content {
     margin: 8em 2em 4em;
 }
 
-.how-the-work-cards-container,
-.how-the-work-cards-container > li {
+.sobreNos-how-the-work-cards-container,
+.sobreNos-how-the-work-cards-container > li {
     list-style: none;
 }
 
-.how-the-work-card,
-.mvv-card {
+.sobreNos-how-the-work-card,
+.sobreNos-mvv-card {
     background-color: var(--primary-blue);
     border-radius: 1em;
     box-shadow: 0px .25em .25em rgba(0, 0, 0, .25);
@@ -134,22 +161,22 @@ section#hero .hero-content {
     padding: 2em;
 }
 
-.how-the-work-card {
+.sobreNos-how-the-work-card {
     flex: 1;
     height: 24em;
     max-width: 22em;
 }
 
-.how-the-work-card h3 {
+.sobreNos-how-the-work-card h3 {
     font-size: 1.6em;
     margin-bottom: 2.5em;
 }
 
-.how-the-work-card p {
+.sobreNos-how-the-work-card p {
     text-align: left;
 }
 
-.how-the-work button {
+.sobreNos-how-the-work button {
     background-color: var(--third-blue);
     border: none;
     border-radius: 1em;
@@ -161,47 +188,52 @@ section#hero .hero-content {
     transition: background-color .2s, scale .2s;
 }
 
-.how-the-work button:hover {
+.sobreNos-how-the-work button:hover {
     background-color: var(--secondary-blue);
     cursor: pointer;
     scale: 1.1;
 }
 
-.who-we-are {
+.sobreNos-how-the-work button:active {
+    background-color: black;
+    scale: 1;
+}
+
+.sobreNos-who-we-are {
     color: var(--primary-blue);
     font-size: 1.2em;
     max-width: 75em;
     margin: auto;
 }
 
-.who-we-are h2 {
+.sobreNos-who-we-are h2 {
     color: var(--primary-blue);
     font: normal bold 4em var(--primary-font);
     text-align: center;
 }
 
-.who-we-are-introduction {
+.sobreNos-who-we-are-introduction {
     font-weight: 600;
     margin: 10em 2em 6em;
     position: relative;
 }
 
-.who-we-are-introduction::before,
-.who-we-are-introduction::after {
+.sobreNos-who-we-are-introduction::before,
+.sobreNos-who-we-are-introduction::after {
     content: '';
     display: block;
     height: 4em;
     width: 4em;
 }
 
-.who-we-are-introduction::before {
+.sobreNos-who-we-are-introduction::before {
     border-left: 1px solid var(--secondary-blue);
     border-top: 1px solid var(--secondary-blue);
     position: absolute;
     top: -2em;
 }
 
-.who-we-are-introduction::after {
+.sobreNos-who-we-are-introduction::after {
     border-right: 1px solid var(--secondary-blue);
     border-bottom: 1px solid var(--secondary-blue);
     position: absolute;
@@ -209,13 +241,13 @@ section#hero .hero-content {
     bottom: -2em;
 }
 
-.who-we-are-introduction p {
+.sobreNos-who-we-are-introduction p {
     font-size: 1em;
     margin: 3em;
     text-align: left;
 }
 
-.mvv {
+.sobreNos-mvv {
     align-items: center;
     display: flex;
     gap: 10em;
@@ -223,15 +255,15 @@ section#hero .hero-content {
     margin: auto;
 }
 
-.mvv-img-container {
+.sobreNos-mvv-img-container {
     padding-top: 5em;
 }
 
-.mvv-image {
+.sobreNos-mvv-image {
     width: 11.875em;
 }
 
-.mvv-cards-container {
+.sobreNos-mvv-cards-container {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -239,7 +271,7 @@ section#hero .hero-content {
     margin-top: 2em;
 }
 
-.mvv-card {
+.sobreNos-mvv-card {
     border-radius: .5em;
     font-size: 1.3em;
     font-weight: bold;
@@ -247,60 +279,60 @@ section#hero .hero-content {
     width: 36em;
 }
 
-.mvv-card h3 {
+.sobreNos-mvv-card h3 {
     font-size: 2em;
     font-family: var(--secondary-font);
     margin-bottom: 1em;
 }
 
-.mvv-second-card {
+.sobreNos-mvv-second-card {
     margin-left: 13em;
 }
 
-.mvv-line {
+.sobreNos-mvv-line {
     background-color: var(--primary-blue);
     border-radius: .375em;
     height: .375em;
     position: absolute;
 }
 
-.mvv-first-line {
+.sobreNos-mvv-first-line {
     transform: rotateZ(-45deg) translateY(-1.875em) translateX(15.625em);
     width: 13.75em;
 }
 
-.mvv-second-line {
+.sobreNos-mvv-second-line {
     transform: translateY(-5.625em) translateX(11.875em);
     width: 26.25em;
 }
 
-.mvv-third-line {
+.sobreNos-mvv-third-line {
     transform: rotateZ(45deg) translateY(-5.625em) translateX(8.125em);
     width: 13.75em;
 }
 
-.mvv-end-message {
+.sobreNos-mvv-end-message {
     color: var(--primary-blue);
-    margin: 10em auto 0;
+    margin: 10em auto;
     text-transform: uppercase;
 }
 
-.mvv-end-message p {
+.sobreNos-mvv-end-message p {
     font-family: var(--secondary-font);
 }
 
-.mvv-end-message p:first-child {
+.sobreNos-mvv-end-message p:first-child {
     font-size: 1.4em;
     font-weight: lighter;
     margin-bottom: 1em;
 }
 
-.mvv-end-message p:last-child {
+.sobreNos-mvv-end-message p:last-child {
     font-size: 2.2em;
     font-weight: bold;
 }
 
-@keyframes visible-block {
+@keyframes sobreNos-visible-block {
     0% {
         opacity: 0;
     }
@@ -310,19 +342,19 @@ section#hero .hero-content {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .visible-block-animation {
-    animation: visible-block 1s ease-in-out;
+  .sobreNos-visible-block-animation {
+    animation: sobreNos-visible-block 1s ease-in-out;
   }
 }
 
 /* end parte Murillo */
 
 /* Parte Renan */
-.founders h1 {
+.sobreNos-founders h1 {
     font-size: 42px;
 }
 
-.founders h1,
+.sobreNos-founders h1,
 h2,
 h3,
 p {
@@ -331,23 +363,23 @@ p {
     text-align: center;
 }
 
-.founders h2,
+.sobreNos-founders h2,
 h3 {
     font-weight: 700;
     font-size: 38px;
     text-align: center;
 }
 
-.founders h3 {
+.sobreNos-founders h3 {
     font-weight: 400;
 }
 
-.founders .blue-card p {
+.sobreNos-founders .sobreNos-blue-card p {
     font-weight: 100;
     font-size: 26px;
 }
 
-.information-container {
+.sobreNos-information-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -356,36 +388,36 @@ h3 {
     gap: 40px;
 }
 
-.information-container p {
+.sobreNos-information-container p {
     display: block;
     font-size: clamp(18px, 1.1vw, 50px);
     line-height: 1.6;
 
 }
 
-.inria-sans-bold {
+.sobreNos-inria-sans-bold {
     font-weight: 700;
 }
 
-.white-section {
+.sobreNos-white-section {
     background-color: white;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.section-title-container {
+.sobreNos-section-title-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 120px;
 }
 
-.section-title {
+.sobreNos-section-title {
     font-size: 42px;
 }
 
-.grid-container-socio1 {
+.sobreNos-grid-container-socio1 {
     max-width: 100%;
     max-height: 1250px;
     width: 1200px;
@@ -394,21 +426,21 @@ h3 {
     margin-top: 30px;
 }
 
-.grid-container-socio1 .blue-card {
+.sobreNos-grid-container-socio1 .sobreNos-blue-card {
     margin-right: 0px;
 }
 
-.grid-container-socio1 img {
+.sobreNos-grid-container-socio1 img {
     display: block;
     width: 356px;
 }
 
-.grid-container-socio2 img {
+.sobreNos-grid-container-socio2 img {
     display: block;
     width: 405px;
 }
 
-.grid-container-socio2 {
+.sobreNos-grid-container-socio2 {
     margin: 89px 0px 0 0px;
     max-width: 100%;
     width: 1200px;
@@ -417,33 +449,33 @@ h3 {
     justify-content: space-between;
 }
 
-.card-inner{
+.sobreNos-card-inner{
     width: 100%; height: 100%;
     transform-style: preserve-3d;
     transition: transform .8s ease;
     border-radius: 10px;
 }
 
-.title-back-card {
+.sobreNos-title-back-card {
     display: none;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.title-back-card > h2,
-.title-back-card > h3 {
+.sobreNos-title-back-card > h2,
+.sobreNos-title-back-card > h3 {
     color: var(--primary-blue);
     font-size: 1.5rem;
 }
 
-.flip-card,
-.card-container:hover .card-inner,
-.card-container:focus-within .card-inner{
+.sobreNos-flip-card,
+.sobreNos-card-container:hover .sobreNos-card-inner,
+.sobreNos-card-container:focus-within .sobreNos-card-inner{
     transform: rotateY(180deg);
     cursor: pointer;
 }
 
-.card-inner .card{
+.sobreNos-card-inner .sobreNos-card{
     position: absolute;
     inset: 0;
     border-radius: inherit;
@@ -455,29 +487,29 @@ h3 {
     padding: 2rem;
 }
 
-.front-card{
+.sobreNos-front-card{
     background: var(--primary-blue);
     color:#fff;
 }
 
-.back-card{
+.sobreNos-back-card{
     transform: rotateY(180deg);
     background: linear-gradient(0deg,#fff 65%,#3f99da 100%);
     color: var(--secondary-blue);
 }
 
-.back-card p {
+.sobreNos-back-card p {
     margin: auto auto;
     color: var(--primary-blue);
     text-align: center;
 }
 
-.cards-grid .card-container .card-inner .back-card .sc-blue {
+.sobreNos-cards-grid .sobreNos-card-container .sobreNos-card-inner .sobreNos-back-card .sobreNos-sc-blue {
     color: var(--secondary-blue);
     font-size: 3rem;
 }
 
-.card-container {
+.sobreNos-card-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -487,17 +519,17 @@ h3 {
     padding-top: 2rem;
 }
 
-.grid-container-socio2 img {
+.sobreNos-grid-container-socio2 img {
     display: block;
     justify-self: end;
     margin-right: 0px;
 }
 
-.contact-spacing {
+.sobreNos-contact-spacing {
     height: 20vh;
 }
 
-.contact-section h1,
+.sobreNos-contact-section h1,
 h2 {
     font-family: "Inria Sans", sans-serif;
     font-style: normal;
@@ -507,15 +539,15 @@ h2 {
     color: white;
 }
 
-.contact-section h2 {
+.sobreNos-contact-section h2 {
     font-size: 32px;
 }
 
-.contact-section h2 span {
+.sobreNos-contact-section h2 span {
     color: var(--secondary-blue);
 }
 
-.contact-section form {
+.sobreNos-contact-section form {
     color: white;
     font-family: "Inria Sans", sans-serif;
     font-style: normal;
@@ -523,13 +555,13 @@ h2 {
     font-size: 22px;
 }
 
-.blue-bg {
+.sobreNos-blue-bg {
     position: relative;
     background-color: var(--primary-blue);
     overflow: hidden;
 }
 
-.contact-section {
+.sobreNos-contact-section {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -537,7 +569,7 @@ h2 {
     margin: 0 auto;
 }
 
-.forms-container {
+.sobreNos-forms-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -545,11 +577,11 @@ h2 {
     height: 100%;
 }
 
-.forms-container h1 {
+.sobreNos-forms-container h1 {
     margin-bottom: 20px;
 }
 
-.contact-img {
+.sobreNos-contact-img {
     position: absolute;
     top: 0;
     right: 0;
@@ -558,7 +590,7 @@ h2 {
     object-fit: cover;
 }
 
-.contact-form input {
+.sobreNos-contact-form input {
     width: 100%;
     height: 45px;
     padding: 10px;
@@ -567,14 +599,14 @@ h2 {
     padding-left: 15px;
 }
 
-.contact-form input::placeholder {
+.sobreNos-contact-form input::placeholder {
     font-family: "Inria Sans", sans-serif;
     font-style: normal;
     color: black;
     font-size: 18px;
 }
 
-.contact-form textarea {
+.sobreNos-contact-form textarea {
     width: 100%;
     height: 165px;
     padding: 10px;
@@ -582,14 +614,14 @@ h2 {
     border-radius: 5px;
 }
 
-.contact-form textarea::placeholder, .contact-form input {
+.sobreNos-contact-form textarea::placeholder, .sobreNos-contact-form input {
     font-family: "Inria Sans", sans-serif;
     font-style: normal;
     color: black;
     font-size: 18px;
 }
 
-.contact-form button {
+.sobreNos-contact-form button {
     cursor: pointer;
     background-color: var(--secondary-blue);
     width: 160px;
@@ -603,25 +635,25 @@ h2 {
     font-size: 20px;
 }
 
-.contact-form {
+.sobreNos-contact-form {
     width: 82.5%;
 }
 
-.contact-form div {
+.sobreNos-contact-form div {
     margin-top: 20px;
 }
 
-.contact-form .button-container {
+.sobreNos-contact-form .sobreNos-button-container {
     display: flex;
     justify-content: center;
 }
 
-.contact-form div input,
-.contact-form div textarea {
+.sobreNos-contact-form div input,
+.sobreNos-contact-form div textarea {
     margin-top: 5px;
 }
 
-@keyframes flip-card {
+@keyframes sobreNos-flip-card {
     0% {
         transform: rotateY(0deg);
     }
@@ -631,14 +663,14 @@ h2 {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .flip-card-animation {
-    animation: flip-card .5s ease-in-out;
+  .sobreNos-flip-card-animation {
+    animation: sobreNos-flip-card .5s ease-in-out;
   }
 }
 
 /* end parte Renan */
 @media (max-width: 768px) {
-    section#hero {
+    section#sobreNos-hero {
         background-image: url('../imgs/cidade-mobile.png');
         background-size: cover;
         background-position: center center;
@@ -647,208 +679,204 @@ h2 {
         padding: 1em;
     }
 
-    section#hero .hero-inner {
+    section#sobreNos-hero .sobreNos-hero-inner {
         align-items: center;
         gap: 1em;
     }
 
-    section#hero .hero-content {
+    section#sobreNos-hero .sobreNos-hero-content {
         max-width: 90%;
         padding: 1.5em;
         text-align: center;
     }
 
-    .hero-title {
+    .sobreNos-hero-title {
         font-size: 1.8em;
         max-width: 90%;
         text-align: center;
     }
 
-    .hero-content p {
+    .sobreNos-hero-content p {
         font-size: 1em;
     }
 }
 
 @media (max-width: 800px) {
-    .how-the-work {
+    .sobreNos-how-the-work {
         padding-bottom: 4em;
     }
 
-    .how-the-work h2 {
+    .sobreNos-how-the-work h2 {
         font-size: 2.2em;
     }
 
-    .how-the-work-cards-container {
+    .sobreNos-how-the-work-cards-container {
         margin-top: 2em;
     }
 
-    .how-the-work-card {
+    .sobreNos-how-the-work-card {
         height: fit-content;
     }
 
-    .who-we-are h2 {
+    .sobreNos-who-we-are h2 {
         font-size: 2.2em
     }
 
-    .who-we-are-introduction {
+    .sobreNos-who-we-are-introduction {
         margin: 4em 1em 6em;
         font-size: 1em;
     }
 
-    .who-we-are-introduction::before {
+    .sobreNos-who-we-are-introduction::before {
         top: -1em;
     }
 
-    .who-we-are-introduction::after {
+    .sobreNos-who-we-are-introduction::after {
         bottom: -1em;
     }
 
-    .who-we-are-introduction p {
+    .sobreNos-who-we-are-introduction p {
         margin: 1em;
     }
 
-    .mvv-img-container {
+    .sobreNos-mvv-img-container {
         display: none;
     }
 
-    .mvv-cards-container {
+    .sobreNos-mvv-cards-container {
         text-align: center;
     }
 
-    .mvv-card {
+    .sobreNos-mvv-card {
         width: 90% !important;
         margin: auto !important;
     }
 
-    .mvv-second-card {
+    .sobreNos-mvv-second-card {
         margin: 1em auto;
     }
 
-    .mvv-end-message p:first-child {
-        margin-bottom: 4em;
-    }
-
-    .forms-container h1 {
+    .sobreNos-forms-container h1 {
         font-size: 2rem;
     }
 
-    .forms-container h2 {
+    .sobreNos-forms-container h2 {
         font-size: 1.5rem;
     }
 
-    .forms-container label {
+    .sobreNos-forms-container label {
         font-size: 1.2rem;
     }
 
-    .contact-form input::placeholder {
+    .sobreNos-contact-form input::placeholder {
         font-size: 1rem;
     }
 
-    .contact-form textarea::placeholder {
+    .sobreNos-contact-form textarea::placeholder {
         font-size: 1rem;
     }
 
-    .card-inner {
+    .sobreNos-card-inner {
         transform: rotateY(180deg);
     }
 
-    .title-back-card {
+    .sobreNos-title-back-card {
         display: block;
     }
 
-    .card-container:hover .card-inner,
-    .card-container:focus-within .card-inner{
+    .sobreNos-card-container:hover .sobreNos-card-inner,
+    .sobreNos-card-container:focus-within .sobreNos-card-inner{
         transform: none;
         cursor: none;
     }
 
-    .founders .grid-container-socio1,
-    .founders .grid-container-socio2 {
+    .sobreNos-founders .sobreNos-grid-container-socio1,
+    .sobreNos-founders .sobreNos-grid-container-socio2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 40px;
     }
 
-    .founders .grid-container-socio2 {
+    .sobreNos-founders .sobreNos-grid-container-socio2 {
         flex-direction: column-reverse;
     }
 
-    .founders img {
+    .sobreNos-founders img {
         width: 62%;
         height: auto;
         margin-bottom: 60px;
     }
 
-    .founders .blue-card {
+    .sobreNos-founders .sobreNos-blue-card {
         width: 80%;
         height: max-content;
     }
 
-    .founders .blue-card h2 {
+    .sobreNos-founders .sobreNos-blue-card h2 {
         font-size: 1.75rem;
     }
 
-    .founders .blue-card h3 {
+    .sobreNos-founders .sobreNos-blue-card h3 {
         font-size: 1.5rem;
     }
 
-    .founders .blue-card p {
+    .sobreNos-founders .sobreNos-blue-card p {
         font-size: 1.12rem;
     }
 
-    .founders .section-title {
+    .sobreNos-founders .sobreNos-section-title {
         text-align: center;
         font-size: 3rem;
     }
 }
 
 @media (min-width:801px) and (max-width:1200px) {
-    .card-inner {
+    .sobreNos-card-inner {
         transform: rotateY(180deg);
     }
 
-    .card-container:hover .card-inner,
-    .card-container:focus-within .card-inner{
+    .sobreNos-card-container:hover .sobreNos-card-inner,
+    .sobreNos-card-container:focus-within .sobreNos-card-inner{
         transform: none;
         cursor: none;
     }
 
-    .founders .grid-container-socio1,
-    .founders .grid-container-socio2 {
+    .sobreNos-founders .sobreNos-grid-container-socio1,
+    .sobreNos-founders .sobreNos-grid-container-socio2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 40px;
     }
 
-    .founders .grid-container-socio2 {
+    .sobreNos-founders .sobreNos-grid-container-socio2 {
         flex-direction: column-reverse;
     }
 
-    .founders img {
+    .sobreNos-founders img {
         width: 42%;
         height: auto;
         margin-bottom: 60px;
     }
 
-    .founders .blue-card {
+    .sobreNos-founders .sobreNos-blue-card {
         width: 80%;
     }
 
-    .founders .blue-card h2 {
+    .sobreNos-founders .sobreNos-blue-card h2 {
         font-size: 3rem;
     }
 
-    .founders .blue-card h3 {
+    .sobreNos-founders .sobreNos-blue-card h3 {
         font-size: 2.5rem;
     }
 
-    .founders .blue-card p {
+    .sobreNos-founders .sobreNos-blue-card p {
         font-size: 2rem;
     }
 
-    .founders .section-title {
+    .sobreNos-founders .sobreNos-section-title {
         text-align: center;
         font-size: 4rem;
         margin-bottom: 32px;
@@ -856,76 +884,76 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-    section#hero .hero-inner {
+    section#sobreNos-hero .sobreNos-hero-inner {
         padding-top: 8vh;
         margin-top: 3vh;
         margin-left: 2vw;
         gap: 1em;
     }
 
-    section#hero .hero-content {
+    section#sobreNos-hero .sobreNos-hero-content {
         max-width: 50vw;
         padding: 2em;
     }
 
-    .hero-title {
+    .sobreNos-hero-title {
         font-size: 2em;
         max-width: 50vw;
     }
 
-    .hero-content p {
+    .sobreNos-hero-content p {
         font-size: 1.2em;
     }
 
-    .mvv-img-container {
+    .sobreNos-mvv-img-container {
         width: 16vw;
     }
 
-    .mvv-card {
+    .sobreNos-mvv-card {
         width: 60vw;
         z-index: 1;
     }
 
-    .mvv-second-card {
+    .sobreNos-mvv-second-card {
         margin-left: 2em;
     }
 
-    .grid-container-socio1,
-    .grid-container-socio2 {
+    .sobreNos-grid-container-socio1,
+    .sobreNos-grid-container-socio2 {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
     
-    .grid-container-socio1 img,
-    .grid-container-socio2 img {
+    .sobreNos-grid-container-socio1 img,
+    .sobreNos-grid-container-socio2 img {
         margin-bottom: 1rem;
     }
 
-    .card-container {
+    .sobreNos-card-container {
         position: static;
     }
 
-    .card-container,
-    .card-container .card-inner,
-    .card-container .card-inner .card {
+    .sobreNos-card-container,
+    .sobreNos-card-container .sobreNos-card-inner,
+    .sobreNos-card-container .sobreNos-card-inner .sobreNos-card {
         height: 600px;
         width: 95%;
         margin: auto;
     }
 
-    .contact-img{
+    .sobreNos-contact-img{
         display: none;
     }
 
-    .blue-bg{
+    .sobreNos-blue-bg{
         background-image: url("../imgs/foto-contato-mobile.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
 
-    .forms-container {
+    .sobreNos-forms-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -934,85 +962,85 @@ h2 {
         height: 100%;
     }
 
-    .forms-container h1 {
+    .sobreNos-forms-container h1 {
         margin: 0 auto;
         text-align: left;
         align-self: flex-start;
     }
 
-    .forms-container h1 span {
+    .sobreNos-forms-container h1 span {
         display: block;
         width: max-content;
         margin: 0 auto;
     }
 
-    .forms-container h1 br {
+    .sobreNos-forms-container h1 br {
         display: none;
     }
 
-    .forms-container h2 {
+    .sobreNos-forms-container h2 {
         margin-top: 10px;
     }
 }
 
 @media (min-width: 1201px) and (max-width: 1600px) { 
-    .contact-section {
+    .sobreNos-contact-section {
         max-width: 1100px;
         padding-top: 20px;
     }
 
-    .contact-img {
+    .sobreNos-contact-img {
         width: 70%;
     }
 
-    .contact-section h1 {
+    .sobreNos-contact-section h1 {
         font-size: 45px;
     }
 
-    .contact-section h2 {
+    .sobreNos-contact-section h2 {
         font-size: 24px;
     }
 
-    .contact-form div {
+    .sobreNos-contact-form div {
         margin-top: 10px;
     }
 
-    .contact-section form {
+    .sobreNos-contact-section form {
         font-size: 18px;
     }
 
-    .forms-container h1 {
+    .sobreNos-forms-container h1 {
         margin-bottom: 5px;
     }
 
-    .contact-form textarea {
+    .sobreNos-contact-form textarea {
         height: 120px;
     }
 }
 
 @media (min-width: 1601px) and (min-width: 2200px) {
-    .founders h1 {
+    .sobreNos-founders h1 {
         font-size: 10rem;
         margin-top: 10rem;
     }
 
-    .founders h2 {
+    .sobreNos-founders h2 {
         font-size: 6rem;
     }
 
-    .founders h3 {
+    .sobreNos-founders h3 {
         font-size: 4rem;
     }
 
-    .founders .information-container p {
+    .sobreNos-founders .sobreNos-information-container p {
         font-size: 2.5rem;
     }
 
-    .section-title-container{
+    .sobreNos-section-title-container{
         margin-bottom: 15rem;
     }
 
-    .contact-img {
+    .sobreNos-contact-img {
         position: absolute;
         top: 0;
         right: 0;
@@ -1021,23 +1049,23 @@ h2 {
         object-fit:fill
     }
 
-    .founders .grid-container-socio1,
-    .founders .grid-container-socio2 {
+    .sobreNos-founders .sobreNos-grid-container-socio1,
+    .sobreNos-founders .sobreNos-grid-container-socio2 {
         display: flex;
         gap: 100px;
         width: auto;
     }
 
-    .grid-container-socio1, .grid-container-socio2 {
+    .sobreNos-grid-container-socio1, .sobreNos-grid-container-socio2 {
         grid-template-columns: 1fr 1fr;
     }
 
-    .grid-container-socio1 img, .grid-container-socio2 img {
+    .sobreNos-grid-container-socio1 img, .sobreNos-grid-container-socio2 img {
         display: block;
         width: 60%;
     }
 
-    .blue-card {
+    .sobreNos-blue-card {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1046,44 +1074,44 @@ h2 {
         padding: 2rem;
     }
 
-    .grid-container-socio1, .grid-container-socio2{
+    .sobreNos-grid-container-socio1, .sobreNos-grid-container-socio2{
         width: 100%;
     }
 
-    .white-section {
+    .sobreNos-white-section {
         max-width: clamp(1200px, 80vw, 2200px);
     }
 
-    .contact-section {
+    .sobreNos-contact-section {
         max-width: clamp(1400px, 80vw, 2600px);
     }
 
-    .contact-section .forms-container h1 {
+    .sobreNos-contact-section .sobreNos-forms-container h1 {
         font-size: 5rem;
     }
 
-    .contact-section .forms-container h2 {
+    .sobreNos-contact-section .sobreNos-forms-container h2 {
         font-size: 3rem;
     }
 
-    .contact-section .forms-container input::placeholder,
-    .contact-section .forms-container textarea::placeholder  {
+    .sobreNos-contact-section .sobreNos-forms-container input::placeholder,
+    .sobreNos-contact-section .sobreNos-forms-container textarea::placeholder  {
         font-size: 2rem;
     }
 
-    .contact-section .forms-container label {
+    .sobreNos-contact-section .sobreNos-forms-container label {
         font-size: 2.5rem;
     }
 
-    .contact-section .forms-container input {
+    .sobreNos-contact-section .sobreNos-forms-container input {
         height: 75px;
     }
 
-    .contact-section .forms-container textarea {
+    .sobreNos-contact-section .sobreNos-forms-container textarea {
         height: 350px;
     }
 
-    .contact-form button {
+    .sobreNos-contact-form button {
         width: 30%;
         height: 60px;
         font-size: 2rem;
@@ -1092,90 +1120,90 @@ h2 {
 }
 
 @media (max-width: 2200px) {
-    .information-container p {
+    .sobreNos-information-container p {
         font-size: 15px !important;
     }
 }
 
 @media (min-width: 1960px) {
-    section#hero,
-    section.how-the-work,
-    section.who-we-are,
-    section.mvv,
-    section.mvv,
-    aside.mvv-end-message {
+    section#sobreNos-hero,
+    section.sobreNos-how-the-work,
+    section.sobreNos-who-we-are,
+    section.sobreNos-mvv,
+    section.sobreNos-mvv,
+    aside.sobreNos-mvv-end-message {
         font-size: 24px;
     }
 }
 
 @media (min-width: 2400px) {
-    section#hero,
-    section.how-the-work,
-    section.who-we-are,
-    section.mvv,
-    section.mvv,
-    aside.mvv-end-message {
+    section#sobreNos-hero,
+    section.sobreNos-how-the-work,
+    section.sobreNos-who-we-are,
+    section.sobreNos-mvv,
+    section.sobreNos-mvv,
+    aside.sobreNos-mvv-end-message {
         font-size: 32px;
     }
 }
 
 @media (min-width: 3200px) {
-    section#hero,
-    section.how-the-work,
-    section.mvv,
-    section.mvv,
-    aside.mvv-end-message {
+    section#sobreNos-hero,
+    section.sobreNos-how-the-work,
+    section.sobreNos-mvv,
+    section.sobreNos-mvv,
+    aside.sobreNos-mvv-end-message {
         font-size: 40px;
     }
 
-    section.who-we-are {
+    section.sobreNos-who-we-are {
         max-width: 80vw;
         font-size: 60px;
     }
 
-    .white-section {
+    .sobreNos-white-section {
         max-width: clamp(2200px, 80vw, 3000px);
     }
 
-    .contact-section .forms-container h1 {
+    .sobreNos-contact-section .sobreNos-forms-container h1 {
         font-size: 7rem;
     }
 
-    .contact-section .forms-container h2 {
+    .sobreNos-contact-section .sobreNos-forms-container h2 {
         font-size: 5rem;
     }
 
-    .contact-section .forms-container input::placeholder,
-    .contact-section .forms-container textarea::placeholder  {
+    .sobreNos-contact-section .sobreNos-forms-container input::placeholder,
+    .sobreNos-contact-section .sobreNos-forms-container textarea::placeholder  {
         font-size: 3rem;
     }
 
-    .contact-section .forms-container label {
+    .sobreNos-contact-section .sobreNos-forms-container label {
         display: block;
         font-size: 4rem;
         margin-bottom: 0rem;
     }
 
-    .contact-section .forms-container input {
+    .sobreNos-contact-section .sobreNos-forms-container input {
         height: 120px;
         padding: 0 0 0 1rem;
         margin: 0;
     }
 
-    .contact-section .forms-container textarea {
+    .sobreNos-contact-section .sobreNos-forms-container textarea {
         height: 450px;
         padding: 0 0 0 1rem;
         margin: 0;
     }
 
-    .contact-form button {
+    .sobreNos-contact-form button {
         width: 30%;
         height: 90px;
         font-size: 3rem;
         border: 4px solid white;
     }
 
-    .contact-form div {
+    .sobreNos-contact-form div {
         margin-top: 3rem;
     }
 }

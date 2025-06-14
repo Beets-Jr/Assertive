@@ -1,6 +1,6 @@
 <?php
 
-//require_once( dirname(__FILE__) . '/CMB2/cmb2SobreNos.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2SobreNos.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2Home.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2Contato.php' );
 

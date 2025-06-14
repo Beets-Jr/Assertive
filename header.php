@@ -12,6 +12,11 @@
     ?>
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/home-video.css">
+    <?php
+    elseif ( is_page('SobreNos') ) : 
+    ?>
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/sobreNos.css">
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/sobreNosTransicoes.css">
     <?php endif; ?>
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/CSS/header-footer.css">
