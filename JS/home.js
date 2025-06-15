@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   elements.forEach(el => io.observe(el));
 });
 
+
 window.addEventListener('DOMContentLoaded', () => {
     const videoContainer = document.querySelector(['.video']);
 

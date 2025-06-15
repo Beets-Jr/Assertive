@@ -7,7 +7,7 @@ function sobre_nos_hero() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => 'HTML/SobreNos.php',
+      'value' => 'SobreNos.php',
     ]
   ]);
 
@@ -33,7 +33,7 @@ function sobre_nos_founders() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => 'HTML/SobreNos.php',
+      'value' => 'SobreNos.php',
     ]
   ]);
 
@@ -121,7 +121,7 @@ function sobre_nos_how_the_work() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => 'HTML/SobreNos.php',
+      'value' => 'SobreNos.php',
     ]
   ]);
 
@@ -167,7 +167,7 @@ function sobre_nos_who_we_are() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => 'HTML/SobreNos.php',
+      'value' => 'SobreNos.php',
     ]
   ]);
 
@@ -213,7 +213,7 @@ function sobre_nos_end_message() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => 'HTML/SobreNos.php',
+      'value' => 'SobreNos.php',
     ]
   ]);
 

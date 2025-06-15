@@ -68,7 +68,7 @@
                     <a href="/">Home</a>
                 <?php endif; ?>
                 
-                <a href="#hero">Quem somos</a>
+                <a href="<?php echo site_url('/sobrenos'); ?>">Quem somos</a>
 
                 <div class="dropdown js-dropdown">
                 
