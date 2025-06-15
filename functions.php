@@ -1,6 +1,11 @@
 <?php
 
 require_once( dirname(__FILE__) . '/CMB2/cmb2SobreNos.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2Home.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2Contato.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_inteligencia.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_header.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_footer.php' );
 
 function assertive_css() {
   wp_register_style( 'assertive-style', get_template_directory_uri() . '/style.css', array(), false, false );
@@ -28,6 +33,27 @@ function the_field($field, $page = NULL, $unique = true) {
   echo get_field($field, $page);
 }
 
+function get_field_array( string $field, $page = null ): array {
+    $page = is_null( $page ) ? get_the_ID() : $page;
+    $values = get_post_meta( $page, $field, false );
+
+    return is_array( $values ) ? $values : [];
+}
+
+function get_field_group( string $field, $page = null ): array {
+    $page = is_null( $page ) ? get_the_ID() : $page;
+    // true no 3º argumento faz retornar o array de items do group
+    $group = get_post_meta( $page, $field, true );
+
+    // Se ainda for string serializada, deserializa
+    if ( is_string( $group ) ) {
+        $maybe = maybe_unserialize( $group );
+        $group = is_array( $maybe ) ? $maybe : [];
+    }
+
+    return is_array( $group ) ? $group : [];
+}
+
 add_action( 'wp_enqueue_scripts', 'assertive_css' );
 add_action( 'wp_enqueue_scripts', 'assertive_scripts' );
 
@@ -47,75 +73,33 @@ Parte Murillo
 Parte Thales
 */
 
-function cmb2_fields_header() {
-    new_cmb2_box([
-        'id' => 'header_box',
-    ]);
-}
+add_action ( 'admin_footer', function() {
+    $screen = get_current_screen();
+    if ( $screen && $screen->post_type === 'page' ) :  
+?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const rangeInput = document.querySelector('input[name="posicao_cor_imagem_hero"]');
 
-function cmb2_fields_inteligencia_hero() {
-   $inteligencia_hero_box = new_cmb2_box([
-        'id' => 'inteligencia_hero_box',
-        'title' => 'Inteligência de Mercado',
-        'object_types' => ['page'],
-        'show_on' => [
-            'key' => 'page-template', 
-            'value' => 'page-inteligencia.php'
-        ]
-    ]);
-    
-    $inteligencia_hero_box->add_field([
-        'name' => 'Título de Entrada',
-        'id' => 'titulo',
-        'type' => 'text',    
-    ]);
+    if (rangeInput) {
+        
+        const feedback = document.createElement('div');
+        feedback.id = 'posicao_cor_feedback';
+        feedback.style.marginTop = '5px';
+        feedback.style.fontWeight = 'bold';
+        rangeInput.parentNode.appendChild(feedback);
 
-    $inteligencia_hero_box->add_field([
-        'name' => 'Frase de Chamada',
-        'id' => 'chamada-hero',
-        'type' => 'text',    
-    ]);
+        function updateOutput() {
+            feedback.innerHTML = 'Valor atual: <span>' + rangeInput.value + '%</span>';
+        }
 
-    $inteligencia_hero_box->add_field([
-        'name' => 'Frase de Chamada no Botão',
-        'id' => 'chamada-hero-button',
-        'type' => 'text',    
-    ]);
-
-}
-
-add_action ('cmb2_admin_init', 'cmb2_fields_header');
-add_action ('cmb2_admin_init', 'cmb2_fields_inteligencia_hero');
-
-function inteligencia_de_mercado_styles() {
-    if (is_page_template('page-inteligencia.php')) {
-        wp_enqueue_style (
-            'inteligencia-de-mercado-style',
-            get_stylesheet_directory_uri() . '/CSS/InteligenciaDeMercado.css',
-            array(),
-            '1.0'
-        );
+        rangeInput.addEventListener('input', updateOutput);
+        updateOutput();
     }
-}
-
-function inteligencia_de_mercado_scripts() {
-    if (is_page_template('page-inteligencia.php')) {
-        wp_enqueue_script(
-            'inteligencia-de-mercado-script',
-            get_stylesheet_directory_uri() . '/JS/InteligenciaDeMercado.js',
-            array(),
-            '1.0',
-            true
-        );
-    }
-}
-
-function header_footer_scripts() {
-    wp_enqueue_script('header-footer', get_stylesheet_directory_uri() . '/JS/header-footer.js', array(), null, true);
-}
-
-add_action('wp_enqueue_scripts', 'inteligencia_de_mercado_styles');
-add_action('wp_enqueue_scripts', 'inteligencia_de_mercado_scripts');
-add_action('wp_enqueue_scripts', 'header_footer_scripts');
+});
+</script>
+<?php
+    endif;
+});
 
 ?>
