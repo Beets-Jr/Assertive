@@ -5,55 +5,70 @@
   <?php get_header(); ?>
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+  <?php 
+    $posicao = get_field('posicao_cor_imagem_hero');
+  ?>
   
-  <section class="market-intelligence-hero">
+<section class="market-intelligence-hero"
+    style="
+        --hero-background-image: url('<?php echo esc_url( get_field('imagem_hero') ); ?>');
+        --hero-gradient-start: <?php echo esc_attr( get_field('cor_imagem_hero_1') ?: '#02052F' ); ?>;
+        --hero-gradient-end: <?php echo esc_attr( get_field('cor_imagem_hero_2') ?: '#06090E' ); ?>;
+        --hero-gradient-position: <?php echo intval($posicao); ?>%;
+    "
+>
+
         <div class="market-intelligence-hero-content">
-            <h1 class="market-intelligence-hero-title"> <?php echo get_post_meta(get_the_ID(), 'titulo', true); ?> </h1>
+            <h1 class="market-intelligence-hero-title"> <?php the_field ('titulo'); ?> </h1>
 
             <p> <?php echo get_post_meta(get_the_ID(), 'chamada-hero', true); ?> </p>
 
-            <button type="button" onclick="navigateToContact()"> <?php echo get_post_meta(get_the_ID(), 'chamada-hero-button', true); ?> </button>
+            <button type="button" onclick="navigateToContact()"> <?php the_field ('chamada-hero-button'); ?> </button>
         </div>
     </section>
 
     <section class="market-intelligence-what-is-it">
         <article class="market-intelligence-what-is-it-card">
-            <h3>O que é a inteligência de Mercado?</h2>
-            <p>Um processo estratégico que coleta, organiza e analisa informações sobre o ambiente externo.</p>
+            <h3> <?php the_field ('titulo_1st_sqr'); ?> </h2>
+            <p> <?php the_field ('texto_sqr_1'); ?> </p>
         </article>
 
         <div class="market-intelligence-what-is-it-vertical-bar first-bar"></div>
 
         <article class="market-intelligence-what-is-it-card">
-            <h3>Dados considerados na estratégia</h2>
-            <p>Concorrentes, tendências, comportamento de consumo e novas oportunidades. </p>
+            <h3> <?php the_field ('titulo_2nd_sqr'); ?> </h2>
+            <p> <?php the_field ('texto_sqr_2'); ?> </p>
         </article>
 
         <div class="market-intelligence-what-is-it-vertical-bar second-bar"></div>
 
         <article class="market-intelligence-what-is-it-card">
-            <h3>Quais são as ferramentas utilizadas?</h2>
-            <p>Utilizamos dados e tecnologia para transformar informações em ações concretas, garantindo uma tomada de decisão mais precisa e competitiva.</p>
+            <h3> <?php the_field ('titulo_3rd_sqr'); ?> </h2>
+            <p> <?php the_field ('texto_sqr_3'); ?> </p>
         </article>
     </section>
 
-    <section class="market-intelligence-main-functions">
-        <h2>Principais Funções da Inteligência de Mercado</h2>
+    <section 
+        class="market-intelligence-main-functions" 
+        style="background-image: url('<?php echo esc_url( get_field('imagem_funcoes') ); ?>');"
+    >
+        <h2> <?php the_field ('titulo_funcoes'); ?> </h2>
 
         <div class="market-intelligence-main-functions-cards-container">
             <article class="market-intelligence-main-functions-card">
-                <h3>Reduzir riscos e identificar tendências</h3>
-                <p>Com inteligência de mercado, é possível antecipar mudanças no mercado e identificar novas demandas e nichos. Assim, torna-se mais fácil a tomada de decisões e as incertezas são reduzidas</p>
+                <h3> <?php the_field ('frase_funcoes_2'); ?> </h3>
+                <p> <?php the_field ('texto_funcoes_2'); ?> </p>
             </article>
 
             <article class="market-intelligence-main-functions-card">
-                <h3>Aumentar a vantagem competitiva</h3>
-                <p>Tomar a liderança em ações mais eficientes e estratégicas dentro do mercado.</p>
+                <h3> <?php the_field ('frase_funcoes_3'); ?> </h3>
+                <p> <?php the_field ('texto_funcoes_3'); ?> </p>
             </article>
 
             <article class="market-intelligence-main-functions-card">
-                <h3>Identificar as informações necessárias para a empresa</h3>
-                <p>Reunimos dados de fontes confiáveis do mercado e da concorrência.</p>
+                <h3> <?php the_field ('frase_funcoes_1'); ?> </h3>
+                <p> <?php the_field ('texto_funcoes_1'); ?> </p>
             </article>
 
             <article class="market-intelligence-main-functions-card card-hidden"></article>
@@ -64,7 +79,7 @@
     </section>
 
     <div class="how-it-works-container">
-        <h2>Como funciona o serviço</h2>
+        <h2> <?php the_field ('titulo_etapas'); ?> </h2>
 
         <div class="how-it-works-grid">
             <div class="dots-container">
@@ -78,20 +93,20 @@
             <div class="information-container inria-sans-font">
                 <div class="dot">1.</div>
                 <div>
-                    <h1 class="inria-sans-bold">Análise de concorrentes</h1>
-                    <p class="inria-sans-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate fermentum massa vel ultricies. Morbi nec augue id lorem eleifend.</p>
+                    <h1 class="inria-sans-bold"> <?php the_field ('titulo_etapa_1'); ?> </h1>
+                    <p class="inria-sans-regular"> <?php the_field ('texto_etapa_1'); ?> </p>
                 </div>
 
                 <div class="dot">2.</div>
                 <div>
-                    <h1 class="inria-sans-bold">Análise Territorial</h1>
-                    <p class="inria-sans-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate fermentum massa vel ultricies. Morbi nec augue id lorem eleifend.</p>
+                    <h1 class="inria-sans-bold"> <?php the_field ('titulo_etapa_2'); ?> </h1>
+                    <p class="inria-sans-regular"> <?php the_field ('texto_etapa_2'); ?> </p>
                 </div>
 
                 <div class="dot">3.</div>
                 <div>
-                    <h1 class="inria-sans-bold">Share de mercado</h1>
-                    <p class="inria-sans-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate fermentum massa vel ultricies. Morbi nec augue id lorem eleifend.</p>
+                    <h1 class="inria-sans-bold"> <?php the_field ('titulo_etapa_3'); ?> </h1>
+                    <p class="inria-sans-regular"> <?php the_field ('texto_etapa_3'); ?> </p>
                 </div>
             </div>
         </div>

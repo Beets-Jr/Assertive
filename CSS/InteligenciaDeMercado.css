@@ -1,3 +1,13 @@
+/*
+Theme Name: Assertive Inteligencia
+Theme URI: http://assertive.com
+Author: Beets Jr
+Author URI: https://beetsjr.com.br/
+Description: Thema criado pela Beets Jr. para a Assertive
+Version: 1.0
+*/
+
+
 :root {
     --primary-font: "Inria Sans", sans-serif;
     --secondary-font: "League Spartan", "Inria Sans", sans-serif;
@@ -16,10 +26,23 @@ body {
     font-family: var(--primary-font);
 }
 
+/* definido no html (php)
+
 .market-intelligence-hero {
-    background: url("../imgs/market-intelligence-what-is-it.jpg") no-repeat 120% top/75%, linear-gradient(to right, #02052F, #06090E 20%);
+    background: url("../imgs/market-intelligence-what-is-it.jpg") no-repeat 120% top/75%, linear-gradient(to right, #02052F, #06090E 20%); 
     height: 100vh;
     width: 100vw;
+} 
+
+*/
+
+.market-intelligence-hero {
+    height: 100vh;
+    width: 100vw;
+
+    background:
+        var(--hero-background-image, url("../imgs/market-intelligence-what-is-it.jpg")) no-repeat 120% top / 75%,
+        linear-gradient(to right, var(--hero-gradient-start, #02052F), var(--hero-gradient-end, #06090E) var(--hero-gradient-position, 20%));
 }
 
 .market-intelligence-hero-content {
@@ -119,9 +142,20 @@ body {
     background: linear-gradient(var(--secondary-blue) 50%, var(--primary-blue) 100%);
 }
 
+/* definido no html (php)
 
 .market-intelligence-main-functions {
     background: var(--primary-blue) url("../imgs/market-intelligence-main-functions.jpg") no-repeat top;
+    background-size: cover;
+    position: relative;
+}
+
+*/
+
+.market-intelligence-main-functions {
+    background-color: var(--primary-blue);
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
     position: relative;
 }
