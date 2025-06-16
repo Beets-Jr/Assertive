@@ -77,19 +77,19 @@
                 <div class="dropdown-menu">
 
                     <!-- === Card 1: Inteligência de mercado === -->
-                    <div class="card"
-                        data-hover-text="Conheça o perfil dos seus clientes com nosso produto de Inteligência de mercado!">
-                    <h3>Inteligência de mercado</h3>
-                    <p>
-                        Conheça profundamente o setor dos seus potenciais clientes. 
-                        Entenda suas necessidades e desafios.
-                    </p>
-                    <div class="atributos">
-                        <p>Análise Territorial</p>
-                        <p>Share de Mercado</p>
-                    </div>
-                    </div>
-
+                    <a href="/inteligencia-de-mercado" class="card-link">
+                        <div class="card" data-hover-text="Conheça o perfil dos seus clientes com nosso produto de Inteligência de mercado!">
+                            <h3>Inteligência de mercado</h3>
+                            <p>
+                            Conheça profundamente o setor dos seus potenciais clientes. 
+                            Entenda suas necessidades e desafios.
+                            </p>
+                            <div class="atributos">
+                            <p>Análise Territorial</p>
+                            <p>Share de Mercado</p>
+                            </div>
+                        </div>
+                    </a>
                     <!-- === Card 2: Treinamento de Prospecção === -->
                     <div class="card"
                         data-hover-text="Transforme sua abordagem comercial com nosso Treinamento de Prospecção!">
