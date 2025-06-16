@@ -37,18 +37,19 @@
   font-style: normal;
 }
 
-/* Hero section - Totalmente responsivo e centralizado */
+/* Hero section - CORRIGIDO - Centralização instantânea */
 
 .hero-section {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     min-height: 100vh;
+    min-height: 100dvh; /* Melhor suporte mobile */
     padding: 0;
     background: url('../imgs/Prospeccao-Assertive/foto-ProspeccaoHero.png') center/cover no-repeat;
     color: #fff;
-    font-family: "Inria Sans", sans-serif;
+    font-family: "Inria Sans", Arial, sans-serif; /* Fallback para fonte */
 }
 
 .hero-content {
@@ -57,14 +58,16 @@
     max-width: 120rem;
     margin: 0;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    /* REMOVIDO position absolute que causava o problema */
+    position: static;
+    transform: none;
+    /* Garante visibilidade imediata */
+    opacity: 1;
+    visibility: visible;
 }
 
 .hero-line {
@@ -448,22 +451,29 @@
         min-height: auto;
     }
 
-    /* Hero mobile */
+    /* Hero mobile - CORRIGIDO */
     .hero-content {
         width: 95%;
         max-width: 90rem;
         padding: 2rem 1rem;
+        /* Mantém centralização em mobile */
+        position: static;
+        transform: none;
     }
 }
 
-/* Hero responsivo em orientação landscape */
+/* Hero responsivo em orientação landscape - CORRIGIDO */
 @media (max-width: 1199px) and (orientation: landscape) {
     .hero-section {
         min-height: 100vh;
+        min-height: 100dvh;
     }
     
     .hero-content {
         padding: 1rem;
+        /* Mantém centralização em landscape */
+        position: static;
+        transform: none;
     }
     
     .hero-content h1 {
@@ -526,6 +536,5 @@
   opacity: 1;
   transform: none;
 }
-
 
 /* end imagens e textos */
