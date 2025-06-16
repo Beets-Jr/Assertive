@@ -14,6 +14,11 @@
 <header class="header-transparent"> 
         <div class="logo-header fade-in-left"> 
             <a href="/"> <!-- depende do nome da página? -->
+            <?php if ( is_page('Home') ) : ?> 
+                <a href="#hero">
+            <?php else : ?>
+                <a href="/">
+            <?php endif; ?>
             <img src="<?php the_field ('logo_header', $header_id); ?>"> 
             </a> 
         </div>
@@ -23,8 +28,12 @@
         </div>
         
             <nav>
-                <a href="/"> <?php the_field ('item_1', $header_id); ?> </a> <!-- depende do nome da página? -->
-                <a href="/quemsomos/"> <?php the_field ('item_2', $header_id); ?> </a>
+                <?php if ( is_page('Home') ) : ?>
+                    <a href="#hero"><?php the_field ('item_1', $header_id); ?></a>
+                <?php else : ?>
+                    <a href="/"><?php the_field ('item_1', $header_id); ?> </a>
+                <?php endif; ?>
+                <a href="/sobrenos/"> <?php the_field ('item_2', $header_id); ?> </a>
 
                 <div class="dropdown js-dropdown">
                 
@@ -51,7 +60,7 @@
                                 <?php } } ?>
                             </div>
                         
-
+                        <!-- Aqui para link !! -->          
                         <a href="/inteligencia-de-mercado/" 
                         class="card-overlay-link" 
                         aria-label="Inteligência de Mercado">

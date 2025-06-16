@@ -150,9 +150,6 @@
 
 <?php endwhile; endif; ?>
 
-<?php 
-    $contato_partial = get_stylesheet_directory() . '/contato.php';
-    include $contato_partial;
-?>
+
 
 <?php get_footer() ?>

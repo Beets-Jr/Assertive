@@ -5,6 +5,8 @@ require_once( dirname(__FILE__) . '/CMB2/cmb2SobreNos.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2Home.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2Contato.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2_inteligencia.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_header.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_footer.php' );
 
 /**
  * Enfileira CSS do tema (front-end)

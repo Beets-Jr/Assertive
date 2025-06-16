@@ -219,10 +219,6 @@
     <!-- end numeros -->
         
     <!-- Include da seção contato -->
-    <?php 
-        $contato_partial = get_stylesheet_directory() . '/contato.php';
-        include $contato_partial;
-    ?>
     <!-- end include seção contato -->
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home.js"></script>
