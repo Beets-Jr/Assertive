@@ -7,6 +7,7 @@ require_once( dirname(__FILE__) . '/CMB2/cmb2Contato.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2_inteligencia.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2_header.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2_footer.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2Prospeccao.php' );
 
 /**
  * Enfileira CSS do tema (front-end)
@@ -16,6 +17,23 @@ function assertive_css() {
     wp_enqueue_style( 'assertive-style' );
 }
 add_action( 'wp_enqueue_scripts', 'assertive_css' );
+
+/**
+ * Enfileira CSS específico da página Prospecção
+ */
+function load_prospeccao_styles() {
+    // Verifica se está usando o template da página prospecção
+    if (is_page_template('page-prospeccao.php')) {
+        wp_enqueue_style(
+            'prospeccao-style', 
+            get_template_directory_uri() . '/ProspeccaoAssertive.css',
+            array('assertive-style'), // Depende do CSS principal
+            '1.0', // Versão
+            'all' // Media type
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'load_prospeccao_styles');
 
 /**
  * Enfileira scripts do tema (front-end)

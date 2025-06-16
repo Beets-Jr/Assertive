@@ -88,7 +88,7 @@
                                 <?php } } ?>
                             </div>
 
-                        <a href="/treinamento-de-prospeccao/" 
+                        <a href="/treinamentoprospeccao" 
                         class="card-overlay-link" 
                         aria-label="Treinamento de Prospeccao">
                         <!-- Link overlay cobrindo toda a tela -->
@@ -115,7 +115,7 @@
                                 <?php } } ?>
                             </div>
 
-                        <a href="/prospeccao-assertive/" 
+                        <a href="/prospeccao" 
                         class="card-overlay-link" 
                         aria-label="Prospecção Assertive">
                         <!-- Link overlay cobrindo toda a tela -->
