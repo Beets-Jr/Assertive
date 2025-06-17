@@ -10,6 +10,16 @@ function fields_footer_contatos() {
             'value' => 'footer-section.php'
         ]
     ]);
+
+    $footer_box_top->add_field([
+        'name' => 'Logo Principal Footer',
+        'desc' => 'Logo principal da empresa que aparece no centro do footer.',
+        'id' => 'logo_principal_footer',
+        'type' => 'file',
+        'options' => [
+            'url' => false,
+        ],    
+    ]);
     
     $footer_box_top->add_field([
         'name' => 'Ícone Telefone',

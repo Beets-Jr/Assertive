@@ -31,7 +31,14 @@
                     <?php else : ?>
                         <a href="/">
                     <?php endif; ?>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png" alt="Logo Assertive">
+                            <?php 
+                            $logo_principal = get_field('logo_principal_footer', $footer_id);
+                            if ($logo_principal) : ?>
+                                <img src="<?php echo $logo_principal; ?>" alt="Logo Assertive">
+                            <?php else : ?>
+                                <!-- Fallback para a imagem padrão caso o campo esteja vazio -->
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png" alt="Logo Assertive">
+                            <?php endif; ?>
                         </a>
                 </div>
     
