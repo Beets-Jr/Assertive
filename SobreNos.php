@@ -8,7 +8,17 @@
 
 <?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
 
-  <section id="sobreNos-hero">
+  <?php
+    // Obter a imagem de fundo personalizada
+    $hero_background = get_field('sobre_nos_hero_background_image');
+    $background_style = '';
+    
+    if ($hero_background) {
+      $background_style = 'style="background-image: url(' . esc_url($hero_background) . ');"';
+    }
+  ?>
+
+  <section id="sobreNos-hero" <?php echo $background_style; ?>>
     <div class="sobreNos-hero-inner">
       <h1 class="sobreNos-hero-title sobreNos-fade-in-left">
         <?php the_field('sobre_nos_hero_title'); ?>

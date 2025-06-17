@@ -12,6 +12,26 @@ function sobre_nos_hero() {
   ]);
 
   $sobre_nos_hero_box->add_field([
+    'id' => 'sobre_nos_hero_background_image',
+    'name' => esc_html__('Imagem de Fundo', 'cmb2'),
+    'desc' => esc_html__('Imagem de fundo da seção hero', 'cmb2'),
+    'type' => 'file',
+    'options' => [
+      'url' => false,
+    ],
+    'text' => [
+      'add_upload_file_text' => 'Selecionar imagem de fundo',
+    ],
+    'query_args' => [
+      'type' => [
+        'image/jpeg',
+        'image/png',
+        'image/webp',
+      ]
+    ]
+  ]);
+
+  $sobre_nos_hero_box->add_field([
     'id' => 'sobre_nos_hero_title',
     'name' => esc_html__('Título', 'cmb2'),
     'desc' => esc_html__('Primeiro e maior texto na seção inicial', 'cmb2'),
