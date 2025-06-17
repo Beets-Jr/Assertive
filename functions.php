@@ -102,6 +102,32 @@ function assertive_admin_enqueue_scripts( $hook ) {
 }
 add_action( 'admin_enqueue_scripts', 'assertive_admin_enqueue_scripts' );
 
+function load_header_section_styles() {
+    if ( is_page_template('header-section.php') ) {
+        wp_enqueue_style(
+            'header-section-style',
+            get_template_directory_uri() . '/header-footer.css',
+            array('assertive-style'), // se precisar depender do CSS principal
+            '1.0',
+            'all'
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'load_header_section_styles');
+
+function load_section_styles() {
+    if ( is_page_template('template-footer.php') ) {
+        wp_enqueue_style(
+            'header-footer-style',
+            get_template_directory_uri() . '/header-footer.css',
+            array('assertive-style'),
+            '1.0',
+            'all'
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'load_section_styles');
+
 /*
 Parte JH
 */
