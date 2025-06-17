@@ -39,4 +39,46 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// inicializar EmailJS
+emailjs.init("bOhuzH_X9D9DabT8f");
+
+window.onload = function() {
+  const form = document.getElementById('contact-form');
+  const btn  = form.querySelector('button[type="submit"]');
+  // guardamos o texto e as classes originais
+  const originalText    = btn.innerText;
+  const originalClasses = btn.className;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // estado “enviando”
+    btn.disabled    = true;
+    btn.innerText   = 'Enviando…';
+    btn.className   = originalClasses; 
+
+    emailjs.sendForm('contact_service', 'template_wra2fsr', this)
+      .then(() => {
+        // sucesso
+        btn.innerText = 'Mensagem enviada!';
+        btn.classList.add('success');
+        form.reset();
+      })
+      .catch(err => {
+        console.error('EmailJS error:', err);
+        // erro
+        btn.innerText = 'Falha ao enviar';
+        btn.classList.add('error');
+      })
+      .finally(() => {
+        // volta ao normal depois de 3s
+        setTimeout(() => {
+          btn.disabled  = false;
+          btn.innerText = originalText;
+          btn.className = originalClasses;
+        }, 3000);
+      });
+  });
+};
+
 /* end parte Renan */
