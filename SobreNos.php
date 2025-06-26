@@ -2,7 +2,7 @@
 // Template Name: SobreNos
 ?>
 
-<?php $home = get_page_by_title('Home'); ?>
+<?php $header = get_page_by_title('Header'); ?>
 
 <?php get_header() ?>
 
@@ -33,7 +33,9 @@
 
   <section class="sobreNos-white-section sobreNos-founders">
     <div class="sobreNos-section-title-container">
-      <h1 class="sobreNos-section-title">Fundadores</h1>
+      <h1 class="sobreNos-section-title">
+        <?php the_field('sobre_nos_founders_title'); ?>
+      </h1>
     </div>
 
     <div class="sobreNos-grid-container-socio1">
@@ -98,7 +100,9 @@
   </section>
 
   <section class="sobreNos-how-the-work">
-    <h2>Como Trabalhamos</h2>
+    <h2>
+      <?php the_field('sobre_nos_how_the_work_title'); ?>
+    </h2>
 
     <ul class="sobreNos-how-the-work-cards-container">
       <?php
@@ -112,46 +116,56 @@
       <?php endforeach; endif; ?>
     </ul>
 
-    <button onClick="sobreNos_showServices()">
-      <?php the_field("sobre_nos_how_the_work_button") ?>
-    </button>
+    <a href="/#servicos">
+      <button>
+        <?php the_field("sobre_nos_how_the_work_button") ?>
+      </button>
+    </a>
   </section>
 
   <section class="sobreNos-who-we-are">
-    <h2>Quem somos</h2>
+    <h2>
+      <?php the_field('sobre_nos_who_we_are_title'); ?>
+    </h2>
 
     <article class="sobreNos-who-we-are-introduction">
       <p><?php the_field("sobre_nos_who_we_are_text") ?></p>
     </article>
   </section>
 
-<section class="sobreNos-mvv">
-  <div class="sobreNos-mvv-img-container">
-    <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/imgs/logo-ksnip_20250416-205452-removebg-preview 1.png' ); ?>" alt="imagem do logo da Assertive" class="sobreNos-mvv-image">
-    <div class="sobreNos-mvv-line sobreNos-mvv-first-line"></div>
-    <div class="sobreNos-mvv-line sobreNos-mvv-second-line"></div>
-    <div class="sobreNos-mvv-line sobreNos-mvv-third-line"></div>
-  </div>
+  <section>
+    <h2 class="sobreNos-mvv-title">
+      <?php the_field('sobre_nos_who_we_are_mvv_title'); ?>
+    </h2>
 
-  <ul class="sobreNos-mvv-cards-container">
-    <?php
-      $count = 0;
+    <div class="sobreNos-mvv">
+      <div class="sobreNos-mvv-img-container">
+        <img src="<?php the_field('logo_header', $header->ID) ?>" alt="imagem do logo da Assertive" class="sobreNos-mvv-image">
+        <div class="sobreNos-mvv-line sobreNos-mvv-first-line"></div>
+        <div class="sobreNos-mvv-line sobreNos-mvv-second-line"></div>
+        <div class="sobreNos-mvv-line sobreNos-mvv-third-line"></div>
+      </div>
 
-      $cards = get_field('sobre_nos_who_we_are_cards');
-      if ($cards) :
-        foreach ($cards as $card) :
-    ?>
-      <li class="sobreNos-mvv-card <?php if ($count == 1) echo "sobreNos-mvv-second-card"; ?>"> 
-        <h3><?php echo esc_html( $card['title'] ); ?> </h3>
-        <p><?php echo esc_html( $card['description'] ); ?> </p>
-      </li>
-    <?php
-        $count++;
-      endforeach;
-    endif;
-    ?>
-  </ul>
-</section>
+      <ul class="sobreNos-mvv-cards-container">
+        <?php
+          $count = 0;
+
+          $cards = get_field('sobre_nos_who_we_are_mvv_cards');
+          if ($cards) :
+            foreach ($cards as $card) :
+        ?>
+          <li class="sobreNos-mvv-card <?php if ($count == 1) echo "sobreNos-mvv-second-card"; ?>"> 
+            <h3><?php echo esc_html( $card['title'] ); ?> </h3>
+            <p><?php echo esc_html( $card['description'] ); ?> </p>
+          </li>
+        <?php
+            $count++;
+          endforeach;
+        endif;
+        ?>
+      </ul>
+    </div>
+  </section>
 
   <aside class="sobreNos-mvv-end-message">
     <p><?php the_field("sobre_nos_end_message_top") ?></p>

@@ -320,6 +320,12 @@ function numeros_home(){
   ]);
 
   $home_numeros_box->add_field([
+    'id' => 'titulo_secao_numeros',
+    'name' => esc_html__('Título da seção de números', 'cmb2'),
+    'type' => 'text_medium',
+  ]);
+
+  $home_numeros_box->add_field([
     'id' => 'titulo_numero1',
     'name' => esc_html__('Título do primeiro número', 'cmb2'),
     'desc' => esc_html__('Texto que fica embaixo do número (do que se trata esse número)', 'cmb2'),
@@ -356,6 +362,20 @@ function numeros_home(){
 
  $home_numeros_box->add_field([
     'id' => 'valor_numero3',
+    'name' => esc_html__('Valor do número', 'cmb2'),
+    'desc' => esc_html__('Insira alguma quantidade', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+  $home_numeros_box->add_field([
+    'id' => 'titulo_numero4',
+    'name' => esc_html__('Título do quarto número', 'cmb2'),
+    'desc' => esc_html__('Texto que fica embaixo do número (do que se trata esse número)', 'cmb2'),
+    'type' => 'text',
+  ]);
+
+ $home_numeros_box->add_field([
+    'id' => 'valor_numero4',
     'name' => esc_html__('Valor do número', 'cmb2'),
     'desc' => esc_html__('Insira alguma quantidade', 'cmb2'),
     'type' => 'text',
