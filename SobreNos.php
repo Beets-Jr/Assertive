@@ -31,6 +31,14 @@
     </div>
   </section>
 
+  <section class="sobreNos-who-we-are">
+    <h2><?php the_field("sobre_nos_who_we_are_title") ?></h2>
+
+    <article class="sobreNos-who-we-are-introduction">
+      <p><?php the_field("sobre_nos_who_we_are_text") ?></p>
+    </article>
+  </section>
+
   <section class="sobreNos-white-section sobreNos-founders">
     <div class="sobreNos-section-title-container">
       <h1 class="sobreNos-section-title">
@@ -121,16 +129,6 @@
         <?php the_field("sobre_nos_how_the_work_button") ?>
       </button>
     </a>
-  </section>
-
-  <section class="sobreNos-who-we-are">
-    <h2>
-      <?php the_field('sobre_nos_who_we_are_title'); ?>
-    </h2>
-
-    <article class="sobreNos-who-we-are-introduction">
-      <p><?php the_field("sobre_nos_who_we_are_text") ?></p>
-    </article>
   </section>
 
   <section>
