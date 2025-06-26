@@ -31,9 +31,17 @@
     </div>
   </section>
 
+  <section class="sobreNos-who-we-are">
+    <h2>Quem somos</h2>
+
+    <article class="sobreNos-who-we-are-introduction">
+      <p><?php the_field("sobre_nos_who_we_are_text") ?></p>
+    </article>
+  </section>
+
   <section class="sobreNos-white-section sobreNos-founders">
     <div class="sobreNos-section-title-container">
-      <h1 class="sobreNos-section-title">Fundadores</h1>
+      <h1 class="sobreNos-section-title">Conheça nossa equipe</h1>
     </div>
 
     <div class="sobreNos-grid-container-socio1">
@@ -117,13 +125,6 @@
     </button>
   </section>
 
-  <section class="sobreNos-who-we-are">
-    <h2>Quem somos</h2>
-
-    <article class="sobreNos-who-we-are-introduction">
-      <p><?php the_field("sobre_nos_who_we_are_text") ?></p>
-    </article>
-  </section>
 
 <section class="sobreNos-mvv">
   <div class="sobreNos-mvv-img-container">
