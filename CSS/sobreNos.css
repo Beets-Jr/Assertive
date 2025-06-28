@@ -937,9 +937,17 @@ h2 {
     .sobreNos-card-container,
     .sobreNos-card-container .sobreNos-card-inner,
     .sobreNos-card-container .sobreNos-card-inner .sobreNos-card {
-        height: 600px;
+        height: fit-content;
         width: 95%;
         margin: auto;
+    }
+
+    .sobreNos-back-card{
+        height: fit-content;
+    }
+
+    body .sobreNos-card-container .sobreNos-front-card{
+        height: 100% !important;
     }
 
     .sobreNos-contact-img{
