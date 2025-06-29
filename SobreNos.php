@@ -170,6 +170,32 @@
     <p><?php the_field("sobre_nos_end_message_bottom") ?></p>
   </aside>
 
+  <script>
+  function ajustarAlturasFlip() {
+
+    document
+      .querySelectorAll('.sobreNos-card-inner')
+      .forEach(inner => {
+        // mede as duas faces (front e back)
+        const faces = inner.querySelectorAll('.sobreNos-card');
+        let alturaMax = 0;
+        faces.forEach(face => {
+          const h = face.getBoundingClientRect().height;
+          if (h > alturaMax) alturaMax = h;
+        });
+        // aplica ao container
+        if (window.innerHeight < 1200)
+          inner.style.height = alturaMax + 'px';
+        else
+          inner.style.height = '100%';
+      });
+  }
+
+  // roda ao carregar e sempre que a janela for redimensionada
+  window.addEventListener('load', ajustarAlturasFlip);
+  window.addEventListener('resize', ajustarAlturasFlip);
+</script>
+
 <?php endwhile; endif; ?>
 
 
