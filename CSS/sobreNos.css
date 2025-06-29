@@ -30,10 +30,10 @@ body {
 #sobreNos-hero {
     position: relative;
     height: 100vh;
-    /* background-image: url('../imgs/'); */
     background-size: cover;
     background-position: center;
     display: flex;
+    margin-bottom: 5rem;
     align-items: center;
     justify-content: center;
     color: white;
@@ -126,7 +126,7 @@ section#sobreNos-hero .sobreNos-hero-content {
 .sobreNos-how-the-work {
     margin: 0 auto;
     max-width: 75em;
-    padding-bottom: 12em;
+    padding-bottom: 3em;
     padding-top: 12em;
     text-align: center;
 }
@@ -249,10 +249,19 @@ section#sobreNos-hero .sobreNos-hero-content {
 
 .sobreNos-mvv {
     align-items: center;
+    justify-content: center;
     display: flex;
     gap: 10em;
     max-width: 75em;
     margin: auto;
+    text-align: center;
+}
+
+.sobreNos-mvv-title {
+    color: var(--primary-blue);
+    font: normal bold 4em var(--primary-font);
+    margin: 10rem auto 5rem;
+    text-align: center;
 }
 
 .sobreNos-mvv-img-container {
@@ -351,7 +360,7 @@ section#sobreNos-hero .sobreNos-hero-content {
 
 /* Parte Renan */
 .sobreNos-founders h1 {
-    font-size: 42px;
+    font-size: 3rem;
 }
 
 .sobreNos-founders h1,
@@ -410,7 +419,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    margin: 5rem 0;
 }
 
 .sobreNos-section-title {
@@ -1019,11 +1028,6 @@ h2 {
 }
 
 @media (min-width: 1601px) and (min-width: 2200px) {
-    .sobreNos-founders h1 {
-        font-size: 10rem;
-        margin-top: 10rem;
-    }
-
     .sobreNos-founders h2 {
         font-size: 6rem;
     }
@@ -1034,10 +1038,6 @@ h2 {
 
     .sobreNos-founders .sobreNos-information-container p {
         font-size: 2.5rem;
-    }
-
-    .sobreNos-section-title-container{
-        margin-bottom: 15rem;
     }
 
     .sobreNos-contact-img {

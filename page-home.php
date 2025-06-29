@@ -53,7 +53,7 @@
 
 <!-- Cards Solucoes (Renan) -->
 
-    <div class="solutions-section">
+    <div id="servicos" class="solutions-section">
         <div class="solutions-content">
             <div class="title">
                 <h2 class="montserrat-regular"><?php the_field('cards_titulo') ?></h2> 
@@ -198,6 +198,8 @@
 
     <!-- Numeros (Murillo) -->
     <section id="numbers">
+        <h2 class="numbers_title"><?php the_field('titulo_secao_numeros') ?></h2>
+
         <div class="metricas-container">
             <div class="metrica">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/segmentos-atendidos.svg" alt="Ícone Segmentos">
@@ -214,6 +216,11 @@
                 <p class="number"><?php the_field('valor_numero3') ?></p>
                 <p class="descricao"><?php the_field('titulo_numero3') ?></p>
             </div>
+            <div class="metrica">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/hard-drives.svg" alt="Ícone base de dados">
+                <p class="number"><?php the_field('valor_numero4') ?></p>
+                <p class="descricao"><?php the_field('titulo_numero4') ?></p>
+            </div>
         </div>
     </section> 
     <!-- end numeros -->
@@ -222,7 +229,6 @@
     <!-- end include seção contato -->
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/Home.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home-video.js"> </script>
 
 <?php endwhile; else : endif; ?>

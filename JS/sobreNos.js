@@ -36,19 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
   ]));
 })
 
-function sobreNos_showServices() {
-  const dropdownMenu = document.getElementsByClassName('dropdown-menu')[0];
-  const menuToggle = document.querySelector('.menu-toggle');
-  const btn = document.querySelector('.js-dropbtn');
-
-  dropdownMenu.classList.add("dropdown-hover-forced");
-
-  menuToggle.click();
-  setTimeout(() => {
-    btn.click();
-  }, 100);
-}
-
 document.addEventListener("mouseup", function(event) {
   const dropdownMenu = document.getElementsByClassName('dropdown-menu')[0];
 

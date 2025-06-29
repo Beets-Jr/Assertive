@@ -551,6 +551,13 @@
   padding: 40px 20px;
 }
 
+section#numbers h2.numbers_title {
+  color: var(--primary-blue);
+  font: normal bold 4em var(--fonte-assertive);
+  text-align: center;
+  margin: 3rem auto 5rem;
+}
+
 .metricas-container {
   display: flex;
   justify-content: center;

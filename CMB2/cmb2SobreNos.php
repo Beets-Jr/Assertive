@@ -58,6 +58,13 @@ function sobre_nos_founders() {
   ]);
 
   $sobre_nos_founders_box->add_field([
+    'id' => 'sobre_nos_founders_title',
+    'name' => esc_html__('Título', 'cmb2'),
+    'desc' => esc_html__('Título da seção Fundadores', 'cmb2'),
+    'type' => 'text_medium',
+  ]);
+
+  $sobre_nos_founders_box->add_field([
     'id' => 'sobre_nos_founders_founder',
     'name' => esc_html__('Fundadora', 'cmb2'),
     'type' => 'title',
@@ -145,6 +152,13 @@ function sobre_nos_how_the_work() {
     ]
   ]);
 
+  $sobre_nos_how_the_work_box->add_field([
+    'id' => 'sobre_nos_how_the_work_title',
+    'name' => esc_html__('Título', 'cmb2'),
+    'desc' => esc_html__('Título da seção "Como Trabalhamos"', 'cmb2'),
+    'type' => 'text_medium',
+  ]);
+
   $sobre_nos_how_the_work_cards = $sobre_nos_how_the_work_box->add_field([
     'id' => 'sobre_nos_how_the_work_cards',
     'name' => esc_html__('Cards', 'cmb2'),
@@ -192,15 +206,40 @@ function sobre_nos_who_we_are() {
   ]);
 
   $sobre_nos_who_we_are_box->add_field([
+    'id' => 'sobre_nos_who_we_are_title',
+    'name' => esc_html__('Título', 'cmb2'),
+    'desc' => esc_html__('Título da seção "Quem somos"', 'cmb2'),
+    'type' => 'text_medium',
+  ]);
+
+  $sobre_nos_who_we_are_box->add_field([
     'id' => 'sobre_nos_who_we_are_text',
     'name' => esc_html__('Texto inicial', 'cmb2'),
     'desc' => esc_html__('Texto exibido logo após o título "Quem somos"', 'cmb2'),
     'type' => 'textarea',
   ]);
+}
 
-  $sobre_nos_who_we_are_cards = $sobre_nos_who_we_are_box->add_field([
-    'id' => 'sobre_nos_who_we_are_cards',
-    'name' => esc_html__('Missão, Visão, Valores', 'cmb2'),
+function sobre_nos_who_we_are_mvv() {
+  $sobre_nos_who_we_are_mvv_box = new_cmb2_box([
+    'id' => 'sobre_nos_who_we_are_mvv_box',
+    'title' => 'MIssão valores',
+    'object_types' => ['page'],
+    'show_on' => [
+      'key' => 'page-template',
+      'value' => 'SobreNos.php',
+    ]
+  ]);
+
+  $sobre_nos_who_we_are_mvv_box->add_field([
+    'id' => 'sobre_nos_who_we_are_mvv_title',
+    'name' => esc_html__('Título', 'cmb2'),
+    'desc' => esc_html__('Título da seção MVV', 'cmb2'),
+    'type' => 'text_medium',
+  ]);
+
+  $sobre_nos_who_we_are_mvv_cards = $sobre_nos_who_we_are_mvv_box->add_field([
+    'id' => 'sobre_nos_who_we_are_mvv_cards',
     'type' => 'group',
     'repeatable' => true,
     'options' => [
@@ -211,14 +250,14 @@ function sobre_nos_who_we_are() {
     ]
   ]);
 
-  $sobre_nos_who_we_are_box->add_group_field($sobre_nos_who_we_are_cards, [
+  $sobre_nos_who_we_are_mvv_box->add_group_field($sobre_nos_who_we_are_mvv_cards, [
     'id' => 'title',
     'name' => esc_html__('Título', 'cmb2'),
     'desc' => esc_html__('Título exibido no topo do card', 'cmb2'),
     'type' => 'text_medium',
   ]);
 
-  $sobre_nos_who_we_are_box->add_group_field($sobre_nos_who_we_are_cards, [
+  $sobre_nos_who_we_are_mvv_box->add_group_field($sobre_nos_who_we_are_mvv_cards, [
     'id' => 'description',
     'name' => esc_html__('Descrição', 'cmb2'),
     'desc' => esc_html__('Descrição no corpo do card', 'cmb2'),
@@ -262,6 +301,7 @@ add_action('cmb2_admin_init', 'sobre_nos_hero');
 add_action('cmb2_admin_init', 'sobre_nos_founders');
 add_action('cmb2_admin_init', 'sobre_nos_how_the_work');
 add_action('cmb2_admin_init', 'sobre_nos_who_we_are');
+add_action('cmb2_admin_init', 'sobre_nos_who_we_are_mvv');
 add_action('cmb2_admin_init', 'sobre_nos_end_message');
 
 ?>
