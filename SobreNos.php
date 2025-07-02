@@ -124,11 +124,11 @@
       <?php endforeach; endif; ?>
     </ul>
 
-    <a href="/#servicos">
+    <a href="<?php echo home_url('/#servicos'); ?>">
       <button>
-        <?php the_field("sobre_nos_how_the_work_button") ?>
+          <?php the_field("sobre_nos_how_the_work_button") ?>
       </button>
-    </a>
+  </a>
   </section>
 
   <section>

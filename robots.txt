@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /?*
+Disallow: /*?*
+Disallow: /*/trackback
+Disallow: /*/feed
+Disallow: /*/comments
+
+# Bloqueia crawling de URLs com parâmetros suspeitos
+Disallow: /*%
+Disallow: /*.php$
+Disallow: /*=
+Disallow: /*&
+
+Sitemap: https://seusite.com/sitemap.xml

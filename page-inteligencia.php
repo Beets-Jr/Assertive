@@ -24,7 +24,9 @@
 
             <p> <?php echo get_post_meta(get_the_ID(), 'chamada-hero', true); ?> </p>
 
-            <button type="button" onclick="navigateToContact()"> <?php the_field ('chamada-hero-button'); ?> </button>
+            <button type="button" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                <?php the_field('chamada-hero-button'); ?>
+            </button>
         </div>
     </section>
 

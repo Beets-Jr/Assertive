@@ -10,6 +10,17 @@ require_once( dirname(__FILE__) . '/CMB2/cmb2_footer.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2Prospeccao.php' );
 
 /**
+ * Validação rigorosa de URLs - redireciona páginas inexistentes para home
+ */
+function strict_url_validation() {
+    if (is_404() || (!is_home() && !is_front_page() && !is_page() && !is_single() && !is_category() && !is_tag() && !is_archive() && !is_search() && !is_admin() && !is_feed())) {
+        wp_redirect(home_url('/'), 301);
+        exit();
+    }
+}
+add_action('template_redirect', 'strict_url_validation');
+
+/**
  * Enfileira CSS do tema (front-end)
  */
 function assertive_css() {
