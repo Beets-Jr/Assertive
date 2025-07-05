@@ -430,10 +430,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
     width: 80%;
     margin: 4vh auto;
-    gap: 24vw;
+    gap: 18vw;
     border-bottom: 2px solid white;
     padding-bottom: 2em;
 }
@@ -548,6 +547,12 @@ footer {
     .footer-top {
         gap: 3.0em; 
     }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .footer-top {
+    gap: 6em;        /* ou 5rem — ajuste até ficar visualmente legal */
+  }
 }
 
 @media (min-width: 1921px) {
