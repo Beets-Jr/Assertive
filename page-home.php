@@ -198,7 +198,7 @@
 
     <!-- Numeros (Murillo) -->
     <section id="numbers">
-        <h2 class="numbers_title"><?php the_field('titulo_secao_numeros') ?></h2>
+        <h2 style="color: var(--primary-blue); font: normal bold 4em var(--fonte-assertive); text-align: center; margin: 3rem auto 5rem;"><?php the_field('titulo_secao_numeros') ?></h2>
 
         <div class="metricas-container">
             <div class="metrica">
@@ -229,7 +229,6 @@
     <!-- end include seção contato -->
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/JS/home-video.js"> </script>
 
 <?php endwhile; else : endif; ?>
 

@@ -233,6 +233,7 @@ section#sobreNos-hero .sobreNos-hero-content {
     top: -2em;
 }
 
+
 .sobreNos-who-we-are-introduction::after {
     border-right: 1px solid var(--secondary-blue);
     border-bottom: 1px solid var(--secondary-blue);
@@ -258,10 +259,37 @@ section#sobreNos-hero .sobreNos-hero-content {
 }
 
 .sobreNos-mvv-title {
+    display: block;
+    position: relative;
     color: var(--primary-blue);
     font: normal bold 4em var(--primary-font);
-    margin: 10rem auto 5rem;
+    margin: 2em auto;
     text-align: center;
+    width: fit-content;
+}
+
+.sobreNos-mvv-title::before,
+.sobreNos-mvv-title::after {
+    content: '';
+    display: block;
+    height: 1em;
+    width: 1em;
+}
+
+.sobreNos-mvv-title::before {
+    border-left: 1px solid var(--secondary-blue);
+    border-top: 1px solid var(--secondary-blue);
+    position: absolute;
+    top: -.5em;
+    left: -1em;
+}
+
+.sobreNos-mvv-title::after {
+    border-right: 1px solid var(--secondary-blue);
+    border-bottom: 1px solid var(--secondary-blue);
+    position: absolute;
+    right: -1em;
+    bottom: -.5em;
 }
 
 .sobreNos-mvv-img-container {

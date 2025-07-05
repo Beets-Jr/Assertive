@@ -238,6 +238,24 @@ function sobre_nos_who_we_are_mvv() {
     'type' => 'text_medium',
   ]);
 
+  $sobre_nos_who_we_are_mvv_box->add_field([
+    'id' => 'sobre_nos_who_we_are_mvv_logo',
+    'name' => esc_html__('Logo', 'cmb2'),
+    'type' => 'file',
+    'options' => [
+      'url' => false,
+    ],
+    'text' => [
+      'add_upload_file_text' => 'Selecionar foto',
+    ],
+    'query_args' => [
+      'type' => [
+        'image/jpeg',
+        'image/png',
+      ]
+    ]
+  ]);
+
   $sobre_nos_who_we_are_mvv_cards = $sobre_nos_who_we_are_mvv_box->add_field([
     'id' => 'sobre_nos_who_we_are_mvv_cards',
     'type' => 'group',
