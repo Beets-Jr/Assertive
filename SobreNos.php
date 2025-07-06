@@ -2,8 +2,6 @@
 // Template Name: SobreNos
 ?>
 
-<?php $header = get_page_by_title('Header'); ?>
-
 <?php get_header() ?>
 
 <?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
@@ -138,7 +136,7 @@
 
     <div class="sobreNos-mvv">
       <div class="sobreNos-mvv-img-container">
-        <img src="<?php the_field('logo_header', $header->ID) ?>" alt="imagem do logo da Assertive" class="sobreNos-mvv-image">
+        <img src="<?php the_field('sobre_nos_who_we_are_mvv_logo') ?>" alt="imagem do logo da Assertive" class="sobreNos-mvv-image">
         <div class="sobreNos-mvv-line sobreNos-mvv-first-line"></div>
         <div class="sobreNos-mvv-line sobreNos-mvv-second-line"></div>
         <div class="sobreNos-mvv-line sobreNos-mvv-third-line"></div>

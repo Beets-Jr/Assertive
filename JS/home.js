@@ -5,11 +5,9 @@ const observer = new IntersectionObserver(entries => {
       const finalValue = Number(targetElement.getAttribute('data-value'));
       let time, increment;
 
-      increment = Math.ceil(Math.sqrt(finalValue));
+      increment = finalValue / 20;
 
-      if (finalValue < 100) time = 100;
-      else if (finalValue < 10000) time = 50;
-      else time = 5;
+      time = 50
 
       for (let i = 0; i <= finalValue; i += increment) {
         await new Promise(r => setTimeout(() => {
