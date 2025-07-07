@@ -171,27 +171,46 @@
   <script>
   function ajustarAlturasFlip() {
 
-    document
-      .querySelectorAll('.sobreNos-card-inner')
-      .forEach(inner => {
-        // mede as duas faces (front e back)
-        const faces = inner.querySelectorAll('.sobreNos-card');
-        let alturaMax = 0;
-        faces.forEach(face => {
-          const h = face.getBoundingClientRect().height;
-          if (h > alturaMax) alturaMax = h;
-        });
-        // aplica ao container
-        if (window.innerHeight < 1200)
-          inner.style.height = alturaMax + 'px';
-        else
-          inner.style.height = '100%';
-      });
-  }
+  const isDesktop = window.innerWidth > 1200;
+  const cardContainers = document.querySelectorAll('.sobreNos-founders .sobreNos-card-container');
 
-  // roda ao carregar e sempre que a janela for redimensionada
-  window.addEventListener('load', ajustarAlturasFlip);
-  window.addEventListener('resize', ajustarAlturasFlip);
+  cardContainers.forEach(container => {
+    const cardInner = container.querySelector('.sobreNos-card-inner');
+    if (!cardInner) return;
+
+    if (isDesktop) {
+
+      const gridContainer = container.closest('.sobreNos-grid-container-socio1, .sobreNos-grid-container-socio2');
+      if (!gridContainer) return;
+
+      const image = gridContainer.querySelector('img');
+      if (!image) return;
+
+      cardInner.style.height = `${image.offsetHeight}px`;
+
+    } else {
+      const frontCard = cardInner.querySelector('.sobreNos-front-card');
+      const backCard = cardInner.querySelector('.sobreNos-back-card');
+      if (!frontCard || !backCard) return;
+      
+      cardInner.style.height = 'auto';
+
+      const frontHeight = frontCard.scrollHeight;
+      const backHeight = backCard.scrollHeight;
+      const maxHeight = Math.max(frontHeight, backHeight);
+      
+      cardInner.style.height = `${maxHeight}px`;
+    }
+  });
+}
+
+window.addEventListener('load', ajustarAlturasFlip);
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(ajustarAlturasFlip, 150);
+});
 </script>
 
 <?php endwhile; endif; ?>
