@@ -95,7 +95,7 @@ header nav {
 }
 header nav a {
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 1em;
     color: white;
     font-family: var(--fonte-assertive);
     position: relative;
@@ -543,7 +543,13 @@ footer {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 900px) {
+    .footer-top {
+        gap: 2.0em; 
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1280px) {
     .footer-top {
         gap: 3.0em; 
     }
