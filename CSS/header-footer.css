@@ -544,8 +544,16 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
-    .footer-top {
-        gap: 2.0em; 
+      
+      .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+        .info-contato, .redes-sociais {
+        align-items: center; 
+        text-align: center;
     }
 }
 
