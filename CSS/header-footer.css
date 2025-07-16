@@ -543,7 +543,7 @@ footer {
   }
 }
 
-@media (min-width: 769px) and (max-width: 900px) {
+@media (min-width: 769px) and (max-width: 1000px) {
       
       .footer-top {
         flex-direction: column;
@@ -557,7 +557,7 @@ footer {
     }
 }
 
-@media (min-width: 901px) and (max-width: 1280px) {
+@media (min-width: 1001px) and (max-width: 1280px) {
     .footer-top {
         gap: 3.0em; 
     }
